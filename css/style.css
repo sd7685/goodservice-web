@@ -297,6 +297,54 @@ img {
          -o-animation: chat-btn 2s linear;
             animation: chat-btn 2s linear;
 }
+@-webkit-keyframes chat-btn {
+	0%   {min-width:320px;}
+	10%  {min-width:245px;}
+	20%  {min-width:155px;}
+	30%  {min-width:110px;}
+	40%  {min-width:85px;}
+	50%  {min-width:70px; color:rgba(255,255,255,0.5); border-radius:25px;}
+	60%  {min-width:50px; height:38px; border-radius:50px; text-indent:-9999px; top:-5px; left:-30px}
+	70%  {min-width:33px; height:28px; border-radius:100px; text-indent:-9999px; top:-30px; left:-100px;}
+	80%  {min-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-65px; left:-120px;}
+	100% {min-width:20px; max-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-75px; left:-140px;}
+}
+@-moz-keyframes chat-btn {
+	0%   {min-width:320px;}
+	10%  {min-width:245px;}
+	20%  {min-width:155px;}
+	30%  {min-width:110px;}
+	40%  {min-width:85px;}
+	50%  {min-width:70px; color:rgba(255,255,255,0.5); border-radius:25px;}
+	60%  {min-width:50px; height:38px; border-radius:50px; text-indent:-9999px; top:-5px; left:-30px}
+	70%  {min-width:33px; height:28px; border-radius:100px; text-indent:-9999px; top:-30px; left:-100px;}
+	80%  {min-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-65px; left:-120px;}
+	100% {min-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-75px; left:-140px;}
+}
+@-ms-keyframes chat-btn {
+	0%   {min-width:320px;}
+	10%  {min-width:245px;}
+	20%  {min-width:155px;}
+	30%  {min-width:110px;}
+	40%  {min-width:85px;}
+	50%  {min-width:70px; color:rgba(255,255,255,0.5); border-radius:25px;}
+	60%  {min-width:50px; height:38px; border-radius:50px; text-indent:-9999px; top:-5px; left:-30px}
+	70%  {min-width:33px; height:28px; border-radius:100px; text-indent:-9999px; top:-30px; left:-100px;}
+	80%  {min-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-65px; left:-120px;}
+	100% {min-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-75px; left:-140px;}
+}
+@-o-keyframes chat-btn {
+	0%   {min-width:320px;}
+	10%  {min-width:245px;}
+	20%  {min-width:155px;}
+	30%  {min-width:110px;}
+	40%  {min-width:85px;}
+	50%  {min-width:70px; color:rgba(255,255,255,0.5); border-radius:25px;}
+	60%  {min-width:50px; height:38px; border-radius:50px; text-indent:-9999px; top:-5px; left:-30px}
+	70%  {min-width:33px; height:28px; border-radius:100px; text-indent:-9999px; top:-30px; left:-100px;}
+	80%  {min-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-65px; left:-120px;}
+	100% {min-width:20px; height:20px; border-radius:100px; text-indent:-9999px; top:-75px; left:-140px;}
+}
 @keyframes chat-btn {
 	0%   {min-width:320px;}
 	10%  {min-width:245px;}
@@ -316,6 +364,54 @@ img {
          -o-animation: chat-list 2s linear;
             animation: chat-list 2s linear;
 	transition-delay:1.4s;
+}
+@-webkit-keyframes chat-list {
+	0%   {color:#2b2b2b;}
+	10%  {color:#2b2b2b;}
+	20%  {color:#2b2b2b;}
+	30%  {color:#2b2b2b;}
+	40%  {color:#2b2b2b;}
+	50%  {opacity:0.5;}
+	60%  {opacity:0.4;}
+	70%  {opacity:0.3;}
+	80%  {opacity:0;}
+	100% {opacity:0;}
+}
+@-moz-keyframes chat-list {
+	0%   {color:#2b2b2b;}
+	10%  {color:#2b2b2b;}
+	20%  {color:#2b2b2b;}
+	30%  {color:#2b2b2b;}
+	40%  {color:#2b2b2b;}
+	50%  {opacity:0.5;}
+	60%  {opacity:0.4;}
+	70%  {opacity:0.3;}
+	80%  {opacity:0;}
+	100% {opacity:0;}
+}
+@-ms-keyframes chat-list {
+	0%   {color:#2b2b2b;}
+	10%  {color:#2b2b2b;}
+	20%  {color:#2b2b2b;}
+	30%  {color:#2b2b2b;}
+	40%  {color:#2b2b2b;}
+	50%  {opacity:0.5;}
+	60%  {opacity:0.4;}
+	70%  {opacity:0.3;}
+	80%  {opacity:0;}
+	100% {opacity:0;}
+}
+@-o-keyframes chat-list {
+	0%   {color:#2b2b2b;}
+	10%  {color:#2b2b2b;}
+	20%  {color:#2b2b2b;}
+	30%  {color:#2b2b2b;}
+	40%  {color:#2b2b2b;}
+	50%  {opacity:0.5;}
+	60%  {opacity:0.4;}
+	70%  {opacity:0.3;}
+	80%  {opacity:0;}
+	100% {opacity:0;}
 }
 @keyframes chat-list {
 	0%   {color:#2b2b2b;}
@@ -338,6 +434,54 @@ img {
             animation: chat-ico 2s linear;
 	transition-delay:1.4s;
 }
+@-webkit-keyframes chat-ico {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:5px;}
+	60%  {left:-15px;top:15px;}
+	70%  {left:-31px;top:21px;}
+	80%  {left:-42px;top:23px;}
+	100% {left:-55px;top:26px;}
+}
+@-moz-keyframes chat-ico {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:5px;}
+	60%  {left:-15px;top:15px;}
+	70%  {left:-31px;top:21px;}
+	80%  {left:-42px;top:23px;}
+	100% {left:-55px;top:26px;}
+}
+@-ms-keyframes chat-ico {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:5px;}
+	60%  {left:-15px;top:15px;}
+	70%  {left:-31px;top:21px;}
+	80%  {left:-42px;top:23px;}
+	100% {left:-55px;top:26px;}
+}
+@-o-keyframes chat-ico {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:5px;}
+	60%  {left:-15px;top:15px;}
+	70%  {left:-31px;top:21px;}
+	80%  {left:-42px;top:23px;}
+	100% {left:-55px;top:26px;}
+}
 @keyframes chat-ico {
 	0%   {left:0;top:-2px;}
 	10%  {left:0;top:-2px;}
@@ -357,6 +501,54 @@ img {
          -o-animation: chat-ico2 2s linear;
             animation: chat-ico2 2s linear;
 	transition-delay:1.4s;
+}
+@-webkit-keyframes chat-ico2 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-3px;}
+	60%  {left:-15px;top:-6px;}
+	70%  {left:-31px;top:-6px;}
+	80% {left:-45px;top:-6px;}
+	100% {left:-55px;top:-6px;}
+}
+@-moz-keyframes chat-ico2 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-3px;}
+	60%  {left:-15px;top:-6px;}
+	70%  {left:-31px;top:-6px;}
+	80% {left:-45px;top:-6px;}
+	100% {left:-55px;top:-6px;}
+}
+@-ms-keyframes chat-ico2 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-3px;}
+	60%  {left:-15px;top:-6px;}
+	70%  {left:-31px;top:-6px;}
+	80% {left:-45px;top:-6px;}
+	100% {left:-55px;top:-6px;}
+}
+@-o-keyframes chat-ico2 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-3px;}
+	60%  {left:-15px;top:-6px;}
+	70%  {left:-31px;top:-6px;}
+	80% {left:-45px;top:-6px;}
+	100% {left:-55px;top:-6px;}
 }
 @keyframes chat-ico2 {
 	0%   {left:0;top:-2px;}
@@ -378,6 +570,54 @@ img {
          -o-animation: chat-ico3 2s linear;
             animation: chat-ico3 2s linear;
 	transition-delay:1.4s;
+}
+@-webkit-keyframes chat-ico3 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-8px;}
+	60%  {left:-15px;top:-20px;}
+	70%  {left:-31px;top:-29px;}
+	80% {left:-45px;top:-32px;}
+	100% {left:-55px;top:-32px;}
+}
+@-moz-keyframes chat-ico3 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-8px;}
+	60%  {left:-15px;top:-20px;}
+	70%  {left:-31px;top:-29px;}
+	80% {left:-45px;top:-32px;}
+	100% {left:-55px;top:-32px;}
+}
+@-ms-keyframes chat-ico3 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-8px;}
+	60%  {left:-15px;top:-20px;}
+	70%  {left:-31px;top:-29px;}
+	80% {left:-45px;top:-32px;}
+	100% {left:-55px;top:-32px;}
+}
+@-o-keyframes chat-ico3 {
+	0%   {left:0;top:-2px;}
+	10%  {left:0;top:-2px;}
+	20%  {left:0;top:-2px;}
+	30%  {left:0;top:-2px;}
+	40%  {left:0;top:-2px;}
+	50%  {left:-5px;top:-8px;}
+	60%  {left:-15px;top:-20px;}
+	70%  {left:-31px;top:-29px;}
+	80% {left:-45px;top:-32px;}
+	100% {left:-55px;top:-32px;}
 }
 @keyframes chat-ico3 {
 	0%   {left:0;top:-2px;}
