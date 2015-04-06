@@ -19,6 +19,18 @@ $(document).ready(function() {
 			$('.chat-step').hide();
 		},5000);
     });
+	
+	$('.chat .button').click(function() {
+		$('.animation1').addClass('animation1-active');
+		setTimeout(function() {
+			$('.animation1').hide();
+			$('.animation2').show();
+			$('.animation2').addClass('animation2-active');
+		},1900);
+    });
+	
+	$('.step-main-row').clone().appendTo('.animation2');
+	
 });
 </script>
 </head>
@@ -291,29 +303,38 @@ $(document).ready(function() {
                             </div>
                             <!-- end heading -->
                         </div>
-                        <div class="row list-row">
-                            <!-- start list -->
-                            <div class="col-md-12 list">
-                                <ul>
-                                    <li><i class="fa fa-circle chat-ico1"></i><a href="#" title="5mins response time">5mins response time</a></li>
-                                    <li><i class="fa fa-circle chat-ico2"></i><a href="#" title="Free If Late">Free If Late</a></li>
-                                    <li><i class="fa fa-circle chat-ico3"></i><a href="#" title="Verified">Verified</a></li>
-                                </ul>
+                        <!-- start animation-box -->
+                        <div class="animation-box">
+                        	<div class="animation1" style="display:block;">
+                                <div class="row list-row">
+                                    <!-- start list -->
+                                    <div class="col-md-12 list">
+                                        <ul>
+                                            <li><i class="fa fa-circle chat-ico1"></i><a href="#" title="5mins response time">5mins response time</a></li>
+                                            <li><i class="fa fa-circle chat-ico2"></i><a href="#" title="Free If Late">Free If Late</a></li>
+                                            <li><i class="fa fa-circle chat-ico3"></i><a href="#" title="Verified">Verified</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- end list -->
+                                </div>
+                                <div class="row chat-row">
+                                    <!-- start chat-col -->
+                                    <div class="col-md-12 chat-col">
+                                        <a href="#" title="CHAT NOW" class="button">CHAT NOW</a>
+                                    </div>
+                                    <!-- end chat-col -->
+                                </div>
                             </div>
-                            <!-- end list -->
-                        </div>
-                        <div class="row chat-row">
-                            <!-- start chat-col -->
-                            <div class="col-md-12 chat-col">
-                                <a href="#" title="CHAT NOW" class="button">CHAT NOW</a>
-                                <p><span>OR</span></p>
+                            <div class="animation2" style="display:none;">
+                            	
                             </div>
-                            <!-- end chat-col -->
                         </div>
+                        <!-- end animation-box -->
                         <div class="row phone-row">
                             <!-- start phone -->
-                            <div class="col-md-12 phone">
-                                <p><span>Call us at</span>98104-57485</p>
+                            <div class="col-md-12">
+                            	<p class="or"><span>OR</span></p>
+                                <p class="phone"><span>Call us at</span>98104-57485</p>
                             </div>
                             <!-- end phone -->
                         </div>
