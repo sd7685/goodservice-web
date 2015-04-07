@@ -1741,7 +1741,7 @@ body {
 	position:fixed;
 	right:0;
 	bottom:0;
-	z-index:999;
+	z-index:99;
 }
 .mg-bar label {
 	background:url(../images/ico_suggest.png) no-repeat center top;
@@ -1935,6 +1935,85 @@ body {
 .chat .animation2 .center {
 	margin-left:63px;
 }
+
+/* Chat-popup */
+.chat-popup {
+	background:#fff;
+	width:310px;
+	min-height:325px;
+	float:left;
+	margin:-162px 0 0 -155px;
+	font-size:13px;
+	color:#2b2b2b;
+	-webkit-border-radius:5px;
+	   -moz-border-radius:5px;
+		-ms-border-radius:5px;
+		 -o-border-radius:5px;
+			border-radius:5px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	z-index:9999;
+}
+.chat-popup h4 {
+	border-bottom:1px solid #a3a3a3;
+	padding:0 15px;
+	font-size:18px;
+	color:#2b2b2b;
+	font-weight:400;
+	line-height:40px;
+}
+.chat-popup h4 .close {
+	float:right;
+	margin:10px -5px 0 0;
+	font-size:18px;
+	color:#333;
+	font-weight:normal;
+}
+.chat-popup .scroll {
+	border-bottom:1px solid #a3a3a3;
+	height:210px;
+	margin-bottom:7px;
+	padding:10px 15px;
+}
+.chat-popup .scroll ul {
+	height:100%;
+	overflow-y:scroll;
+}
+.chat-popup li {
+	font-size:16px;
+	color:#2b2b2b;
+	line-height:24px;
+}
+.chat-popup li a {
+	color:#2b2b2b;
+}
+.chat-popup li a:hover {
+	color:#3dcc59;
+}
+.chat-popup p {
+	text-align:center;
+	line-height:normal;
+}
+.chat-popup p span {
+	display:block;
+}
+.chat-popup .close-txt {
+	display:inline-block;
+	margin-top:7px;
+	font-size:16px;
+	color:#3dcc59;
+}
+#chat-mg {
+	position:absolute;
+}
+#chat-mg .modal-dialog {
+	width:100%;
+	height:100%;
+	padding:15px;
+	margin:0;
+}
+
 
 .loading {
 	position:absolute;
