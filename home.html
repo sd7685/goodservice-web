@@ -7,9 +7,17 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
-<script src='//use.typekit.net/vsp3mtw.js'></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
 <script>
-  try{Typekit.load();}catch(e){}
+$(document).ready(function() {
+	
+	$('.fb-btn').click(function() {
+    	$('.login').hide();
+		$('.thanks').show();
+	});
+	
+});
 </script>
 </head>
 
@@ -26,7 +34,7 @@
             <div class="icon"><img src="images/ico_location.png" width="59" height="86" alt="location"></div>
             <h2>Amazing local services in your city.</h2>
             <p><span>We are currently allowing access by invitation only</span> Please click on the link below, and get on the waiting list.</p>
-            <a href="#" title="Invitation" class="button">Invitation</a>
+            <a href="#" title="Invitation" data-toggle="modal" data-target="#invitation" class="button">Invitation</a>
         </header>
         <!-- end header -->
     </div>
@@ -43,5 +51,30 @@
     <!-- end footer-in -->
 </footer>
 <!-- end footer -->
+<!-- start invitation-modal -->
+<div class="modal" id="invitation">
+    <div class="modal-dialog">
+    	<!-- start invitation -->
+        <div class="invitation">
+        	<a href="#" class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></a>
+        	<!-- start login -->
+        	<div class="login">
+                <h3>Get an incredible invitation</h3>
+                <h4>Join our waiting list by signing in through facebook.</h4>
+                <a href="#" title="Connect with Facebook" class="fb-btn"><i class="fa fa-facebook"></i>Connect with Facebook</a>
+                <p><strong>Dont have Facebook?</strong> Stay put... <span>we will let you know if we can give you access.</span></p>
+            </div>
+            <!-- end login -->
+            <!-- start thanks -->
+            <div class="thanks" style="display:none;">
+            	<h3>Thanks</h3>
+                <p>we will let you know when your invite is ready</p>
+            </div>
+            <!-- end thanks -->
+        </div>
+        <!-- end invitation -->
+    </div>
+</div>
+<!-- end invitation-modal -->
 </body>
 </html>
