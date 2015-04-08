@@ -56,6 +56,16 @@ $(document).ready(function() {
 	
 	});
 	
+	$('.vendor-gallery li img').click(function() {
+		$('.dk-slider-box').addClass('active');
+		$('body').css("overflow","hidden");
+    });
+	
+	$('.dk-slider-box .close-btn').click(function() {
+		$('.dk-slider-box').removeClass('active');
+		$('body').css("overflow","inherit");
+    });
+	
 });
 </script>
 </head>
@@ -373,6 +383,26 @@ $(document).ready(function() {
                                 <p>Showing you Zion Technologies's Mobile & Tablet Repair , see <strong>Laptop & Computer Repair</strong></p>
                             </div>
                             <!-- end info -->
+                            <!-- start vendor-gallery -->
+                            <div class="vendor-gallery">
+                                <h3>Photos</h3>
+                                    <!-- start img-col-1 -->
+                                    <div class="row">
+                                    	<div class="col-md-12">
+                                            <ul>
+                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"></a></li>
+                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                                <li class="last"><a href="#" title="+1882">+1882</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- end img-col-1 -->
+                            </div>
+                            <!-- end vendor-gallery -->
                             <!-- start price-list -->
                             <div class="col-md-12 price-list">
                                 <h3>Prices</h3>
@@ -741,84 +771,7 @@ $(document).ready(function() {
                                 </div>
                             </div>
                             <!-- end vendor-info -->
-                            <!-- start vendor-gallery -->
-                            <div class="vendor-gallery col-md-12">
-                                <h3>Photos</h3>
-                                <div class="row">
-                                    <!-- start img-col-1 -->
-                                    <div class="col-md-12 imgb">
-                                        <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                    </div>
-                                    <!-- end img-col-1 -->
-                                    <!-- start img-col-2 -->
-                                    <div class="img-col2">
-                                        <div class="col-md-6 imgb">
-                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                        </div>
-                                        <div class="col-md-6 imgb">
-                                            <img src="images/img_gallery3.jpg" width="351" height="496" alt="gallery">
-                                        </div>
-                                    </div>
-                                    <!-- end img-col-2 -->
-                                    <!-- start img-col-3 -->
-                                    <div class="img-col3">
-                                        <div class="col-md-4 imgb">
-                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                        </div>
-                                        <div class="col-md-4 imgb">
-                                            <img src="images/img_gallery3.jpg" width="351" height="496" alt="gallery">
-                                        </div>
-                                        <div class="col-md-4 imgb">
-                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                        </div>
-                                    </div>
-                                    <!-- end img-col-3 -->
-                                    <!-- start img-col-4 -->
-                                    <div class="img-col4">
-                                        <div class="col-md-4 imgb">
-                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                        </div>
-                                        <div class="col-md-4 imgb">
-                                            <img src="images/img_gallery3.jpg" width="960" height="540" alt="gallery">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="row">
-                                                <div class="col-md-12 imgb">
-                                                    <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                                </div>
-                                                <div class="col-md-12 imgb">
-                                                    <img src="images/img_gallery3.jpg" width="960" height="540" alt="gallery">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end img-col-4 -->
-                                    <!-- start img-col-5 -->
-                                    <div class="img-col5">
-                                        <div class="col-md-6 imgb">
-                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="row">
-                                                <div class="col-md-6 imgb">
-                                                    <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                                </div>
-                                                <div class="col-md-6 imgb">
-                                                    <img src="images/img_gallery3.jpg" width="351" height="496" alt="gallery">
-                                                </div>
-                                                <div class="col-md-6 imgb">
-                                                    <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                                </div>
-                                                <div class="col-md-6 imgb">
-                                                    <img src="images/img_gallery3.jpg" width="351" height="496" alt="gallery">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end img-col-5 -->
-                                </div>
-                            </div>
-                            <!-- end vendor-gallery -->
+                            
                         </div>
                     </div>
                     <!-- end dk-vendor-detail -->
@@ -844,18 +797,21 @@ $(document).ready(function() {
 <div class="main-overlay"></div>
 <!-- start dk-slider -->
 <div class="dk-slider-box">
+	<a href="#" title="Close" class="close-btn"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
     <!-- start slider -->
     <div class="dk-slider clearfix">
         <ul class="slides">
-            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-            <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
-            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-            <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
+            <li><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+            <li><div class="imgb"><span><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+            <li><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+            <li><div class="imgb"><span><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></span></div></li>
         </ul>
     </div>
     <!-- end slider -->
     <!-- start carousel -->
     <div class="dk-carousel clearfix">
+    	<span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
+    	<span class="pull-left">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</span>
         <ul class="slides">
             <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
             <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
