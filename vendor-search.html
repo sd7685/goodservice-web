@@ -11,6 +11,7 @@
 <!--<script src="js/bootstrap.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
 <script>
 $(document).ready(function() {
 	
@@ -33,6 +34,27 @@ $(document).ready(function() {
 		$('.rightcol').removeClass('active');
 		$('body').css("overflow","inherit");
     });
+	
+	$(window).load(function() {
+		$('.dk-carousel').flexslider({
+			animation: "slide",
+			controlNav: false,
+			animationLoop: false,
+			slideshow: false,
+			itemWidth: 107,
+			itemMargin: 15,
+			asNavFor: '.dk-slider'
+		});
+		   
+		$('.dk-slider').flexslider({
+			animation: "slide",
+			controlNav: false,
+			animationLoop: false,
+			slideshow: false,
+			sync: ".dk-carousel"
+		});
+	
+	});
 	
 });
 </script>
@@ -313,7 +335,7 @@ $(document).ready(function() {
             </div>
             <!-- end leftcol -->
             <!-- start rightcol -->
-            <div class="col-md-5 rightcol">
+            <div class="col-md-6 rightcol">
             	<a href="#" title="Close" class="close-btn"><i class="fa fa-times"></i></a>
                 <div class="rightcol-overlay row">
                     <!-- start dk-vendor-detail -->
@@ -325,17 +347,12 @@ $(document).ready(function() {
                                 <div class="col-lg-12">
                                     <div class="row">
                                         <a href="#phone" data-toggle="collapse" title="Phone" class="active"><i class="fa fa-phone"></i> Phone</a>
-                                        <a href="#address" data-toggle="collapse" title="Address"><i class="fa fa-map-marker"></i>Adchini | Address</a>
+                                        <p>HUDA Market <span>Gurgaon</span></p>
                                     </div>
                                 </div>
                                 <div class="collapse col-md-12" id="phone">
                                     <div class="row">
                                         <p><span>Phone:</span> +91-9818271286,+91-9810935376</p>
-                                    </div>
-                                </div>
-                                <div class="collapse col-md-12" id="address">
-                                    <div class="row">
-                                        <p><span>Address:</span> 65/2, Adchini, New Delhi</p>
                                     </div>
                                 </div>
                             </div>
@@ -825,5 +842,29 @@ $(document).ready(function() {
 </div>
 <!-- end main-container -->
 <div class="main-overlay"></div>
+<!-- start dk-slider -->
+<div class="dk-slider-box">
+    <!-- start slider -->
+    <div class="dk-slider clearfix">
+        <ul class="slides">
+            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+            <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
+            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+            <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
+        </ul>
+    </div>
+    <!-- end slider -->
+    <!-- start carousel -->
+    <div class="dk-carousel clearfix">
+        <ul class="slides">
+            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+            <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
+            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+            <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
+        </ul>
+    </div>
+    <!-- end carousel -->
+</div>
+<!-- end dk-slider -->
 </body>
 </html>
