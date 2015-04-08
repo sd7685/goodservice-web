@@ -95,7 +95,7 @@ textarea {
 	font-family:Arial, Helvetica, sans-serif; /* Body Font Family Will Come Here */
 }
 a {
-	color:#393939;
+	color:#2b2b2b;
 	text-decoration:none;
 }
 a:hover {
@@ -703,8 +703,8 @@ img {
 body {
 	background:#faf7fd;
 	font-family: "proxima-nova",sans-serif;
-	font-size:14px;
-	color:#393939;
+	font-size:12px;
+	color:#2b2b2b;
 }
 .box {
 	width:340px;
@@ -755,7 +755,7 @@ body {
 	float:left;
 	padding:3px 20px 3px 0;
 	font-size:14px;
-	color:#393939;
+	color:#2b2b2b;
 }
 .search button {
 	background:none;
@@ -928,7 +928,6 @@ body {
 }
 .vendor-detail h4 {
 	font-size:16px;
-	color:#393939;
 	font-weight:700;
 }
 .vendor-detail h4 i {
@@ -955,7 +954,6 @@ body {
 .vendor-detail h6 {
 	padding-bottom:8px;
 	font-size:14px;
-	color:#393939;
 }
 .vendor-detail .price {
 	text-align:right;
@@ -1270,24 +1268,21 @@ body {
 /* Dk-Vendor-detail */
 .dk-vendor-detail {
 	padding-bottom:60px;
-	padding-top:26px;
+	padding-top:10px;
 }
 .dk-vendor-detail h2 {
 	padding-bottom:15px;
-	font-size:30px;
-	color:#393939;
+	font-size:24px;
 	font-weight:600;
 }
 .dk-vendor-detail h3 {
 	padding-bottom:10px;
-	font-size:24px;
-	color:#393939;
+	font-size:16px;
 	font-weight:600;
 }
 .dk-vendor-detail h4 {
 	padding-bottom:15px;
 	font-size:18px;
-	color:#393939;
 }
 /* Title */
 .dk-vendor-detail .title {
@@ -1300,7 +1295,7 @@ body {
 	padding:0 10px;
 	margin:0 10px 10px 0;
 	font-size:14px;
-	color:#393939;
+	color:#2b2b2b;
 	line-height:30px;
 }
 .dk-vendor-detail .title i {
@@ -1370,7 +1365,6 @@ body {
 /* Info */
 .dk-vendor-detail .info {
 	padding-bottom:27px;
-	font-size:14px;
 	color:#707070;
 }
 .dk-vendor-detail .info p {
@@ -1379,7 +1373,7 @@ body {
 }
 .dk-vendor-detail .info strong {
 	display:block;
-	color:#393939;
+	color:#2b2b2b;
 	font-weight:bold;
 }
 /* Price-list */
@@ -1399,7 +1393,7 @@ body {
 .price-list .name {
 	padding-bottom:5px;
 	display:block;
-	font-size:14px;
+	font-size:13px;
 	color:#afbbc1;
 	font-weight:600;
 }
@@ -1412,11 +1406,8 @@ body {
 	line-height:normal;
 }
 .price-list p strong {
-	font-size:16px;
-	font-weight:700;
-}
-.price-list p strong small {
-	font-size:14px;
+	font-size:13px;
+	font-weight:600;
 }
 .price-list .panel-collapse {
 	padding-bottom:7px;
@@ -1471,8 +1462,6 @@ body {
 }
 .vendor-info .table {
 	border:1px solid #ededed;
-	font-size:14px;
-	color:#2b2b2b;
 }
 .vendor-info .table .row1 {
 	border-top:1px solid #ededed;
@@ -1782,7 +1771,7 @@ body {
 	float:left;
 	resize:none;
 	font-size:14px;
-	color:#393939;
+	color:#2b2b2b;
 }
 .mg-bar .button {
 	background:#fff url(../images/bg_submit.png) no-repeat left top;
@@ -1800,6 +1789,9 @@ body {
 .chat-step {
 	background:#fff;
 	height:100%;
+	margin:-15px;
+	padding:15px;
+	box-sizing:content-box;
 	text-align:center;
 	font-size:16px;
 }
@@ -1889,7 +1881,6 @@ body {
 	float:left;
 	padding-top:15px;
 	font-size:12px;
-	color:#393939;
 }
 .step-main-row .step-txtb p {
 	position:relative;
