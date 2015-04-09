@@ -104,57 +104,103 @@ $(document).ready(function() {
     	<!-- start row -->
     	<div class="row">
         	<!-- start leftcol -->
-        	<div class="col-md-8  col-md-offset-2 leftcol">
-            	<!-- start dk-vendor-list -->
-            	<div class="dk-vendor-list">
-                	<!-- start row -->
-                	<div class="row row1">
-                        <div class="col-md-10 col-md-offset-1">
-                        	<div class="row">
-                                <div class="col-md-6">
-                                	<div class="row">
-                                    	<div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
-                                    </div>
-                                    <div class="row">
-                                    	<div class="col-md-12">
-                                        	<a href="#" title="See More Branches" class="pull-right">See More Branches</a>
-                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
+        	<div class="col-md-10  col-md-offset-1 leftcol">
+            	<div class="row">
+                	<!-- start filter -->
+                    <div class="col-md-3 filter">
+                    	<h3>Locality</h3>
+                        <div class="column">
+                        	<h4><a href="#filter-locality" data-toggle="collapse" title="Anywhere in Gurgoan">Anywhere in Gurgoan</a></h4>
+                            <ul class="collapse in" id="locality">
+                                <li><a href="#" title="Sector 24" class="active">Sector 24</a></li>
+                                <li><a href="#" title="Sector 2">Sector 2</a></li>
+                                <li><a href="#" title="Huda city center">Huda city center</a></li>
+                                <li><a href="#" title="MG road metro">MG road metro</a></li>
+                            </ul>
+                        </div>
+                        <h3>Categories</h3>
+                        <div class="column">
+                        	<h4><a href="#filter-categories" data-toggle="collapse" title="Mobile Repair">Mobile Repair</a></h4>
+                            <ul class="collapse" id="filter-categories">
+                                <li><a href="#" title="Sector 24">Sector 24</a></li>
+                                <li><a href="#" title="Sector 2">Sector 2</a></li>
+                                <li><a href="#" title="Huda city center">Huda city center</a></li>
+                                <li><a href="#" title="MG road metro">MG road metro</a></li>
+                            </ul>
+                        </div>
+                        <h3>Brands</h3>
+                        <div class="column">
+                        	<h4><a href="#filter-brands" data-toggle="collapse" title="Show Any">Show Any</a></h4>
+                            <ul class="collapse" id="filter-brands">
+                                <li><input type="radio" id="radio1"><label for="radio1"><span></span>Sector 24 <strong>(1200)</strong></label></li>
+                                <li><input type="radio" id="radio2"><label for="radio2"><span></span>Sector 2 <strong>(1200)</strong></label></li>
+                                <li><input type="radio" id="radio3"><label for="radio3"><span></span>Huda city center <strong>(1200)</strong></label></li>
+                                <li><input type="radio" id="radio4"><label for="radio4"><span></span>MG road metro <strong>(1200)</strong></label></li>
+                            </ul>
+                        </div>
+                        <h3>Service Center</h3>
+                        <div class="column">
+                            <h4><a href="#filter-service" data-toggle="collapse" title="Show Any">Show Any</a></h4>
+                            <ul class="collapse" id="filter-service">
+                                <li><input type="checkbox" id="checkbox1"><label for="checkbox1"><span></span>Sector 24</label></li>
+                                <li><input type="checkbox" id="checkbox2"><label for="checkbox2"><span></span>Sector 2</label></li>
+                                <li><input type="checkbox" id="checkbox3"><label for="checkbox3"><span></span>Huda city center</label></li>
+                                <li><input type="checkbox" id="checkbox4"><label for="checkbox4"><span></span>MG road metro</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end filter -->
+                    <!-- start dk-vendor-list -->
+                    <div class="dk-vendor-list col-md-9">
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a href="#" title="See More Branches" class="pull-right">See More Branches</a>
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="PHONE" class="button phone"><span class="icon-phone"></span>PHONE</a>
+                                    </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
-                                </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone"></span>PHONE</a>
-                                </div>
-                            </div>
-                        	<div class="row price">
-                                <div class="col-md-12">
-									<h4><a href="#dk-price-box1" data-toggle="collapse" title="Prices" class="active"><span>View</span> Prices <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse in" id="dk-price-box1">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                	<p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><a href="#" title="View More Prices" class="more-prices">View More Prices</a></p>
+                                <div class="row price">
+                                    <div class="col-md-12">
+                                        <h4><a href="#dk-price-box1" data-toggle="collapse" title="Prices" class="active"><span>View</span> Prices <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
+                                        <div class="collapse in" id="dk-price-box1">
+                                            <div class="price-box">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
+                                                        <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
+                                                        <p><a href="#" title="View More Prices" class="more-prices">View More Prices</a></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row price">
-                                <div class="col-md-12">
-                                    <h4><a href="#dk-repair-box1" data-toggle="collapse" title="Laptop & Computer Repai" class="active">Laptop & Computer Repai <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse in" id="dk-repair-box1">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                    <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><a href="#" title="View More" class="more-prices">View More</a></p>
+                                <div class="row price">
+                                    <div class="col-md-12">
+                                        <h4><a href="#dk-repair-box1" data-toggle="collapse" title="Laptop & Computer Repai" class="active">Laptop & Computer Repai <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
+                                        <div class="collapse in" id="dk-repair-box1">
+                                            <div class="price-box">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
+                                                         <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
+                                                         <p><a href="#" title="View More" class="more-prices">View More</a></p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,186 +208,15 @@ $(document).ready(function() {
                                 </div>
                             </div>
                         </div>
+                        <!-- end row -->
                     </div>
-                    <!-- end row -->
-                    <!-- start row -->
-                	<div class="row row1">
-                        <div class="col-md-10 col-md-offset-1">
-                        	<div class="row">
-                                <div class="col-md-6">
-                                	<div class="row">
-                                    	<div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
-                                    </div>
-                                    <div class="row">
-                                    	<div class="col-md-12">
-                                        	<a href="#" title="See More Branches" class="pull-right">See More Branches</a>
-                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
-                                </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone"></span>PHONE</a>
-                                </div>
-                            </div>
-                        	<div class="row price">
-                                <div class="col-md-12">
-									<h4><a href="#dk-price-box2" data-toggle="collapse" title="Prices"><span>View</span> Prices <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse" id="dk-price-box2">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                	<p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><a href="#" title="View More Prices" class="more-prices">View More Prices</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row price">
-                                <div class="col-md-12">
-                                    <h4><a href="#dk-repair-box2" data-toggle="collapse" title="Laptop & Computer Repai">Laptop & Computer Repai <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse" id="dk-repair-box2">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                    <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><a href="#" title="View More" class="more-prices">View More</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- end dk-vendor-list -->
+                    <!-- start loading -->
+                    <div class="loading" style="display:none;">
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
                     </div>
-                    <!-- end row -->
-                    <!-- start row -->
-                	<div class="row row1">
-                        <div class="col-md-10 col-md-offset-1">
-                        	<div class="row">
-                                <div class="col-md-6">
-                                	<div class="row">
-                                    	<div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
-                                    </div>
-                                    <div class="row">
-                                    	<div class="col-md-12">
-                                        	<a href="#" title="See More Branches" class="pull-right">See More Branches</a>
-                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
-                                </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone"></span>PHONE</a>
-                                </div>
-                            </div>
-                        	<div class="row price">
-                                <div class="col-md-12">
-									<h4><a href="#dk-price-box3" data-toggle="collapse" title="Prices"><span>View</span> Prices <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse" id="dk-price-box3">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                	<p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><a href="#" title="View More Prices" class="more-prices">View More Prices</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row price">
-                                <div class="col-md-12">
-                                    <h4><a href="#dk-repair-box3" data-toggle="collapse" title="Laptop & Computer Repai">Laptop & Computer Repai <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse" id="dk-repair-box3">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                    <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><a href="#" title="View More" class="more-prices">View More</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end row -->
-                    <!-- start row -->
-                	<div class="row row1">
-                        <div class="col-md-10 col-md-offset-1">
-                        	<div class="row">
-                                <div class="col-md-6">
-                                	<div class="row">
-                                    	<div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
-                                    </div>
-                                    <div class="row">
-                                    	<div class="col-md-12">
-                                        	<a href="#" title="See More Branches" class="pull-right">See More Branches</a>
-                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
-                                </div>
-                                <div class="col-md-3">
-                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone"></span>PHONE</a>
-                                </div>
-                            </div>
-                        	<div class="row price">
-                                <div class="col-md-12">
-									<h4><a href="#dk-price-box4" data-toggle="collapse" title="Prices"><span>View</span> Prices <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse" id="dk-price-box4">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                	<p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                    <p><a href="#" title="View More Prices" class="more-prices">View More Prices</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row price">
-                                <div class="col-md-12">
-                                    <h4><a href="#dk-repair-box4" data-toggle="collapse" title="Laptop & Computer Repai">Laptop & Computer Repai <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                    <div class="collapse" id="dk-repair-box4">
-                                    	<div class="price-box">
-                                        	<div class="row">
-                                            	<div class="col-md-12">
-                                                    <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                     <p><a href="#" title="View More" class="more-prices">View More</a></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end row -->
+                    <!-- end loading -->
                 </div>
-                <!-- end dk-vendor-list -->
-                <!-- start loading -->
-                <div class="loading" style="display:none;">
-                    <i class="fa fa-circle-o-notch fa-spin"></i>
-                </div>
-                <!-- end loading -->
             </div>
             <!-- end leftcol -->
             <!-- start rightcol -->
