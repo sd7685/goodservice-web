@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>Good Service</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -28,11 +27,13 @@ $(document).ready(function() {
 		$('.main-overlay').show();
 		$('.rightcol').addClass('active');
 		$('body').css("overflow","hidden");
+		return false;
     });
 	$('.main-overlay,.close-btn').click(function() {
 		$('.main-overlay').hide();
 		$('.rightcol').removeClass('active');
 		$('body').css("overflow","inherit");
+		return false;
     });
 	
 	$(window).load(function() {
@@ -44,6 +45,7 @@ $(document).ready(function() {
 			itemWidth: 107,
 			itemMargin: 15,
 			asNavFor: '.dk-slider'
+			
 		});
 		   
 		$('.dk-slider').flexslider({
@@ -52,6 +54,7 @@ $(document).ready(function() {
 			animationLoop: false,
 			slideshow: false,
 			sync: ".dk-carousel"
+			
 		});
 	
 	});
@@ -59,11 +62,26 @@ $(document).ready(function() {
 	$('.vendor-gallery li img').click(function() {
 		$('.dk-slider-box').addClass('active');
 		$('body').css("overflow","hidden");
+		$('.rightcol-overlay').css("overflow","inherit");
+		$('.main-overlay').hide();
     });
 	
 	$('.dk-slider-box .close-btn').click(function() {
 		$('.dk-slider-box').removeClass('active');
 		$('body').css("overflow","inherit");
+    });
+	
+	
+	
+	
+	var hrefValue
+	$('.tab-nav a').click(function() {
+		$(hrefValue).removeClass("top-padding");
+		$('.tab-nav a').removeClass('active');
+		$(this).toggleClass('active');
+		hrefValue =  $(this).attr('href');
+		console.log(hrefValue);
+		$(hrefValue).addClass("top-padding");
     });
 	
 });
@@ -225,10 +243,25 @@ $(document).ready(function() {
                 <div class="rightcol-overlay row">
                     <!-- start dk-vendor-detail -->
                     <div class="dk-vendor-detail">
+                    	<!-- start tab-nav -->
+                    	<div class="tab-nav">
+                        	<div class="row">
+                            	<div class="col-md-12">
+                                    <a href="#link-scroll1" title="Info">Info</a>
+                                    <a href="#link-scroll2" title="Photos">Photos</a>
+                                    <a href="#link-scroll3" title="Prices">Prices</a>
+                                    <a href="#link-scroll4" title="Repair Center Info">Repair Center Info</a>
+                                    <a href="#link-scroll1" title="Info">Info</a>
+                                    <a href="#link-scroll2" title="Photos">Photos</a>
+                                    <a href="#link-scroll3" title="Prices">Prices</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end tab-nav -->
                         <h2>Zion Technologies</h2>
                         <div class="row">
                             <!-- start title -->
-                            <div class="col-md-12 title">
+                            <div class="col-md-12 title" id="link-scroll1">
                                 <div class="col-lg-12">
                                     <div class="row">
                                         <a href="#phone" data-toggle="collapse" title="Phone" class="active"><i class="fa fa-phone"></i> Phone</a>
@@ -258,28 +291,29 @@ $(document).ready(function() {
                                 <p>Showing you Zion Technologies's Mobile & Tablet Repair , see <strong>Laptop & Computer Repair</strong></p>
                             </div>
                             <!-- end info -->
+                            <div class="clear"></div>
                             <!-- start vendor-gallery -->
-                            <div class="vendor-gallery">
+                            <div class="vendor-gallery" id="link-scroll2">
                                 <h3>Photos</h3>
-                                    <!-- start img-col-1 -->
-                                    <div class="row">
-                                    	<div class="col-md-12">
-                                            <ul>
-                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"></a></li>
-                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
-                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
-                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
-                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
-                                                <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
-                                                <li class="last"><a href="#" title="+1882">+1882</a></li>
-                                            </ul>
-                                        </div>
+                                <!-- start img-col-1 -->	
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul>
+                                            <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"></a></li>
+                                            <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                            <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                            <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                            <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                            <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                            <li class="last"><a href="#" title="+1882">+1882</a></li>
+                                        </ul>
                                     </div>
-                                    <!-- end img-col-1 -->
+                                </div>
+                                <!-- end img-col-1 -->
                             </div>
                             <!-- end vendor-gallery -->
                             <!-- start price-list -->
-                            <div class="col-md-12 price-list">
+                            <div class="col-md-12 price-list" id="link-scroll3">
                                 <h3>Prices</h3>
                                 <!-- start tabs -->
                                 <div class="panel-group clearfix" id="accordion" role="tablist" aria-multiselectable="true">
@@ -556,7 +590,7 @@ $(document).ready(function() {
                             </div>
                             <!-- end price-list -->
                             <!-- start vendor-info -->
-                            <div class="col-md-12">
+                            <div class="col-md-12" id="link-scroll4">
                                 <div class="vendor-info">
                                     <h3>Repair Center Info</h3>
                                     <!-- start table -->
@@ -646,7 +680,6 @@ $(document).ready(function() {
                                 </div>
                             </div>
                             <!-- end vendor-info -->
-                            
                         </div>
                     </div>
                     <!-- end dk-vendor-detail -->
@@ -660,6 +693,33 @@ $(document).ready(function() {
                         <i class="fa fa-circle-o-notch fa-spin"></i>
                     </div>
                     <!-- end loading -->
+                    <!-- start dk-slider -->
+                    <div class="dk-slider-box">
+                        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
+                        <!-- start slider -->
+                        <div class="dk-slider clearfix">
+                            <ul class="slides">
+                                <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                                <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                                <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                                <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                            </ul>
+                        </div>
+                        <!-- end slider -->
+                        <!-- start carousel -->
+                        <div class="dk-carousel clearfix">
+                            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
+                            <span class="pull-left"></span>
+                            <ul class="slides">
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
+                            </ul>
+                        </div>
+                        <!-- end carousel -->
+                    </div>
+                    <!-- end dk-slider -->
                 </div>
             </div>
             <!-- end rightcol -->
@@ -670,32 +730,5 @@ $(document).ready(function() {
 </div>
 <!-- end main-container -->
 <div class="main-overlay"></div>
-<!-- start dk-slider -->
-<div class="dk-slider-box">
-	<a href="#" title="Close" class="close-btn"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
-    <!-- start slider -->
-    <div class="dk-slider clearfix">
-        <ul class="slides">
-            <li><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-            <li><div class="imgb"><span><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-            <li><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-            <li><div class="imgb"><span><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-        </ul>
-    </div>
-    <!-- end slider -->
-    <!-- start carousel -->
-    <div class="dk-carousel clearfix">
-    	<span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
-    	<span class="pull-left">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</span>
-        <ul class="slides">
-            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-            <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
-            <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-            <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
-        </ul>
-    </div>
-    <!-- end carousel -->
-</div>
-<!-- end dk-slider -->
 </body>
 </html>

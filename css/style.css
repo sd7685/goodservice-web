@@ -1268,7 +1268,7 @@ body {
 /* Dk-Vendor-detail */
 .dk-vendor-detail {
 	padding-bottom:60px;
-	padding-top:10px;
+	padding-top:40px;
 }
 .dk-vendor-detail h2 {
 	padding-bottom:15px;
@@ -1498,7 +1498,6 @@ body {
 	float:left;
 	margin-right:10px;
 	position:relative;
-	z-index:1;
 	-webkit-border-radius:2px;
 	   -moz-border-radius:2px;
 		-ms-border-radius:2px;
@@ -1506,12 +1505,18 @@ body {
 			border-radius:2px;
 }
 .vendor-gallery li img {
+	border:1px solid #e4e4e4;
 	width:82px;
 	height:82px;
 	position:absolute;
 	left:0;
 	top:0;
 	z-index:2;
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+		-ms-border-radius:2px;
+		 -o-border-radius:2px;
+			border-radius:2px;
 }
 .vendor-gallery li.last {
 	background:#e4e4e4;
@@ -1525,18 +1530,22 @@ body {
 .vendor-gallery li img:nth-child(2) {
 	left:5px;
 	top:5px;
+	z-index:3;
 }
 .vendor-gallery li img:nth-child(3) {
 	left:10px;
 	top:10px;
+	z-index:4;
 }
 .vendor-gallery li img:nth-child(4) {
 	left:15px;
 	top:15px;
+	z-index:5;
 }
 .vendor-gallery li img:nth-child(5) {
 	left:20px;
 	top:20px;
+	z-index:6;
 }
 
 /* Dk-search */
@@ -2083,6 +2092,9 @@ body {
 	width:700px;
 	height:auto;
 }
+.dk-slider .slides li .caption {
+	display:none;
+}
 .dk-slider .flex-prev,
 .dk-slider .flex-next {
 	background:url(../images/bg_slider_arrow.png) no-repeat left top;
@@ -2139,7 +2151,7 @@ body {
 .dk-carousel:hover .flex-viewport {
 	height:65px;
 }
-.dk-slider-box .close-btn {
+.dk-slider-box .close-btn2 {
 	display:inline-block;
 	font-size:30px;
 	color:#fff;
@@ -2233,6 +2245,51 @@ input[type="radio"] + label span {
 input[type="radio"]:checked + label span {
     background:url(../images/bg_radio.png) no-repeat left -14px;
 }
+
+/* Tab-nav */
+.tab-nav {
+	border-bottom:1px solid #d7d7d7;
+	background:#fff;
+	width:50%;
+	height:36px;
+	float:left;
+	font-size:12px;
+	color:#a0adb4;
+	font-weight:600;
+	text-transform:uppercase;
+	position:fixed;
+	right:-100%;
+	top:0;
+	z-index:999;
+	transition:0.2s;
+}
+.rightcol.active .tab-nav {
+	right:0;
+}
+.tab-nav a {
+	height:36px;
+	padding:0 5px;
+	margin-left:10px;
+	display:inline-block;
+	color:#a0adb4;
+	line-height:34px;
+}
+.tab-nav a:hover,.tab-nav a.active {
+	border-bottom:2px solid #36c647;
+	color:#2b2b2b;
+}
+
+.top-padding {
+	padding-top:45px;
+}
+
+
+
+
+
+
+
+
 
 
 .loading {
