@@ -2253,7 +2253,7 @@ body {
 
 /* Filter */
 .filter {
-	padding-top:20px;
+	padding:30px 45px 0 0;
 }
 .filter .column {
 	border:1px solid #d7d7d7;
