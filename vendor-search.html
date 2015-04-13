@@ -36,53 +36,91 @@ $(document).ready(function() {
 		return false;
     });
 	
-	
-	$(window).load(function() {
+	///////// slider1 ////////////
+	$captions = $('.captions');
+	$captions2 = $('.captions2');
 		
-		$captions = $('.captions');
-		
-		$('.dk-carousel').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			itemWidth: 107,
-			itemMargin: 15,
-			asNavFor: '.dk-slider'
-			
-		});
-		   
-		$('.dk-slider').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			sync: ".dk-carousel",
-			
-			start: function() {
-				$activecaption = $('.flex-active-slide .flex-caption');
-				$captions.html($activecaption.text());        
-			},
-			after: function() {
-				$activecaption = $('.flex-active-slide .flex-caption');
-				$captions.html($activecaption.text());
-			}
-			
-		});
-	
+	$('.dk-carousel1').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 107,
+		itemMargin: 15,
+		asNavFor: '.dk-slider1'
 	});
+		   
+	$('.dk-slider1').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		sync: ".dk-carousel1",
+		start: function() {
+			$activecaption = $('.flex-active-slide .flex-caption');
+			$captions.html($activecaption.text());        
+		},
+		after: function() {
+			$activecaption = $('.flex-active-slide .flex-caption');
+			$captions.html($activecaption.text());
+		}
+	});	
 	
-	$('.vendor-gallery li img').click(function() {
-		$('.dk-slider-box').addClass('active');
+	
+	$('.dk-carousel2').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 107,
+		itemMargin: 15,
+		asNavFor: '.dk-slider2'
+	});
+		   
+	$('.dk-slider2').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		sync: ".dk-carousel2",
+		start: function() {
+			$activecaption = $('.flex-active-slide .flex-caption2');
+			$captions2.html($activecaption.text());        
+		},
+		after: function() {
+			$activecaption = $('.flex-active-slide .flex-caption2');
+			$captions2.html($activecaption.text());
+		}
+	});	
+	
+	
+	
+	$('.dk-gallery-link li a').click(function() {
+		$('#dk-slider').addClass('active');
+		$('body').css("overflow","hidden");
+		$('.rightcol-overlay').css("overflow","inherit");
+		$('.main-overlay').hide();
+    });
+	
+	$('.dk-videos-link li a').click(function() {
+		$('#dk-videos').addClass('active');
 		$('body').css("overflow","hidden");
 		$('.rightcol-overlay').css("overflow","inherit");
 		$('.main-overlay').hide();
     });
 	
 	$('.dk-slider-box .close-btn2').click(function() {
-		$('.dk-slider-box').removeClass('active');
+		$('#dk-slider,#dk-videos').removeClass('active');
 		$('body').css("overflow","inherit");
+		$('.rightcol-overlay').css("overflow","auto");
+		$('.main-overlay').show();
     });
+	
+	
 	
 	var hrefValue;
 	$('.rightcol-overlay').scroll(function(){
@@ -159,7 +197,7 @@ $(document).ready(function() {
                         </div>
                         <h3>Categories</h3>
                         <div class="column">
-                        	<h4><a href="#filter-categories" data-toggle="collapse" title="Mobile Repair">Mobile Repair</a></h4>
+                        	<h4><a href="#filter-categories" data-toggle="collapse" title="Mobile Repair"><strong class="pull-right">(1200)</strong>Mobile Repair Mobile Repair</a></h4>
                             <ul class="collapse" id="filter-categories">
                                 <li><a href="#" title="Sector 24">Sector 24</a></li>
                                 <li><a href="#" title="Sector 2">Sector 2</a></li>
@@ -305,19 +343,6 @@ $(document).ready(function() {
                             <!-- end tab-nav -->
                         </div>
                         <!-- end vendor-detail-top-info -->
-                        <!-- start map -->
-                        <div class="row">
-                            <div class="col-md-12 map">
-                                <div class="imgb">
-                                    <a href="#map" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" title="Map">
-                                    <img src="images/img_map.jpg" width="600" height="79" alt="map">
-                                    <div class="overlay"><span><span>View Map</span></span></div>
-                                    </a>
-                                </div>
-                                <div class="map-box collapse" id="map"><img src="images/img_map.jpg" width="600" height="79" alt="map"></div>
-                            </div>
-                        </div>
-                        <!-- end map -->
                         <!-- start info -->
                         <div class="row">
                             <div class="col-md-12 info">
@@ -326,7 +351,7 @@ $(document).ready(function() {
                         </div>
                         <!-- end info -->
                         <!-- start vendor-gallery -->
-                        <div class="vendor-gallery row section" id="link-box1">
+                        <div class="vendor-gallery row dk-gallery-link" id="link-box1">
                             <div class="col-md-12">
                                 <h3>Photos</h3>
                                 <ul>
@@ -345,20 +370,49 @@ $(document).ready(function() {
                                     </li>
                                     <li>
                                         <a href="#" title="Gallery">
-                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
-                                            <img src="images/img_gallery2.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_slider1.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_slider2.jpg" width="960" height="540" alt="gallery">
                                             <img src="images/img_gallery3.jpg" width="960" height="540" alt="gallery">
                                             <img src="images/img_gallery4.jpg" width="960" height="540" alt="gallery">
+                                             <img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery">
                                         </a>
                                     </li>
                                     <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
                                     <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
                                     <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
-                                    <li class="last"><a href="#" title="+1882">+1882</a></li>
+                                    <li class="last"><a href="#" title="View More">View More</a></li>
                                 </ul>
                             </div>
                         </div>
                         <!-- end vendor-gallery -->
+                        <!-- start vendor-videos -->
+                        <div class="vendor-gallery vendor-videos row dk-videos-link" id="link-box1">
+                            <div class="col-md-12">
+                                <h3>Videos</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                        	<div class="overlay"><img src="images/ico_play.png" width="40" height="40" alt="play"></div>
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                        	<div class="overlay"><img src="images/ico_play.png" width="40" height="40" alt="play"></div>
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                        	<div class="overlay"><img src="images/ico_play.png" width="40" height="40" alt="play"></div>
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li class="last"><a href="#" title="View More">View More</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end vendor-videos -->
                         <!-- start price-list -->
                         <div class="row">
                             <div class="col-md-12 price-list section" id="link-box2">
@@ -731,6 +785,18 @@ $(document).ready(function() {
                             </div>
                         </div>
                         <!-- end vendor-info -->
+                        <!-- start map -->
+                        <div class="row">
+                            <div class="col-md-12 map">
+                            	<h3>Map</h3>
+                                <div class="imgb">
+                                    <a href="#" title="Map">
+                                    <img src="http://maps.googleapis.com/maps/api/staticmap?scale=1&zoom=15&size=800x800&maptype=roadmap&markers=color:red%7Clabel:A%7C28.4593715,77.0262573&sensor=false&center=28.4593715,77.0262573&key=AIzaSyAiNMM9JT4UQvk-S9hBOTkZihhaZyR2M6Y" width="600" height="79" alt="map">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end map -->
                     </div>
                     <!-- end dk-vendor-detail -->
                     <!-- start dk-chat-bar -->
@@ -744,10 +810,10 @@ $(document).ready(function() {
                     </div>
                     <!-- end loading -->
                     <!-- start dk-slider -->
-                    <div class="dk-slider-box">
+                    <div class="dk-slider-box" id="dk-slider">
                         <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
                         <!-- start slider -->
-                        <div class="dk-slider clearfix">
+                        <div class="dk-slider1 clearfix">
                             <ul class="slides">
                                 <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
                                 <li><p class="flex-caption">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
@@ -757,9 +823,36 @@ $(document).ready(function() {
                         </div>
                         <!-- end slider -->
                         <!-- start carousel -->
-                        <div class="dk-carousel clearfix">
+                        <div class="dk-carousel1 clearfix">
                             <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
                             <span class="pull-left captions"></span>
+                            <ul class="slides">
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
+                            </ul>
+                        </div>
+                        <!-- end carousel -->
+                    </div>
+                    <!-- end dk-slider -->
+                    <!-- start dk-slider -->
+                    <div class="dk-slider-box" id="dk-videos">
+                        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
+                        <!-- start slider -->
+                        <div class="dk-slider2 clearfix">
+                            <ul class="slides">
+                                <li><p class="flex-caption2">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
+                                <li><p class="flex-caption2">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
+                                <li><p class="flex-caption2">5/5: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
+                                <li><p class="flex-caption2">7/7: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
+                            </ul>
+                        </div>
+                        <!-- end slider -->
+                        <!-- start carousel -->
+                        <div class="dk-carousel2 clearfix">
+                            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
+                            <span class="pull-left captions2"></span>
                             <ul class="slides">
                                 <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
                                 <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
