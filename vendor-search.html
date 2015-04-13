@@ -6,6 +6,7 @@
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/fonts.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <!--<script src="js/bootstrap.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
@@ -23,7 +24,7 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
     });
 	
-	$('.dk-vendor-list a').click(function() {
+	$('.dk-vendor-list h3 a').click(function() {
 		$('.main-overlay').show();
 		$('.rightcol').addClass('active');
 		$('body').css("overflow","hidden");
@@ -181,54 +182,92 @@ $(document).ready(function() {
     	<!-- start row -->
     	<div class="row">
         	<!-- start leftcol -->
-        	<div class="col-md-10  col-md-offset-1 leftcol">
+        	<div class="col-md-10 col-md-offset-1 leftcol">
+            	<!-- start dk-search -->
+            	<div class="row">
+                	<div class="col-lg-10 col-md-offset-1">
+                    	<div class="dk-search">
+                        	<form action="#">
+                            	<div class="input-search">
+                                    <div class="input-search-in">
+                                    	<span class="icon-search_icon"></span><input name="search" type="text" value="Search here for anything">
+                                    </div>
+                                </div>
+                                <div class="input-city">
+                                	<div class="input-city-in">
+                                		<span class="icon-map_marker"></span><input name="search" type="text" value="Anywhere In Gurgoan">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end dk-search -->
+            	<!-- start result-count -->
+            	<div class="row">
+                	<div class="col-lg-12">
+                    	<div class="result-count">
+                        	<p><span><strong>70</strong> mobile & tablet repair in gurgaon</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end result-count -->
             	<div class="row">
                 	<!-- start filter -->
                     <div class="col-md-3 filter">
                     	<h3>Locality</h3>
                         <div class="column">
-                        	<h4><a href="#filter-locality" data-toggle="collapse" title="Anywhere in Gurgoan">Anywhere in Gurgoan</a></h4>
-                            <ul class="collapse in" id="locality">
-                                <li><a href="#" title="Sector 24" class="active">Sector 24</a></li>
-                                <li><a href="#" title="Sector 2">Sector 2</a></li>
-                                <li><a href="#" title="Huda city center">Huda city center</a></li>
-                                <li><a href="#" title="MG road metro">MG road metro</a></li>
-                            </ul>
+                        	<h4><a href="#filter-locality" data-toggle="collapse" title="Anywhere in Gurgoan"><span class="icon-down_arrow"></span>Anywhere in Gurgoan</a></h4>
+                            <div class="collapse" id="filter-locality">
+                                <ul>
+                                    <li><a href="#" title="Sector 24" class="active">Sector 24</a></li>
+                                    <li><a href="#" title="Sector 2">Sector 2</a></li>
+                                    <li><a href="#" title="Huda city center">Huda city center</a></li>
+                                    <li><a href="#" title="MG road metro">MG road metro</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <h3>Categories</h3>
                         <div class="column">
-                        	<h4><a href="#filter-categories" data-toggle="collapse" title="Mobile Repair"><strong class="pull-right">(1200)</strong>Mobile Repair Mobile Repair</a></h4>
-                            <ul class="collapse" id="filter-categories">
-                                <li><a href="#" title="Sector 24">Sector 24</a></li>
-                                <li><a href="#" title="Sector 2">Sector 2</a></li>
-                                <li><a href="#" title="Huda city center">Huda city center</a></li>
-                                <li><a href="#" title="MG road metro">MG road metro</a></li>
-                            </ul>
+                        	<h4><a href="#filter-categories" data-toggle="collapse" title="Mobile Repair"><span class="icon-down_arrow"></span><strong class="pull-right">(1200)</strong>Mobile Repair Mobile Repair</a></h4>
+                            <div class="collapse" id="filter-categories">
+                                <ul>
+                                    <li><a href="#" title="Sector 24">Sector 24</a></li>
+                                    <li><a href="#" title="Sector 2">Sector 2</a></li>
+                                    <li><a href="#" title="Huda city center">Huda city center</a></li>
+                                    <li><a href="#" title="MG road metro">MG road metro</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <h3>Brands</h3>
                         <div class="column">
-                        	<h4><a href="#filter-brands" data-toggle="collapse" title="Show Any"><strong class="pull-right">(1200)</strong>Show Any</a></h4>
-                            <ul class="collapse" id="filter-brands">
-                                <li><input type="radio" id="radio1"><label for="radio1" class="disabled"><strong class="pull-right">(1200)</strong><span></span>Sector 24 Show Any Show Any</label></li>
-                                <li><input type="radio" id="radio2"><label for="radio2"><strong class="pull-right">(1200)</strong><span></span>Sector 2</label></li>
-                                <li><input type="radio" id="radio3"><label for="radio3"><span></span>Huda city center <strong>(1200)</strong></label></li>
-                                <li><input type="radio" id="radio4"><label for="radio4"><span></span>MG road metro <strong>(1200)</strong></label></li>
-                            </ul>
+                        	<h4><a href="#filter-brands" data-toggle="collapse" title="Show Any"><span class="icon-down_arrow"></span><strong class="pull-right">(1200)</strong>Show Any</a></h4>
+                            <div class="collapse" id="filter-brands">
+                                <ul>
+                                    <li><input type="radio" id="radio1"><label for="radio1" class="disabled"><strong class="pull-right">(1200)</strong><span></span>Sector 24 Show Any Show Any</label></li>
+                                    <li><input type="radio" id="radio2"><label for="radio2"><strong class="pull-right">(1200)</strong><span></span>Sector 2</label></li>
+                                    <li><input type="radio" id="radio3"><label for="radio3"><strong class="pull-right">(1200)</strong><span></span>Huda city center</label></li>
+                                    <li><input type="radio" id="radio4"><label for="radio4"><strong class="pull-right">(1200)</strong><span></span>MG road metro</label></li>
+                                </ul>
+                            </div>
                         </div>
                         <h3>Service Center</h3>
                         <div class="column">
-                            <h4><a href="#filter-service" data-toggle="collapse" title="Show Any">Show Any</a></h4>
-                            <ul class="collapse" id="filter-service">
-                                <li><input type="checkbox" id="checkbox1"><label for="checkbox1" class="disabled"><span></span>Sector 24</label></li>
-                                <li><input type="checkbox" id="checkbox2"><label for="checkbox2"><span></span>Sector 2</label></li>
-                                <li><input type="checkbox" id="checkbox3"><label for="checkbox3"><span></span>Huda city center</label></li>
-                                <li><input type="checkbox" id="checkbox4"><label for="checkbox4"><span></span>MG road metro</label></li>
-                            </ul>
+                            <h4><a href="#filter-service" data-toggle="collapse" title="Show Any"><span class="icon-down_arrow"></span> Show Any</a></h4>
+                            <div class="collapse" id="filter-service">
+                                <ul>
+                                    <li><input type="checkbox" id="checkbox1"><label for="checkbox1" class="disabled"><strong class="pull-right">(1200)</strong><span></span>Sector 24</label></li>
+                                    <li><input type="checkbox" id="checkbox2"><label for="checkbox2"><strong class="pull-right">(1200)</strong><span></span>Sector 2</label></li>
+                                    <li><input type="checkbox" id="checkbox3"><label for="checkbox3"><strong class="pull-right">(1200)</strong><span></span>Huda city center</label></li>
+                                    <li><input type="checkbox" id="checkbox4"><label for="checkbox4"><strong class="pull-right">(1200)</strong><span></span>MG road metro</label></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <!-- end filter -->
                     <!-- start dk-vendor-list -->
-                    <div class="dk-vendor-list col-md-9">
+                    <div class="dk-vendor-list col-md-8 col-md-offset-1">
                         <!-- start row -->
                         <div class="row row1">
                             <div class="col-md-12">
@@ -238,9 +277,9 @@ $(document).ready(function() {
                                             <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <a href="#" title="See More Branches" class="pull-right">See More Branches</a>
+                                            <div class="col-md-12 address-row">
                                                 <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
                                             </div>
                                         </div>
                                     </div>
@@ -248,35 +287,222 @@ $(document).ready(function() {
                                         <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
                                     </div>
                                     <div class="col-md-3">
-                                        <a href="#" title="PHONE" class="button phone"><span class="icon-phone"></span>PHONE</a>
+                                        <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
                                     </div>
                                 </div>
-                                <div class="row price">
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <h4><a href="#dk-price-box1" data-toggle="collapse" title="Prices" class="active"><span>View</span> Prices <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                        <div class="collapse in" id="dk-price-box1">
-                                            <div class="price-box">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box1" data-toggle="collapse" title="Prices" class="active"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse in" id="dk-price-box1">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                        <p><strong>Rs 500</strong> <small>|</small> Other Samsung Charger</p>
-                                                        <p><a href="#" title="View More Prices" class="more-prices">View More Prices</a></p>
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row price">
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <h4><a href="#dk-repair-box1" data-toggle="collapse" title="Laptop & Computer Repai" class="active">Laptop & Computer Repai <i class="fa fa-plus-circle"></i><i class="fa fa-minus-circle"></i></a></h4>
-                                        <div class="collapse in" id="dk-repair-box1">
-                                            <div class="price-box">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box1" data-toggle="collapse" title="SERVICES" class="active">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse in" id="dk-repair-box1">
                                                 <div class="row">
                                                     <div class="col-md-12">
-                                                        <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                         <p><strong>Other</strong> Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see Other Samsung Charger Showing you Zion Technologies's Mobile & Tablet Repair , see</p>
-                                                         <p><a href="#" title="View More" class="more-prices">View More</a></p>
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 address-row">
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box2" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-price-box2">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box2" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-repair-box2">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 address-row">
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box3" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-price-box3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box3" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-repair-box3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 address-row">
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box4" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-price-box4">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box4" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-repair-box4">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
