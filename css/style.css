@@ -1749,7 +1749,10 @@ body {
 	border:1px solid #979797;
 	background:#fff;
 	display:block;
-	margin-bottom:15px;
+	max-width:140px;
+	float:right;
+	padding:0 15px;
+	margin-left:5px;
 	text-align:center;
 	font-size:12px;
 	color:#979797;
@@ -1775,10 +1778,6 @@ body {
 	background:#55ec73;
 	color:#fff;
 }
-
-
-
-
 
 /* Chat-mg */
 .chat-mg {
@@ -2498,6 +2497,92 @@ input[type="radio"]:checked + label span {
 	z-index:2;
 }
 
+/* Showcase */
+.showcase {
+	background:#1ac63e url(../images/bg_showcase_pattern.png) repeat;
+	min-height:240px;
+}
+
+/* Form-box */
+body.inner {
+	height:100%;
+}
+.form-box {
+	padding-top:180px;
+}
+.form-box form {
+	border:1px solid #d7d7d7;
+	padding:15px;
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+		-ms-border-radius:2px;
+		 -o-border-radius:2px;
+			border-radius:2px;
+}
+.form-box h2 {
+	padding-bottom:10px;
+	font-size:18px;
+	color:2b2b2b;
+	font-weight:600;
+	text-transform:uppercase;
+}
+.form-box label {
+	margin-bottom:5px;
+	display:block;
+	color:#2b2b2b;
+	font-weight:600;
+	line-height:normal;
+}
+.form-box .input {
+	border:1px solid #d7d7d7;
+	width:100%;
+	height:35px;
+	margin-bottom:15px;
+	padding:5px 10px;
+	font-size:13px;
+	color:#2b2b2b;
+	line-height:normal;
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+		-ms-border-radius:2px;
+		 -o-border-radius:2px;
+			border-radius:2px;
+}
+.form-box .remember {
+	margin-bottom:15px;
+}
+.form-box .checkbox {
+	display:none;
+}
+.form-box input[type="checkbox"] + label span {
+	margin:0 5px 0 0;
+}
+.form-box .button {
+	border:1px solid #d7d7d7;
+	background:#fff;
+	padding:12px 15px 10px 15px;
+	font-size:13px;
+	color:#2b2b2b;
+	font-weight:700;
+	text-transform:uppercase;
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+		-ms-border-radius:2px;
+		 -o-border-radius:2px;
+			border-radius:2px;
+}
+.form-box .button:hover {
+	border:1px solid #3dcc59;
+	background:#3dcc59;
+	color:#fff;
+}
+.form-box .pull-right {
+	margin-top:12px;
+}
+.form-box .pull-right:hover {
+	color:#3dcc59;
+}
+
 .loading {
 	position:absolute;
 }
@@ -2836,13 +2921,13 @@ html {
 {
 	font-family: 'proxima_nova_rgbold_italic';
 }
-.filter h3, .dk-vendor-list .price p strong, .result-count strong,.dk-vendor-list .address-row a strong {
+.filter h3, .dk-vendor-list .price p strong, .result-count strong, .dk-vendor-list .address-row a strong,.form-box .button {
 	font-family: 'proxima_nova_rgbold';
 }
 .dk-search .input-city input {
 	font-family: 'proxima_nova_rgregular';
 }
-.filter h4, .filter li strong, .dk-vendor-list h3, .dk-vendor-list h4 {
+.filter h4, .filter li strong, .dk-vendor-list h3, .dk-vendor-list h4, .form-box h2, .form-box label {
 	font-family: 'proxima_novasemibold';
 }
 .dk-search .input-search input {
