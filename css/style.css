@@ -2409,7 +2409,7 @@ input[type="radio"]:checked + label span {
 }
 .dk-search span {
 	float:left;
-	margin:0 15px 0 7px;
+	margin:0 9px 0 7px;
 }
 .dk-search .input-search {
 	background:url(../images/bg_search.png) no-repeat left bottom;
@@ -2467,6 +2467,80 @@ input[type="radio"]:checked + label span {
 	font-weight:400;
 	line-height:24px;
 }
+/* search2 */
+.dk-search2 .input-search,
+.dk-search2 .input-city {
+	border:1px solid #cbcbcb;
+	min-height:54px;
+	-webkit-border-radius:5px;
+	   -moz-border-radius:5px;
+		-ms-border-radius:5px;
+		 -o-border-radius:5px;
+			border-radius:5px;
+}
+.dk-search2 .input-search,
+.dk-search2 .input-search-in,
+.dk-search2 .input-city,
+.dk-search2 .input-city-in {
+	background:none;
+	padding:0;
+}
+.dk-search2 .input-search input,
+.dk-search2 .input-city input {
+	height:52px;
+	padding:8px 10px 8px 0;
+	line-height:36px;
+}
+.dk-search2 .input-search span,
+.dk-search2 .input-city span {
+	margin-top:17px;
+}
+/* search2 */
+.dk-search3 .input-search,
+.dk-search3 .input-city {
+	border:1px solid #cbcbcb;
+	min-height:54px;
+	-webkit-border-radius:50px;
+	   -moz-border-radius:50px;
+		-ms-border-radius:50px;
+		 -o-border-radius:50px;
+			border-radius:50px;
+}
+.dk-search3 .input-search,
+.dk-search3 .input-search-in,
+.dk-search3 .input-city,
+.dk-search3 .input-city-in {
+	background:none;
+	padding:0;
+}
+.dk-search3 .input-search,
+.dk-search3 .input-city {
+	background:#fff;
+}
+.dk-search3 .input-search input,
+.dk-search3 .input-city input {
+	height:52px;
+	padding:8px 10px 8px 0;
+	line-height:36px;
+}
+.dk-search3 .input-search input {
+	width:455px;
+}
+.dk-search3 .input-city input {
+	width:160px;
+}
+.dk-search3 .input-search span,
+.dk-search3 .input-city span {
+	margin-top:17px;
+	margin-left:15px;
+}
+.showcase3 .dk-search3 .input-city span,
+.showcase3 .dk-search3 .input-city input {
+	color:#33cf54;
+}
+.showcase3 .dk-search3 {
+	padding-bottom:24px;
+}
 
 /* Result-count */
 .result-count {
@@ -2476,6 +2550,9 @@ input[type="radio"]:checked + label span {
 	font-weight:400;
 	position:relative;
 	z-index:1;
+}
+.result-count2 {
+	margin-top:55px;
 }
 .result-count span {
 	background:#fff;
@@ -2500,9 +2577,98 @@ input[type="radio"]:checked + label span {
 /* Showcase */
 .showcase {
 	background:#1ac63e url(../images/bg_showcase_pattern.png) repeat;
-	min-height:240px;
+	text-align:center;
+	font-size:14px;
+	color:#fff;
 }
-
+.showcase-box {
+	background:url(../images/ico_phone.png) no-repeat 31% 55px;
+	min-height:232px;
+	padding-top:30px;
+}
+.showcase h3 {
+	padding-bottom:25px;
+	font-size:20px;
+	color:#fff;
+	font-weight:400;
+}
+.showcase .phone {
+	padding-bottom:8px;
+	display:inline-block;
+	font-size:42px;
+	color:#fff;
+	font-weight:300;
+	line-height:normal;
+}
+.showcase .or {
+	opacity:0.5;
+}
+.showcase a.button,
+a.book-new-btn {
+	background:#11902a;
+	min-width:250px;
+	height:40px;
+	margin-top:10px;
+	display:inline-block;
+	text-align:center;
+	font-size:12px;
+	color:#fff;
+	line-height:40px;
+	text-transform:uppercase;
+	-webkit-border-radius:2px;
+	   -moz-border-radius:2px;
+		-ms-border-radius:2px;
+		 -o-border-radius:2px;
+			border-radius:2px;
+}
+a.book-new-btn {
+	margin-top:0;
+	min-width:240px;
+	float:right;
+	height:32px;
+	line-height:32px;
+}
+/* Showcase2 */
+.showcase2 .showcase-box {
+	min-height:130px;
+}
+.showcase2 h3 {
+	padding-bottom:15px;
+}
+.showcase3 .showcase-box {
+	background-position:31% 7px;
+	min-height:60px;
+	padding-top:19px;
+}
+.showcase3 .phone {
+	font-weight:700;
+}
+.showcase3 .showcase-box {
+	background-position:31% 7px;
+	min-height:60px;
+	padding-top:19px;
+}
+.showcase4 .showcase-box {
+	background-position:12% 7px;
+	min-height:60px;
+	padding-top:11px;
+}
+.showcase4 .or {
+	display:inline-block;
+	padding:0 66px;
+	float:left;
+	line-height:40px;
+}
+.showcase4 a.button {
+	margin:0;
+	float:left;
+}
+.showcase4 .phone {
+	float:left;
+	margin-left:17%;
+	font-size:35px;
+	font-weight:700;
+}
 /* Form-box */
 .form-box {
 	padding-top:180px;
@@ -3067,7 +3233,7 @@ html {
 {
 	font-family: 'proxima_nova_rgbold_italic';
 }
-.filter h3, .dk-vendor-list .price p strong, .result-count strong, .dk-vendor-list .address-row a strong,.form-box .button {
+.filter h3, .dk-vendor-list .price p strong, .result-count strong, .dk-vendor-list .address-row a strong,.form-box .button,.showcase3 .phone,.showcase4 .phone {
 	font-family: 'proxima_nova_rgbold';
 }
 .dk-search .input-city input {
@@ -3076,6 +3242,6 @@ html {
 .filter h4, .filter li strong, .dk-vendor-list h3, .dk-vendor-list h4, .form-box h2, .form-box label,.table-list .row:first-child,.table-list p strong,.table-list .button,.table-list .add-row-txt,.heading h2,.table-top-bar .button {
 	font-family: 'proxima_novasemibold';
 }
-.dk-search .input-search input {
+.dk-search .input-search input, .showcase .phone {
 	font-family: 'proxima_novathin';
 }
