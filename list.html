@@ -42,6 +42,38 @@
 <div class="main-container">
 	<!-- start container -->
 	<div class="container">
+    	<!-- start table-top-bar -->
+    	<div class="row">
+        	<div class="col-md-12 table-top-bar">
+            	<div class="row">
+                	<div class="col-md-4">
+                    	<p>Time Period <select class="select">
+                        	<option>Today</option>
+                        </select> to <select class="select">
+                        	<option>Today</option>
+                        </select></p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                    	<a href="#" title="Download in Excel" class="button">Download in Excel</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                    	<p><a href="#" title="Logout" class="pull-right button">Logout</a> <select class="select">
+                        	<option>Everyone</option>
+                        </select></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end table-top-bar -->
+    	<!-- start heading -->
+    	<div class="row">
+        	<div class="col-md-12">
+            	<div class="heading">
+                	<h2>April 12th, 2015</h2>
+                </div>
+            </div>
+        </div>
+        <!-- end heading -->
     	<!-- start row -->
     	<div class="row">
         	<!-- start table-list -->
@@ -119,7 +151,14 @@
                 </div>
                 <!-- end row -->
                 <!-- start row -->
-            	<div class="row form-row">
+            	<div class="row add-row-txt">
+                	<div class="col-md-12">
+                    	<p><a href="#form-row" data-toggle="collapse" title="Add New Lead">Add New Lead</a></p>
+                    </div>
+                </div>
+                <!-- end row -->
+                <!-- start row -->
+            	<div class="row form-row collapse" id="form-row">
                 	<div class="col-md-3">
                     	<textarea class="textarea"></textarea>
                     </div>
