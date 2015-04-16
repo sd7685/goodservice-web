@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo</title>
+</head>
+
+<body>
+<h1>My First JavaScript</h1>
+<p><a href="#" onclick="document.getElementById('time').innerHTML = Date()">Click me to display Date and Time.</a></p>
+<div id="time"></div>
+
+<p><a href="#" onclick="document.getElementById('text-hello').innerHTML =('hello')">Click me to display text.</a></p>
+<div id="text-hello"></div>
+
+<p><a href="#" onclick="changeImage()">Click me to display change Image.</a></p>
+<img src="images/bg_chat_pattern.png" width="499" height="340" alt="pattern" id="pattern">
+
+<script>
+function changeImage() {
+    var image = document.getElementById('pattern');
+    if (image.src.match("bg_chat_pattern")) {
+        image.src = "images/bg_home_pattern.png";
+    } else {
+        image.src = "images/bg_chat_pattern.png";
+    }
+}
+</script>
+
+<p id="plus-txt"></p>
+
+<script>
+var pi = 3.14;
+var person = "John Doe";
+var answer = 'Yes I am!';
+
+document.getElementById("plus-txt").innerHTML = pi + person + answer;
+</script>
+
+<p id="1var-3value"></p>
+
+<script>
+var cars = ["Saab","Volvo","BMW"];
+
+document.getElementById("1var-3value").innerHTML = cars[2];
+</script>
+</body>
+</html>
