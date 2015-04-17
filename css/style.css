@@ -1636,6 +1636,11 @@ body {
 .dk-vendor-list h3 a:hover {
 	color:#3dcc59;
 }
+.dk-vendor-list h3 address {
+	font-size:12px;
+	color:#afbbc1;
+	font-weight:400;
+}
 .dk-vendor-list .address-row {
 	padding-bottom:13px;
 }
@@ -2893,6 +2898,28 @@ a.book-new-btn {
 .table-top-bar .pull-right.button {
 	border:1px solid #3dcc59;
 }
+
+
+
+/* images-section */
+.images-section {
+	padding-bottom:10px;
+}
+
+.images-section img {
+	border:1px solid #d7d7d7;
+	padding:3px;
+	width:43px;
+	height:43px;
+	float:left;
+	margin-left:5px;
+}
+
+
+
+
+
+
 
 
 .loading {
