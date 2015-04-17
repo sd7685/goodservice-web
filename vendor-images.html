@@ -124,17 +124,6 @@ $(document).ready(function() {
 	
 	
 	var hrefValue;
-	$('.rightcol-overlay').scroll(function(){
-		
-		if ($(this).scrollTop() > 10) {
-			$('.vendor-detail-top-info').addClass('fiexd');
-		} else {
-			$('.vendor-detail-top-info').removeClass('fiexd');
-		}
-	});
-	
-	
-	
 	$('.tab-nav a').click(function() {
 		$(hrefValue).removeClass("top-padding");
 		$('.tab-nav a').removeClass('active');
@@ -143,6 +132,20 @@ $(document).ready(function() {
 		console.log(hrefValue);
 		$(hrefValue).addClass("top-padding");
     });
+	
+	$('.panel-group > div').hide().filter(':lt(2)').show();
+	$('.panel-group').append('<div class="view-more"><a href="#" title="View More">View More</a></div>').find('div:last').click(function(){
+		$(this).siblings(':gt(1)').toggle();
+	});
+	
+	$('.vendor-info .table > div').hide().filter(':lt(2)').show();
+	$('.vendor-info .table').append('<div class="view-more"><a href="#" title="View More">View More</a></div>').find('div:last').click(function(){
+		$(this).siblings(':gt(1)').toggle();
+	});
+
+ 
+	
+
 	
 });
 </script>
