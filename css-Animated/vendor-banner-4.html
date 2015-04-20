@@ -1,0 +1,1101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Good Service</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/fonts.css" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script>
+$(document).ready(function() {
+	
+    $('.panel-heading').click(function() {
+		$('.panel-heading').removeClass('active');
+        $(this).toggleClass('active');
+    });
+	
+	$('.dk-vendor-list h4 a').click(function() {
+		$(this).toggleClass('active');
+    });
+	
+	$('.dk-vendor-list h3 a').click(function() {
+		$('.main-overlay').show();
+		$('.rightcol').addClass('active');
+		$('body').css("overflow","hidden");
+		return false;
+    });
+	$('.main-overlay,.close-btn').click(function() {
+		$('.main-overlay').hide();
+		$('.rightcol').removeClass('active');
+		$('body').css("overflow","inherit");
+		return false;
+    });
+	
+	///////// slider1 ////////////
+	$captions = $('.captions');
+	$captions2 = $('.captions2');
+		
+	$('.dk-carousel1').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 107,
+		itemMargin: 15,
+		asNavFor: '.dk-slider1'
+	});
+		   
+	$('.dk-slider1').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		sync: ".dk-carousel1",
+		start: function() {
+			$activecaption = $('.flex-active-slide .flex-caption');
+			$captions.html($activecaption.text());        
+		},
+		after: function() {
+			$activecaption = $('.flex-active-slide .flex-caption');
+			$captions.html($activecaption.text());
+		}
+	});	
+	
+	
+	$('.dk-carousel2').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		itemWidth: 107,
+		itemMargin: 15,
+		asNavFor: '.dk-slider2'
+	});
+		   
+	$('.dk-slider2').flexslider({
+		selector: ".slides > li",
+		animation: "slide",
+		controlNav: false,
+		animationLoop: false,
+		slideshow: false,
+		sync: ".dk-carousel2",
+		start: function() {
+			$activecaption = $('.flex-active-slide .flex-caption2');
+			$captions2.html($activecaption.text());        
+		},
+		after: function() {
+			$activecaption = $('.flex-active-slide .flex-caption2');
+			$captions2.html($activecaption.text());
+		}
+	});	
+	
+	
+	
+	$('.dk-gallery-link li a').click(function() {
+		$('#dk-slider').addClass('active');
+		$('body').css("overflow","hidden");
+		$('.rightcol-overlay').css("overflow","inherit");
+		$('.main-overlay').hide();
+    });
+	
+	$('.dk-videos-link li a').click(function() {
+		$('#dk-videos').addClass('active');
+		$('body').css("overflow","hidden");
+		$('.rightcol-overlay').css("overflow","inherit");
+		$('.main-overlay').hide();
+    });
+	
+	$('.dk-slider-box .close-btn2').click(function() {
+		$('#dk-slider,#dk-videos').removeClass('active');
+		$('body').css("overflow","inherit");
+		$('.rightcol-overlay').css("overflow","auto");
+		$('.main-overlay').show();
+    });
+	
+	
+	
+	var hrefValue;
+	$('.rightcol-overlay').scroll(function(){
+		
+		if ($(this).scrollTop() > 10) {
+			$('.vendor-detail-top-info').addClass('fiexd');
+		} else {
+			$('.vendor-detail-top-info').removeClass('fiexd');
+		}
+	});
+	
+	
+	
+	$('.tab-nav a').click(function() {
+		$(hrefValue).removeClass("top-padding");
+		$('.tab-nav a').removeClass('active');
+		$(this).toggleClass('active');
+		hrefValue =  $(this).attr('href');
+		console.log(hrefValue);
+		$(hrefValue).addClass("top-padding");
+    });
+	
+});
+</script>
+</head>
+
+<body>
+<!-- start header -->
+<header class="header">
+	<!-- start container -->
+	<div class="container">
+    	<!-- start row -->
+    	<div class="row">
+        	<div class="col-md-12">
+            	
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</header>
+<!-- end header -->
+<!-- start main-container -->
+<div class="main-container">
+	<!-- start showcase -->
+    <div class="showcase showcase4">
+        <!-- start container -->
+        <div class="container">
+            <div class="row">
+            	<div class="col-md-12">
+                	<div class="showcase-box">
+                        <span class="phone">+91 - 981 017 0429</span>
+                        <p class="or">- OR -</p>
+                        <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end showcase -->
+	<!-- start container -->
+	<div class="container">
+    	<!-- start row -->
+    	<div class="row">
+        	<!-- start leftcol -->
+        	<div class="col-md-10 col-md-offset-1 leftcol">
+            	<!-- start dk-search -->
+            	<div class="row">
+                	<div class="col-lg-10 col-md-offset-1">
+                    	<div class="dk-search">
+                        	<form action="#">
+                            	<div class="input-search">
+                                    <div class="input-search-in">
+                                    	<span class="icon-search_icon"></span><input name="search" type="text" value="Search here for anything">
+                                    </div>
+                                </div>
+                                <div class="input-city">
+                                	<div class="input-city-in">
+                                		<span class="icon-map_marker"></span><input name="search" type="text" value="Anywhere In Gurgoan">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end dk-search -->
+            	<!-- start result-count -->
+            	<div class="row">
+                	<div class="col-lg-12">
+                    	<div class="result-count">
+                        	<p><span><strong>70</strong> mobile & tablet repair in gurgaon</span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end result-count -->
+            	<div class="row">
+                	<!-- start filter -->
+                    <div class="col-md-4">
+                    	<div class="filter">
+                            <h3>Locality</h3>
+                            <div class="column">
+                                <h4><a href="#filter-locality" data-toggle="collapse" title="Anywhere in Gurgoan"><span class="icon-down_arrow"></span>Anywhere in Gurgoan</a></h4>
+                                <div class="collapse" id="filter-locality">
+                                    <ul>
+                                        <li><a href="#" title="Sector 24" class="active">Sector 24</a></li>
+                                        <li><a href="#" title="Sector 2">Sector 2</a></li>
+                                        <li><a href="#" title="Huda city center">Huda city center</a></li>
+                                        <li><a href="#" title="MG road metro">MG road metro</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3>Categories</h3>
+                            <div class="column">
+                                <h4><a href="#filter-categories" data-toggle="collapse" title="Mobile Repair"><span class="icon-down_arrow"></span><strong class="pull-right">(1200)</strong>Mobile Repair Mobile Repair</a></h4>
+                                <div class="collapse" id="filter-categories">
+                                    <ul>
+                                        <li><a href="#" title="Sector 24">Sector 24</a></li>
+                                        <li><a href="#" title="Sector 2">Sector 2</a></li>
+                                        <li><a href="#" title="Huda city center">Huda city center</a></li>
+                                        <li><a href="#" title="MG road metro">MG road metro</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3>Brands</h3>
+                            <div class="column">
+                                <h4><a href="#filter-brands" data-toggle="collapse" title="Show Any"><span class="icon-down_arrow"></span><strong class="pull-right">(1200)</strong>Show Any</a></h4>
+                                <div class="collapse" id="filter-brands">
+                                    <ul>
+                                        <li><input type="radio" id="radio1"><label for="radio1" class="disabled"><strong class="pull-right">(1200)</strong><span></span>Sector 24 Show Any Show Any</label></li>
+                                        <li><input type="radio" id="radio2"><label for="radio2"><strong class="pull-right">(1200)</strong><span></span>Sector 2</label></li>
+                                        <li><input type="radio" id="radio3"><label for="radio3"><strong class="pull-right">(1200)</strong><span></span>Huda city center</label></li>
+                                        <li><input type="radio" id="radio4"><label for="radio4"><strong class="pull-right">(1200)</strong><span></span>MG road metro</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <h3>Service Center</h3>
+                            <div class="column">
+                                <h4><a href="#filter-service" data-toggle="collapse" title="Show Any"><span class="icon-down_arrow"></span> Show Any</a></h4>
+                                <div class="collapse" id="filter-service">
+                                    <ul>
+                                        <li><input type="checkbox" id="checkbox1"><label for="checkbox1" class="disabled"><strong class="pull-right">(1200)</strong><span></span>Sector 24</label></li>
+                                        <li><input type="checkbox" id="checkbox2"><label for="checkbox2"><strong class="pull-right">(1200)</strong><span></span>Sector 2</label></li>
+                                        <li><input type="checkbox" id="checkbox3"><label for="checkbox3"><strong class="pull-right">(1200)</strong><span></span>Huda city center</label></li>
+                                        <li><input type="checkbox" id="checkbox4"><label for="checkbox4"><strong class="pull-right">(1200)</strong><span></span>MG road metro</label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end filter -->
+                    <!-- start dk-vendor-list -->
+                    <div class="dk-vendor-list col-md-8">
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 address-row">
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                    	<a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+										<a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box1" data-toggle="collapse" title="Prices" class="active"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse in" id="dk-price-box1">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box1" data-toggle="collapse" title="SERVICES" class="active">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse in" id="dk-repair-box1">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 address-row">
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                    	<a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+										<a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box2" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-price-box2">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box2" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-repair-box2">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 address-row">
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                    	<a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+										<a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box3" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-price-box3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box3" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-repair-box3">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- start row -->
+                        <div class="row row1">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="row">
+                                            <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 address-row">
+                                                <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                                <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                    	<a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+										<a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price">
+                                            <h4><a href="#dk-price-box4" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-price-box4">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                            <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                    	<div class="price services">
+                                            <h4><a href="#dk-repair-box4" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                            <div class="collapse" id="dk-repair-box4">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    	<div class="price-box">
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                            <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                            <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end dk-vendor-list -->
+                    <!-- start loading -->
+                    <div class="loading" style="display:none;">
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                    </div>
+                    <!-- end loading -->
+                </div>
+            </div>
+            <!-- end leftcol -->
+            <!-- start rightcol -->
+            <div class="col-md-6 rightcol">
+            	<a href="#" title="Close" class="close-btn"><i class="fa fa-times"></i></a>
+                <div class="rightcol-overlay row">
+                    <!-- start dk-vendor-detail -->
+                    <div class="dk-vendor-detail">
+                    	<!-- start vendor-detail-top-info -->
+                    	<div class="vendor-detail-top-info">
+                            <!-- start heaering -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2>Zion Technologies</h2>
+                                </div>
+                            </div>
+                            <!-- end heaering -->
+                            <!-- start title -->
+                            <div class="row">
+                                <div class="col-md-12 title">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <a href="#phone" data-toggle="collapse" title="Phone" class="active"><i class="fa fa-phone"></i> Phone</a>
+                                            <p>HUDA Market <span>Gurgaon</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="collapse col-md-12" id="phone">
+                                            <p><span>Phone:</span> +91-9818271286,+91-9810935376</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end title -->
+                            <!-- start tab-nav -->
+                            <div class="row">
+                            	<div class="col-md-12">
+                            		<div class="tab-nav">
+                                    	<ul>
+                                        	<li><a href="#link-box1" title="Photos">Photos</a></li>
+                                        	<li><a href="#link-box2" title="Prices">Prices</a></li>
+                                        	<li><a href="#link-box3" title="Repair Center Info">Repair Center Info</a></li>
+                                        </ul>
+                            		</div>
+                            	</div>
+                            </div>
+                            <!-- end tab-nav -->
+                        </div>
+                        <!-- end vendor-detail-top-info -->
+                        <!-- start info -->
+                        <div class="row">
+                            <div class="col-md-12 info">
+                                <p>Showing you Zion Technologies's Mobile & Tablet Repair , see <strong>Laptop & Computer Repair</strong></p>
+                            </div>
+                        </div>
+                        <!-- end info -->
+                        <!-- start vendor-gallery -->
+                        <div class="vendor-gallery row dk-gallery-link" id="link-box1">
+                            <div class="col-md-12">
+                                <h3>Photos</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                            <img src="images/img_slider1.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_slider2.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_gallery3.jpg" width="960" height="540" alt="gallery">
+                                            <img src="images/img_gallery4.jpg" width="960" height="540" alt="gallery">
+                                             <img src="images/img_gallery5.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                    <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                    <li><a href="#" title="Gallery"><img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery"></a></li>
+                                    <li class="last"><a href="#" title="View More">View More</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end vendor-gallery -->
+                        <!-- start vendor-videos -->
+                        <div class="vendor-gallery vendor-videos row dk-videos-link" id="link-box1">
+                            <div class="col-md-12">
+                                <h3>Videos</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                        	<div class="overlay"><img src="images/ico_play.png" width="40" height="40" alt="play"></div>
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                        	<div class="overlay"><img src="images/ico_play.png" width="40" height="40" alt="play"></div>
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Gallery">
+                                        	<div class="overlay"><img src="images/ico_play.png" width="40" height="40" alt="play"></div>
+                                            <img src="images/img_gallery1.jpg" width="960" height="540" alt="gallery">
+                                        </a>
+                                    </li>
+                                    <li class="last"><a href="#" title="View More">View More</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end vendor-videos -->
+                        <!-- start price-list -->
+                        <div class="row">
+                            <div class="col-md-12 price-list section" id="link-box2">
+                                <h3>Prices</h3>
+                                <!-- start tabs -->
+                                <div class="panel-group clearfix" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <!-- start column -->
+                                    <div class="panel panel-default">
+                                        <!-- start heading -->
+                                        <div class="panel-heading" role="tab" id="dk-vendor-heading1">
+                                            <!-- start row -->
+                                            <a href="#dk-vendor1" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="dk-vendor1" title="Apple">
+                                            <div class="row">
+                                                <span class="name col-md-12">Apple</span>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong><small>Rs</small>2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                            </a>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end heading -->
+                                        <!-- start content -->
+                                        <div id="dk-vendor1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dk-vendor-heading1">
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end content -->
+                                    </div>
+                                    <!-- end column -->
+                                    <!-- start column -->
+                                    <div class="panel panel-default">
+                                        <!-- start heading -->
+                                        <div class="panel-heading" role="tab" id="dk-vendor-heading2">
+                                            <!-- start row -->
+                                            <a href="#dk-vendor2" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="dk-vendor2" title="Apple">
+                                            <div class="row">
+                                                <span class="name col-md-12">Apple</span>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                            </a>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end heading -->
+                                        <!-- start content -->
+                                        <div id="dk-vendor2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dk-vendor-heading2">
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end content -->
+                                    </div>
+                                    <!-- end column -->
+                                    <!-- start column -->
+                                    <div class="panel panel-default">
+                                        <!-- start heading -->
+                                        <div class="panel-heading" role="tab" id="dk-vendor-heading3">
+                                            <!-- start row -->
+                                            <a href="#dk-vendor3" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="dk-vendor3" title="Apple">
+                                            <div class="row">
+                                                <span class="name col-md-12">Apple</span>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                            </a>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end heading -->
+                                        <!-- start content -->
+                                        <div id="dk-vendor3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dk-vendor-heading3">
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end content -->
+                                    </div>
+                                    <!-- end column -->
+                                    <!-- start column -->
+                                    <div class="panel panel-default">
+                                        <!-- start heading -->
+                                        <div class="panel-heading" role="tab" id="dk-vendor-heading4">
+                                            <!-- start row -->
+                                            <a href="#dk-vendor4" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="dk-vendor4" title="Apple">
+                                            <div class="row">
+                                                <span class="name col-md-12">Apple</span>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    <i class="fa fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                            </a>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end heading -->
+                                        <!-- start content -->
+                                        <div id="dk-vendor4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dk-vendor-heading4">
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                            <!-- start row -->
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <p>iPhone 5C Battery: <strong>Rs2500</strong></p>
+                                                </div>
+                                                <div class="col-md-1">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end content -->
+                                    </div>
+                                    <!-- end column -->
+                                </div>
+                                <!-- end tabs -->
+                            </div>
+                        </div>
+                        <!-- end price-list -->
+                        <!-- start vendor-info -->
+                        <div class="row">
+                            <div class="col-md-12 section" id="link-box3">
+                                <div class="vendor-info">
+                                    <h3>Repair Center Info</h3>
+                                    <!-- start table -->
+                                    <div class="table clearfix">
+                                        <!-- start row1 -->
+                                        <div class="row1">
+                                            <div class="col-md-3">
+                                                <p>Brand</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>Apple, Samsung, Nokia, Blackberry, Sony, HTC, Nokia Luma</p>
+                                            </div>
+                                        </div>
+                                        <!-- end row1 -->
+                                        <!-- start row1 -->
+                                        <div class="row1">
+                                            <div class="col-md-3">
+                                                <p>Service Center Type</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="check"><i class="fa fa-check"></i> Multi-Brands Service Center</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="error"><i class="fa fa-times"></i> Authorised Service Center</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p>Delivery Options</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p class="check"><i class="fa fa-check"></i> Home Pickup & Delivery</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <p class="check"><i class="fa fa-check"></i> In-Store Repair</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end row1 -->
+                                        <!-- start row -->
+                                        <div class="row1">
+                                            <div class="col-md-3">
+                                                <p>Apple</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+                                        <!-- start row -->
+                                        <div class="row1">
+                                            <div class="col-md-3">
+                                                <p>Samsung</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+                                        <!-- start row -->
+                                        <div class="row1">
+                                            <div class="col-md-3">
+                                                <p>Nokia</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->
+                                        <!-- start row -->
+                                        <div class="row1">
+                                            <div class="col-md-3">
+                                                <p>Repair Time</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p>&nbsp;</p>
+                                            </div>
+                                        </div>
+                                        <!-- end row -->	
+                                    </div>
+                                    <!-- end table -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end vendor-info -->
+                        <!-- start map -->
+                        <div class="row">
+                            <div class="col-md-12 map">
+                            	<h3>Map</h3>
+                                <div class="imgb">
+                                    <a href="#" title="Map">
+                                    <img src="http://maps.googleapis.com/maps/api/staticmap?scale=1&zoom=15&size=800x800&maptype=roadmap&markers=color:red%7Clabel:A%7C28.4593715,77.0262573&sensor=false&center=28.4593715,77.0262573&key=AIzaSyAiNMM9JT4UQvk-S9hBOTkZihhaZyR2M6Y" width="600" height="79" alt="map">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end map -->
+                    </div>
+                    <!-- end dk-vendor-detail -->
+                    <!-- start dk-chat-bar -->
+                    <div class="dk-chat-bar">
+                        <a href="#" title="CHAT NOW">CHAT NOW</a>
+                    </div>
+                    <!-- end dk-chat-bar -->
+                    <!-- start loading -->
+                    <div class="loading" style="display:none;">
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                    </div>
+                    <!-- end loading -->
+                    <!-- start dk-slider -->
+                    <div class="dk-slider-box" id="dk-slider">
+                        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
+                        <!-- start slider -->
+                        <div class="dk-slider1 clearfix">
+                            <ul class="slides">
+                                <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                                <li><p class="flex-caption">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                                <li><p class="flex-caption">5/5: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                                <li><p class="flex-caption">7/7: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></span></div></li>
+                            </ul>
+                        </div>
+                        <!-- end slider -->
+                        <!-- start carousel -->
+                        <div class="dk-carousel1 clearfix">
+                            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
+                            <span class="pull-left captions"></span>
+                            <ul class="slides">
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
+                            </ul>
+                        </div>
+                        <!-- end carousel -->
+                    </div>
+                    <!-- end dk-slider -->
+                    <!-- start dk-slider -->
+                    <div class="dk-slider-box" id="dk-videos">
+                        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
+                        <!-- start slider -->
+                        <div class="dk-slider2 clearfix">
+                            <ul class="slides">
+                                <li><p class="flex-caption2">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
+                                <li><p class="flex-caption2">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
+                                <li><p class="flex-caption2">5/5: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
+                                <li><p class="flex-caption2">7/7: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
+                            </ul>
+                        </div>
+                        <!-- end slider -->
+                        <!-- start carousel -->
+                        <div class="dk-carousel2 clearfix">
+                            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
+                            <span class="pull-left captions2"></span>
+                            <ul class="slides">
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
+                                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
+                            </ul>
+                        </div>
+                        <!-- end carousel -->
+                    </div>
+                    <!-- end dk-slider -->
+                </div>
+            </div>
+            <!-- end rightcol -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end main-container -->
+<div class="main-overlay"></div>
+</body>
+</html>
