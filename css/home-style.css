@@ -1,147 +1,4 @@
-/*  CSS definations for Good Service  */
-/*-------------------------------------------------------------------------------------------
 
-INDEX:
-
-0. RESET
-
-1. SETUP
-1.1 Defaults
-1.2 Common Tages
-
-2. SITE STRUCTURE & APPEARANCE
-2.1 Header
-	2.1 Logo
-2.2 Container
-  	2.2.1 Showacase
-2.3 Footer
-
--------------------------------------------------------------------------------------------*/
-
-/*-------------------------------------------------------------------------------------------*/
-/* 0. RESET */
-/*-------------------------------------------------------------------------------------------*/
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-* {
-	outline:none;
-}
-
-/*-------------------------------------------------------------------------------------------*/
-/* 1. SETUP */
-/*-------------------------------------------------------------------------------------------*/
-
-/* 1.1 Defaults */
-h1, h2, h3, h4, h5, h6, strong {
-	margin:0;
-	padding:0;
-	font-weight:normal;
-}
-i, em {
-	font-style:italic;
-}
-.left {
-	float:left;
-}
-.right {
-	float:right;
-}
-.alignleft {
-	text-align:left;
-}
-.alignright {
-	text-align:right;
-}
-.aligncenter {
-	text-align:center;
-}
-.clear {
-	clear:both;
-	line-height:1px;
-	height:1px;
-}
-input,textarea {
-	padding:0;
-}
-textarea {
-	overflow:auto;
-	font-family:Arial, Helvetica, sans-serif; /* Body Font Family Will Come Here */
-}
-a {
-	color:#2b2b2b;
-	text-decoration:none;
-}
-a:hover {
-	color:inherit;
-	text-decoration:none;
-}
-a:focus {
-	outline:none;
-	color:inherit;
-	text-decoration:none;
-}
-address {
-	font-style:normal;
-}
-p {
-	margin-bottom:0;
-	padding-bottom:10px;
-}
-
-/* 1.2 Common Tages */
-.loading {
-	background:rgba(255,255,255,0.9);
-	width:100%;
-	height:100%;
-	float:left;
-	position:fixed;
-	left:0;
-	top:0;
-	z-index:2;
-	display:none;
-}
-.loading i {
-	width:30px;
-	height:30px;
-	float:left;
-	margin:-15px 0 0 -15px;
-	font-size:30px;
-	color:#000;
-	position:absolute;
-	left:50%;
-	top:50%;
-	z-index:2;
-}
-/*///////////////////////////////////
-  Common Css
-///////////////////////////////////*/
 img {
 	max-width:100%;
 	height:auto;
@@ -159,36 +16,28 @@ img {
   color:inherit;
 }
 
-/*-------------------------------------------------------------------------------------------*/
-/* 2. SITE STRUCTURE & APPEARANCE */
-/*-------------------------------------------------------------------------------------------*/
-body {
-	background:#fff;
-	font-family: 'proxima_nova_rgregular';
-	font-size:12px;
-	color:#2b2b2b;
-	font-weight:400;
-}
 
 /* Header */
-.header {
-	padding:22px 0 0 32px;
+.header-home {
+	background:none;
+	padding:22px 0 0 0;
 	min-height:95px;
+	position:static;
 }
 .logo {
 	font-size:24px;
 	color:#33CE53;
 }
-.logo strong {
-	font-weight:700;
+.logo span {
+	font-weight:400;
 }
 /* Showcase */
-.showcase {
+.home-showcase {
 	background:url(../images/bg_phone_screen.png) no-repeat center top;
 	border-bottom:1px solid #E2E2E2;
 	min-height:502px;
 }
-.showcase h2,
+.home-showcase h2,
 .login h2 {
 	padding-bottom:13px;
 	text-align:right;
@@ -200,7 +49,7 @@ body {
 	font-size:30px;
 	text-align:left;
 }
-.showcase .caption {
+.home-showcase .caption {
 	float:right;
 	padding-top:198px;
 	text-align:center;
@@ -208,15 +57,15 @@ body {
 	color:#000;
 	font-weight:400;
 }
-.showcase p,
+.home-showcase p,
 .login p {
 	padding-bottom:15px;
 }
-.showcase form {
+.home-showcase .form {
 	padding-top:33px;
 	min-height:125px;
 }
-.showcase .input,
+.home-showcase .input,
 .login .input {
 	border:1px solid #E8E8E8;
 	background:#fff;
@@ -235,7 +84,7 @@ body {
 		 -o-border-radius:2px;
 			border-radius:2px;
 }
-.showcase .button,
+.home-showcase .button,
 .login .button {
 	background:#33CE53;
 	border:none;
@@ -254,14 +103,14 @@ body {
 		 -o-border-radius:2px;
 			border-radius:2px;
 }
-.showcase .button:hover,
+.home-showcase .button:hover,
 .login .button:hover {
 	background:#38F65F;
 }
-.showcase .app-btn {
+.home-showcase .app-btn {
 	display:none;
 }
-.showcase .bg-success,
+.home-showcase .bg-success,
 .login .bg-success {
 	display:block;
 	margin-top:15px;
@@ -269,17 +118,17 @@ body {
 	line-height:28px;
 	padding:0;
 }
-.showcase .bg-success p,
+.home-showcase .bg-success p,
 .login .bg-success p {
 	padding:0;
 }
-.showcase .highlight-link {
+.home-showcase .highlight-link {
 	display:inline-block;
 	margin-top:25px;
 	font-size:18px;
 	color:#33CE53;
 }
-.showcase .highlight-link span {
+.home-showcase .highlight-link span {
 	display:block;
 	position:relative;
 	-webkit-animation: arrow 1.6s infinite;
@@ -311,7 +160,6 @@ body {
 }
 .invitation {
 	background:#fff;
-	min-height:240px;
 }
 .invitation .close {
 	margin:5px 5px 0 0;
@@ -335,43 +183,48 @@ body {
 	line-height:22px;
 }
 #invitation .modal-dialog {
+	background:#fff;
+	width:400px;
+	height:280px;
+	left:50%;
 	top:50%;
-	margin-top:-120px;
+	margin:-140px 0 0 -200px;
+	position:absolute;
 }
-/* Search */
-.search {
+/* Find-search */
+.find-search {
 	padding:38px 0 15px 0;
 	font-size:12px;
 	color:#858585;
 }
-.search h3 {
+.find-search h3 {
 	text-align:center;
 	font-size:28px;
 	color:#2B2B2B;
 	font-weight:400;
 	text-transform:uppercase;
 }
-.search p {
+.find-search p {
 	text-align:right;
 }
-.search a {
+.find-search a {
 	color:#858585;
 }
-.search a:hover {
+.find-search a:hover {
 	color:#33CE53;
 }
-.search span {
+.find-search span {
 	color:#2B2B2B;
 }
-.search .highlight {
+.find-search .highlight {
 	color:#33CE53;
 	text-transform:uppercase;
 }
-.search form {
+.find-search .form {
 	padding-top:29px;
 	padding-bottom:28px;
 }
-.search .input {
+.find-search .input {
 	background:#fff url(../images/ico_search1.png) no-repeat 14px center;
 	border:1px solid #eee;
 	width:100%;
@@ -387,25 +240,25 @@ body {
 		 -o-border-radius:2px;
 			border-radius:2px;
 }
-.search .loc {
+.find-search .loc {
 	background:#fff url(../images/ico_loc.png) no-repeat 18px center;
 	font-size:14px;
 	color:#33CE53;
 }
-/* Services */
-.services {
+/* Main-services */
+.main-services {
 	padding:10px 0 50px 0;
 }
-.services .row {
+.main-services .row {
 	margin-right:-10px;
 	margin-left:-10px;
 }
-.services .col-md-6,
-.services .col-md-4 {
+.main-services .col-md-6,
+.main-services .col-md-4 {
 	padding-right:10px;
 	padding-left:10px;
 }
-.services .imgb {
+.main-services .imgb {
 	width:100%;
 	float:left;
 	margin-bottom:10px;
@@ -414,7 +267,7 @@ body {
 	z-index:1;
 	overflow:hidden;
 }
-.services .imgb img {
+.main-services .imgb img {
 	width:100%;
 	height:auto;
 	-webkit-transition:0.5s all ease;
@@ -423,7 +276,14 @@ body {
 		 -o-transition:0.5s all ease;
 			transition:0.5s all ease;
 }
-.services .caption {
+.main-services .col-md-4 .imgb {
+	height:230px;
+}
+.main-services .col-md-4 .imgb img {
+	width:auto;
+	height:100%;
+}
+.main-services .caption {
 	background:rgba(0,0,0,0.5);
 	width:100%;
 	height:100%;
@@ -434,12 +294,12 @@ body {
 	top:0;
 	z-index:2;
 }
-.services .caption > div {
+.main-services .caption > div {
 	width:100%;
 	height:100%;
 	display:table;
 }
-.services h4 {
+.main-services h4 {
 	font-size:36px;
 	color:#fff;
 	font-weight:600;
@@ -453,19 +313,19 @@ body {
 		 -o-transition:0.5s all ease;
 			transition:0.5s all ease;
 }
-.services h4 a {
+.main-services h4 a {
 	color:#fff;
 }
-.services h4 span {
+.main-services h4 span {
 	display:block;
 }
-.services .overlay {
+.main-services .overlay {
 	background:rgba(51,206,83,0.9);
 	width:100%;
 	height:100%;
 	float:left;
 	padding:20px;
-	font-size:12px;
+	font-size:11px;
 	color:#fff;
 	position:absolute;
 	left:0;
@@ -478,35 +338,36 @@ body {
 		 -o-transition:0.5s all ease;
 			transition:0.5s all ease;
 }
-.services h5 {
+.main-services h5 {
 	padding-bottom:10px;
-	font-size:14px;
+	font-size:13px;
 	color:rgba(255,255,255,0.8);
 	font-weight:600;
+	line-height:normal;
 }
-.services ul {
+.main-services ul {
 	padding-bottom:20px;
 }
-.services li {
-	line-height:20px;
+.main-services li {
+	line-height:19px;
 }
-.services li a {
+.main-services li a {
 	color:#fff;
 }
-.services li a:hover {
+.main-services li a:hover {
 	color:rgba(255,255,255,0.8);
 }
-.services .imgb:hover .overlay {
+.main-services .imgb:hover .overlay {
 	opacity:1;
 }
-.services .imgb:hover img {
+.main-services .imgb:hover img {
 	-webkit-transform:scale(1.07, 1.07);
 	   -moz-transform:scale(1.07, 1.07);
 		-ms-transform:scale(1.07, 1.07);
 		 -o-transform:scale(1.07, 1.07);
 			transform:scale(1.07, 1.07);
 }
-.services .imgb:hover h4 {
+.main-services .imgb:hover h4 {
 	opacity:0.2;
 }
 /* Testimonials */
@@ -564,73 +425,79 @@ body {
 
 
 @media (min-width: 1200px) {
-.container {
+.home .container {
 	width:1000px;
 }
 }
 @media only screen and ( min-width: 768px) and ( max-width: 999px ) {
-.showcase {
+/* home-showcase */
+.home-showcase {
 	background:url(../images/bg_phone_screen_mb.png) no-repeat center 300px;
 	min-height:600px;
 	padding-bottom:20px;
 }
-.showcase .caption {
+.home-showcase .caption {
 	padding-top:0;
 	float:none;
 }
-.showcase h2 {
+.home-showcase h2 {
 	text-align:center;
 }
-.showcase form {
+.home-showcase .form {
 	display:inline-block;
 }
-.showcase .pull-right {
+.home-showcase .pull-right {
 	float:inherit !important;
 }
-.services h4 {
+
+/* main-services */
+.main-services h4 {
 	font-size:22px;
 	line-height:normal;
 }
 }
 @media only screen and ( min-width: 300px) and ( max-width: 767px ) {
-.header {
+/* header-home */
+.header-home {
 	padding-left:0;
 	min-height:85px;
 }
 .logo {
 	text-align:center;
 }
-.showcase {
+
+/* home-showcase */
+.home-showcase {
 	background:url(../images/bg_phone_screen_mb.png) no-repeat center 150px;
 	min-height:481px;
 	padding-bottom:20px;
 }
-.showcase .caption {
+.home-showcase .caption {
 	float:none;
 	padding-top:0;
 	font-size:15px;
 	display:none;
 }
-.showcase .pull-right {
+.home-showcase .pull-right {
 	float:inherit !important;
 }
-.showcase h2 {
+.home-showcase h2 {
 	padding-top:15px;
 	text-align:center;
 	font-size:30px;
 }
-.showcase p {
+.home-showcase p {
 	line-height:normal;
 }
-.showcase form {
+.home-showcase .form {
 	padding-top:10px;
 }
-.showcase .input,
+.home-showcase .input,
 .login .input  {
 	width:100%;
 	margin-right:0;
 }
-.showcase .button,
+.home-showcase .button,
 .login .button  {
 	float:none;
 	display:inline-block;
@@ -640,26 +507,32 @@ body {
 .login form {
 	text-align:center;
 }
-.search h3 {
+
+/* find-search */
+.find-search h3 {
 	padding-bottom:15px;
 }
-.search form {
+.find-search .form {
 	padding-bottom:13px;
 	display:none;
 }
-.search p {
+.find-search p {
 	text-align:center;
 	line-height:normal;
 }
-.services .overlay {
+/* main-services */
+.main-services .overlay {
 	text-align:center;
 }
-.testimonials .col-md-4 {
-	border-bottom:1px solid #ccc;
-	width:100%;
-	float:left;
-	padding-bottom:10px;
-	margin-bottom:10px;
+}
+@media only screen and ( min-width: 200px) and ( max-width: 419px ) {
+#invitation .modal-dialog {
+	width:280px;
+	height:280px;
+	left:50%;
+	top:50%;
+	margin:-140px 0 0 -140px;
+	position:absolute;
 }
 }
 
@@ -667,19 +540,17 @@ body {
 /*////////////////////////////////////////////
   Fonts
 ////////////////////////////////////////////*/
-.logo {
+.logo span {
 	font-family: 'proxima_novathin';
 }
-.testimonials h3,
-.testimonials h4 span,
-.search input,
-.showcase .input,
-.showcase .button {
+.find-search input,
+.home-showcase .input,
+.home-showcase .button {
 	font-family: 'proxima_nova_rgregular';
 }
-.logo strong {
+.logo {
 	font-family: 'proxima_novasemibold';
 }
-.testimonials h4 {
+ {
 	font-family: 'proxima_nova_rgbold';
 }

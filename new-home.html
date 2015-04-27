@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <title>Good Service</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/home-style.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="css/fonts.css" rel="stylesheet" type="text/css">
@@ -12,64 +13,76 @@
 <script src="js/bootstrap.js"></script>
 </head>
 
-<body>
+<body class="home">
 <!-- start header -->
-<div class="header">
-	<div class="logo">
-    	<h1><strong>GOOD</strong>SERVICE</h1>
+<div class="header header-home">
+	<div class="container-fluid">
+    	<div class="row">
+            <div class="logo col-md-12">
+                <h1>GOOD<span>SERVICE</span></h1>
+            </div>
+        </div>
     </div>
 </div>
 <!-- end header -->
-<!-- start showcase -->
-<div class="showcase">
+<!-- start home-showcase -->
+<div class="home-showcase">
 	<div class="container">
     	<div class="row">
             <div class="col-md-7 pull-right">
-            	<div class="text-center">
-                	<a href="#" title="Download App" data-toggle="modal" data-target="#invitation" class="button app-btn"><i class="fa fa-download"></i> Download App</a>
-                </div>
-            	<!-- start caption -->
-            	<div class="caption">
-                    <h2>Lorem Ipsum is simply dummy</h2>
-                    <p>dummy text of the printing and typesetting industry</p>
-                    <form action="#">
-                        <input type="text" placeholder="Enter Your Email" class="input">
-                        <input name="submit" type="submit" value="Get Notification" class="button">
-                        <div class="clear"></div>
-                        <div class="bg-success" style="display:none;">
-                            <p>We will send you the download link</p>
+            	<div class="pull-right text-center">
+                	<div class="row">
+                        <div class="col-md-12">
+                            <a href="#" title="Download App" data-toggle="modal" data-target="#invitation" class="button app-btn"><i class="fa fa-download"></i> Download App</a>
                         </div>
-                    </form>
-                </div>
-                <!-- end caption -->
-                <div class="text-center">
-                	<a href="#find-services" title="FIND SERVICES" class="highlight-link">FIND SERVICES <span><img src="images/img_arrow.png" width="26" height="8" alt="arrow"></span></a>
+                    </div>
+                    <!-- start caption -->
+                    <div class="row">
+                        <div class="col-md-12 caption">
+                           <h2>Lorem Ipsum is simply dummy</h2>
+                            <p>dummy text of the printing and typesetting industry</p>
+                            <div class="form">
+                                <input type="text" placeholder="Enter Your Email" class="input">
+                                <input name="submit" type="submit" value="Get Notification" class="button">
+                                <div class="clear"></div>
+                                <div class="bg-success" style="display:none;">
+                                    <p>We will send you the download link</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end caption -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#find-services" title="FIND SERVICES" class="highlight-link">FIND SERVICES <span><img src="images/img_arrow.png" width="26" height="8" alt="arrow"></span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- end showcase -->
-<!-- start search -->
-<div class="search" id="find-services">
+<!-- end home-showcase -->
+<!-- start find-search -->
+<div class="find-search" id="find-services">
 	<div class="container">
     	<div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <h3>FIND SERVICES NEAR BY YOU</h3>
-                <form action="#">
+                <div class="form">
                     <div class="row">
                         <div class="col-md-8 col-sm-8"><input type="text" placeholder="Search here for anything" class="input"></div>
                         <div class="col-md-4 col-sm-4"><input type="text" placeholder="Anywhere In Gurgoan" class="input loc"></div>
                     </div>
-                </form>
+                </div>
                 <p><span>City:</span> <span class="highlight">GURGOAN</span> | Change: <a href="#" title="Delhi">Delhi</a>, <a href="#" title="Mumbai">Mumbai</a>, <a href="#" title="Kolkata">Kolkata</a>, <a href="#" title="Hyderabad">Hyderabad</a>, <a href="#" title="Chennai">Chennai</a>, <a href="#" title="Bangalore">Bangalore</a></p>
             </div>
         </div>
     </div>
 </div>
-<!-- end search -->
-<!-- start services -->
-<div class="services">
+<!-- end find-search -->
+<!-- start main-services -->
+<div class="main-services">
 	<div class="container">
     	<div class="row">
         	<!-- start column -->
@@ -611,7 +624,7 @@
         </div>
     </div>
 </div>
-<!-- end services -->
+<!-- end main-services -->
 <!-- 
 <div class="testimonials">
 	<div class="container">
@@ -651,14 +664,14 @@
                 <div class="caption">
                     <h2>Lorem Ipsum is simply dummy</h2>
                     <p>dummy text of the printing and typesetting industry</p>
-                    <form action="#">
+                    <div class="form">
                         <input type="text" placeholder="Enter Your Email" class="input">
                         <input name="submit" type="submit" value="Get Notification" class="button">
                         <div class="clear"></div>
                         <div class="bg-success" style="display:none;">
                             <p>We will send you the download link</p>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             <!-- end login -->
