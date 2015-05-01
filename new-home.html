@@ -11,6 +11,26 @@
 <link href="css/fonts.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/modernizr.custom.59904.js"></script>
+<script>
+$(document).ready(function() {
+	
+	if ($(window).width() < 999) {
+		$('.main-services').addClass('main-services-mb');
+    }
+    else {
+		$('.main-services').removeClass('main-services-mb');
+    }
+	
+	$(".main-services-mb .imgb").click(function() {
+		$('.main-services-mb .imgb').removeClass('active');
+		$(this).toggleClass('active');
+		return false;
+ 	});
+	
+});
+</script>
+
 </head>
 
 <body class="home">
@@ -89,73 +109,41 @@
         	<div class="col-md-6 col-sm-6">
             	<div class="imgb">
                 	<div class="caption"><div><h4><a href="#" title="EDUCATION">EDUCATION</a></h4></div></div>
-                    <img src="images/img_education.jpg" srcset="images/education@2x.png 2x" alt="a cute kitten">
+                    <img src="images/img_education.png" width="980" height="614" alt="education" class="img-dk">
+                    <img src="images/img_education_ipd.png" width="350" height="340" alt="education" class="img-ipd">
                     <!-- start overlay -->
                     <div class="overlay">
-                    	<div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                      <div class="row">
+                        <div class="col-md-4 col-xs-4">
+                          <h5>Learning &amp; Hobbies</h5>
+                          <ul>
+                            <li> <a href="/language-courses/gurgaon">Language Courses</a> </li>
+                            <li> <a href="/cooking-classes/gurgaon">Cooking Classes</a> </li>
+                            <li> <a href="/music-classes/gurgaon">Music Classes</a> </li>
+                            <li> <a href="/play-schools/gurgaon">Play Schools</a> </li>
+                            <li> <a href="/art-and-craft-classes/gurgaon">Art &amp; Craft Classes</a> </li>
+                            <li> <a href="/dance-classes/gurgaon">Dance Classes</a> </li>
+                            <li> <a href="/driving-schools/gurgaon">Driving Schools</a> </li>
+                          </ul>
                         </div>
                         <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                          <h5>Tuitions &amp; entrance coaching</h5>
+                          <ul>
+                            <li> <a href="/tuition-classes/gurgaon">Tuitions</a> </li>
+                            <li> <a href="/coaching-classes/gurgaon">Coaching Institutes</a> </li>
+                          </ul>
                         </div>
                         <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                          <h5>Professional Courses</h5>
+                          <ul>
+                            <li> <a href="/animation-courses/gurgaon">Animation &amp; Graphic Design Courses</a> </li>
+                            <li> <a href="/fashion-&amp;-interior-design-courses/gurgaon">Fashion &amp; Interior Design Courses</a> </li>
+                            <li> <a href="/finance-accounting-courses/gurgaon">Finance &amp; Accounting Courses</a> </li>
+                            <li> <a href="/computer-courses/gurgaon">Computer Courses</a> </li>
+                            <li> <a href="/beautician-courses/gurgaon">Beautician Courses</a> </li>
+                          </ul>
                         </div>
-                        </div>
-                        <div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                      </div>
                     </div>
                     <!-- end overlay -->
                 </div>
@@ -165,73 +153,36 @@
             <div class="col-md-6 col-sm-6">
             	<div class="imgb">
                 	<div class="caption"><div><h4><a href="#" title="ELECTRONICS">ELECTRONICS</a></h4></div></div>
-                	<img src="images/img_electronics.jpg" width="490" height="307" alt="ELECTRONICS">
+                	<img src="images/img_household.png" width="980" height="614" alt="HOUSEHOLD" class="img-dk">
+                    <img src="images/img_household_ipd.png" width="350" height="340" alt="HOUSEHOLD" class="img-ipd">
                     <!-- start overlay -->
                     <div class="overlay">
-                    	<div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                      <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                          <h5>Home needs</h5>
+                          <ul>
+                            <li> <a href="/maid-services/gurgaon">Maid Agencies</a> </li>
+                            <li> <a href="/electrician/gurgaon">Electricians</a> </li>
+                            <li> <a href="/carpenter/gurgaon">Carpenters</a> </li>
+                            <li> <a href="/painters/gurgaon">Painters</a> </li>
+                            <li> <a href="/gas-agency/gurgaon">Gas Agency</a> </li>
+                            <li> <a href="/plumber/gurgaon">Plumbers</a> </li>
+                            <li> <a href="/housekeeping-services/gurgaon">Housekeeping &amp; Cleaning Services</a> </li>
+                            <li> <a href="/packers-and-movers/gurgaon">Packers and Movers</a> </li>
+                            <li> <a href="/locksmiths/gurgaon">Locksmiths &amp; Key Makers</a> </li>
+                            <li> <a href="/pest-control/gurgaon">Pest Control Services</a> </li>
+                            <li> <a href="/dry-cleaners/gurgaon">Dry Cleaners</a> </li>
+                          </ul>
                         </div>
-                        <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                        <div class="col-md-6 col-xs-6">
+                          <h5>Real Estate &amp; PG</h5>
+                          <ul>
+                            <li> <a href="/service-apartments/gurgaon">Service Apartments</a> </li>
+                            <li> <a href="/real-estate-property-dealer/gurgaon">Real Estate Agents</a> </li>
+                            <li> <a href="/pg/gurgaon">Paying Guest (PG)</a> </li>
+                          </ul>
                         </div>
-                        <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                        <div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                      </div>
                     </div>
                     <!-- end overlay -->
                 </div>
@@ -243,21 +194,22 @@
         	<div class="col-md-4 col-sm-4">
             	<div class="imgb">
                 	<div class="caption"><div><h4><a href="#" title="HOUSEHOLD">HOUSEHOLD</a></h4></div></div>
-                	<img src="images/img_household.jpg" width="321" height="200" alt="HOUSEHOLD">
+                	<img src="images/img_electronics.png" width="642" height="400" alt="ELECTRONICS" class="img-dk">
+                    <img src="images/img_electronics_ipd.png" width="490" height="307" alt="ELECTRONICS" class="img-ipd">
                     <!-- start overlay -->
                     <div class="overlay">
-                        <div class="row">
-                            <div class="col-md-12 col-xs-12">
-                                <h5>Electronics Repair</h5>
-                                <ul>
-                                    <li><a href="/appliances-repair/gurgaon">Electronics &amp; Appliances repair</a></li>
-                                    <li><a href="/laptop-repair/gurgaon">Laptop &amp; Computer Repair</a></li>
-                                    <li><a href="/mobile-repair/gurgaon">Mobile &amp; Tablet Repair</a></li>
-                                    <li><a href="/car-towing-crane-services/gurgaon">Crane &amp; Car Towing</a></li>
-                                    <li><a href="/auto-repair/gurgaon">Car Repair</a></li>
-                                </ul>
-                            </div>
+                      <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                          <h5>Electronics Repair</h5>
+                          <ul>
+                            <li> <a href="/appliances-repair/gurgaon">Electronics &amp; Appliances repair</a> </li>
+                            <li> <a href="/laptop-repair/gurgaon">Laptop &amp; Computer Repair</a> </li>
+                            <li> <a href="/mobile-repair/gurgaon">Mobile &amp; Tablet Repair</a> </li>
+                            <li> <a href="/car-towing-crane-services/gurgaon">Crane &amp; Car Towing</a> </li>
+                            <li> <a href="/auto-repair/gurgaon">Car Repair</a> </li>
+                          </ul>
                         </div>
+                      </div>
                     </div>
                     <!-- end overlay -->
                 </div>
@@ -267,36 +219,37 @@
             <div class="col-md-4 col-sm-4">
             	<div class="imgb">
                 	<div class="caption"><div><h4><a href="#" title="EVENTS">EVENTS</a></h4></div></div>
-                	<img src="images/img_events.jpg" width="321" height="200" alt="EVENTS">
+                	<img src="images/img_events.png" width="642" height="400" alt="EVENTS" class="img-dk">
+                    <img src="images/img_events_ipd.png" width="230" height="315" alt="EVENTS" class="img-ipd">
                     <!-- start overlay -->
                     <div class="overlay">
-                        <div class="row">
-                            <div class="col-md-12 col-xs-12">
-                                <h5>Events</h5>
-                                <div class="row">
-                                    <div class="col-md-6 col-xs-6">
-                                        <ul>
-                                            <li><a href="/wedding-card-designers/gurgaon">Wedding Card Designers</a></li>
-                                            <li><a href="/gift-trousseau-packing/gurgaon">Gift Trousseau Packing</a></li>
-                                            <li><a href="/bartender/gurgaon">Bartender</a></li>
-                                            <li><a href="/florist/gurgaon">Florist</a></li>
-                                            <li><a href="/photographers/gurgaon">Photographers</a></li>
-                                            <li><a href="/banquet-halls/gurgaon">Banquet Halls</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-6 col-xs-6">
-                                        <ul>
-                                            <li><a href="/valet-services/gurgaon">Valet Parking Services</a></li>
-                                            <li><a href="/caterers/gurgaon">Caterers</a></li>
-                                            <li><a href="/wedding-planners/gurgaon">Wedding Planners</a></li>
-                                            <li><a href="/event-management-companies/gurgaon">Event Management Companies</a></li>
-                                            <li><a href="/event-performers/gurgaon">Event Performers</a></li>
-                                            <li><a href="/pandits-and-astrologers/gurgaon">Astrologers &amp; Pandits</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                      <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                          <h5>Events</h5>
+                          <div class="row">
+                            <div class="col-md-6 col-xs-6">
+                              <ul>
+                                <li> <a href="/wedding-card-designers/gurgaon">Wedding Card Designers</a> </li>
+                                <li> <a href="/gift-trousseau-packing/gurgaon">Gift Trousseau Packing</a> </li>
+                                <li> <a href="/bartender/gurgaon">Bartender</a> </li>
+                                <li> <a href="/florist/gurgaon">Florist</a> </li>
+                                <li> <a href="/photographers/gurgaon">Photographers</a> </li>
+                                <li> <a href="/banquet-halls/gurgaon">Banquet Halls</a> </li>
+                              </ul>
                             </div>
+                            <div class="col-md-6 col-xs-6">
+                              <ul>
+                                <li> <a href="/valet-services/gurgaon">Valet Parking Services</a> </li>
+                                <li> <a href="/caterers/gurgaon">Caterers</a> </li>
+                                <li> <a href="/wedding-planners/gurgaon">Wedding Planners</a> </li>
+                                <li> <a href="/event-management-companies/gurgaon">Event Management Companies</a> </li>
+                                <li> <a href="/event-performers/gurgaon">Event Performers</a> </li>
+                                <li> <a href="/pandits-and-astrologers/gurgaon">Astrologers &amp; Pandits</a> </li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
                     <!-- end overlay -->
                 </div>
@@ -306,31 +259,32 @@
             <div class="col-md-4 col-sm-4">
             	<div class="imgb">
                 	<div class="caption"><div><h4><a href="#" title="BEAUTY & HEALTH">BEAUTY <span>&</span> HEALTH</a></h4></div></div>
-                	<img src="images/img_health.jpg" width="321" height="200" alt="BEAUTY & HEALTH">
+                	<img src="images/img_health.png" width="642" height="400" alt="BEAUTY & HEALTH" class="img-dk">
+                    <img src="images/img_health_ipd.png" width="230" height="315" alt="BEAUTY & HEALTH" class="img-ipd">
                     <!-- start overlay -->
                     <div class="overlay">
-                        <div class="row">
-                            <div class="col-md-6 col-xs-6">
-                            	<h5>Beauty, health and fitness</h5>
-                                <ul>
-                                    <li><a href="/beauty-parlour/gurgaon">Hair Salon &amp; Beauty Parlour</a></li>
-                                    <li><a href="/gyms/gurgaon">Gyms</a></li>
-                                    <li><a href="/spas/gurgaon">Spa</a></li>
-                                    <li><a href="/sports-coaching-fitness-classes/gurgaon">Sports Coaching &amp; Fitness Classes</a></li>
-                                    <li><a href="/tattoo-artists/gurgaon">Tattoo and Piercing</a></li>
-                                    <li><a href="/sports-complex/gurgaon">Sports Complex &amp; Clubs</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6 col-xs-6">
-                                <h5>Doctors</h5>
-                                <ul>
-                                    <li><a href="/doctors/gurgaon">Doctors</a></li>
-                                    <li><a href="/hair-and-skin-clinics/gurgaon">Hair &amp; Skin Care Clinics</a></li>
-                                    <li><a href="/chemists/gurgaon">Chemist</a></li>
-                                    <li><a href="/vet-clinics-&amp;-pet-shops/gurgaon">Pet Clinics</a></li>
-                                </ul>
-                            </div>
+                      <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                          <h5>Beauty, health and fitness</h5>
+                          <ul>
+                            <li> <a href="/beauty-parlour/gurgaon">Hair Salon &amp; Beauty Parlour</a> </li>
+                            <li> <a href="/gyms/gurgaon">Gyms</a> </li>
+                            <li> <a href="/spas/gurgaon">Spa</a> </li>
+                            <li> <a href="/sports-coaching-fitness-classes/gurgaon">Sports Coaching &amp; Fitness Classes</a> </li>
+                            <li> <a href="/tattoo-artists/gurgaon">Tattoo and Piercing</a> </li>
+                            <li> <a href="/sports-complex/gurgaon">Sports Complex &amp; Clubs</a> </li>
+                          </ul>
                         </div>
+                        <div class="col-md-6 col-xs-6">
+                          <h5>Doctors</h5>
+                          <ul>
+                            <li> <a href="/doctors/gurgaon">Doctors</a> </li>
+                            <li> <a href="/hair-and-skin-clinics/gurgaon">Hair &amp; Skin Care Clinics</a> </li>
+                            <li> <a href="/chemists/gurgaon">Chemist</a> </li>
+                            <li> <a href="/vet-clinics-&amp;-pet-shops/gurgaon">Pet Clinics</a> </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                     <!-- end overlay -->
                 </div>
@@ -342,73 +296,28 @@
         	<div class="col-md-6 col-sm-6">
             	<div class="imgb">
                 	<div class="caption"><div><h4><a href="#" title="BUSINESS">BUSINESS</a></h4></div></div>
-                	<img src="images/img_business.jpg" width="490" height="307" alt="BUSINESS">
+                	<img src="images/img_business.png" width="980" height="614" alt="BUSINESS" class="img-dk">
+                    <img src="images/img_business_ipd.png" width="350" height="340" alt="BUSINESS" class="img-ipd">
                     <!-- start overlay -->
                     <div class="overlay">
-                    	<div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                      <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                          <h5>Business &amp; Professional Services</h5>
+                          <ul>
+                            <li> <a href="/web-design/gurgaon">Web Design</a> </li>
+                            <li> <a href="/printers/gurgaon">Printers</a> </li>
+                            <li> <a href="/chartered-accountant/gurgaon">Chartered Accountants</a> </li>
+                            <li> <a href="/seo-company/gurgaon">SEO &amp; Digital Marketing</a> </li>
+                            <li> <a href="/graphic-designer/gurgaon">Graphic Designers</a> </li>
+                            <li> <a href="/tiffin-services/gurgaon">Tiffin Service</a> </li>
+                            <li> <a href="/hr-consultants/gurgaon">Placement Consultants</a> </li>
+                            <li> <a href="/architects/gurgaon">Architects</a> </li>
+                            <li> <a href="/interior-designers/gurgaon">Interior Designers</a> </li>
+                            <li> <a href="/business-centre-(serviced-offices)/gurgaon">Business Centre (Serviced Office)</a> </li>
+                            <li> <a href="/lawyers/gurgaon">Lawyers</a> </li>
+                          </ul>
                         </div>
-                        <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                        <div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                      </div>
                     </div>
                     <!-- end overlay -->
                 </div>
@@ -418,73 +327,35 @@
             <div class="col-md-6 col-sm-6">
             	<div class="imgb">
                 	<div class="caption"><div><h4><a href="#" title="SERVICES">SERVICES</a></h4></div></div>
-                	<img src="images/img_services.jpg" width="490" height="307" alt="SERVICES">
+                	<img src="images/img_services.png" width="980" height="614" alt="SERVICES" class="img-dk">
+                    <img src="images/img_services_ipd.png" width="350" height="340" alt="SERVICES" class="img-ipd">
                     <!-- start overlay -->
                     <div class="overlay">
-                    	<div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                      <div class="row">
+                        <div class="col-md-6 col-xs-6">
+                          <h5>Government services agents</h5>
+                          <ul>
+                            <li> <a href="/driving-licence-agent/gurgaon">Driving Licence Agent</a> </li>
+                            <li> <a href="/pan-card-agents/gurgaon">PAN Card Agents</a> </li>
+                            <li> <a href="/marriage-certificate-agents/gurgaon">Marriage Certificate Agents</a> </li>
+                            <li> <a href="/birth-certificate-agents/gurgaon">Birth Certificate Agents</a> </li>
+                            <li> <a href="/passport-agents/gurgaon">Passport Agents</a> </li>
+                          </ul>
                         </div>
-                        <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
+                        <div class="col-md-6 col-xs-6">
+                          <h5>More services</h5>
+                          <ul>
+                            <li> <a href="/detective-agencies/gurgaon">Detective Agencies</a> </li>
+                            <li> <a href="/used-second-hand-goods/gurgaon">Used Second Hand Goods</a> </li>
+                            <li> <a href="/travel-agents/gurgaon">Travel Agents</a> </li>
+                            <li> <a href="/courier-services/gurgaon">Courier</a> </li>
+                            <li> <a href="/taxi/gurgaon">Cabs &amp; Taxi Service</a> </li>
+                            <li> <a href="/marriage-bureau/gurgaon">Marriage Bureau</a> </li>
+                            <li> <a href="/tailors/gurgaon">Tailors</a> </li>
+                            <li> <a href="/foreign-currency-exchange/gurgaon">Foreign Currency Exchange</a> </li>
+                          </ul>
                         </div>
-                        <div class="col-md-4 col-xs-4">
-                            <h5>Cooking Classes</h5>
-                            <ul>
-                                <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                <li><a href="#" title="Italian">Italian</a></li>
-                                <li><a href="#" title="Indian">Indian</a></li>
-                                <li><a href="#" title="Desserts">Desserts</a></li>
-                                <li><a href="#" title="Thai">Thai</a></li>
-                                <li><a href="#" title="South Indian">South Indian</a></li>
-                            </ul>
-                        </div>
-                        </div>
-                        <div class="row">
-                    		<div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-4 col-xs-4">
-                                <h5>Music Classes</h5>
-                                <ul>
-                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                    <li><a href="#" title="Drums">Drums</a></li>
-                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                    <li><a href="#" title="Piano">Piano</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                      </div>
                     </div>
                     <!-- end overlay -->
                 </div>
