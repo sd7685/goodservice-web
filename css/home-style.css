@@ -475,7 +475,8 @@ img {
 	margin-top:65px;
 }
 
-.img-ipd {
+.img-ipd,
+.img-iph {
 	display:none;
 }
 
@@ -695,6 +696,18 @@ img {
 	height:100%;
 }
 }
+@media only screen and ( min-width: 200px) and ( max-width: 370px ) {
+.img-ipd,
+.img-dk {
+	display:none;
+}
+.img-iph {
+	display:block;
+	width:100% !important;
+	height:auto !important;
+}
+}
+
 
 /*////////////////////////////////////////////
   Fonts
