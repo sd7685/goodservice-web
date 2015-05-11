@@ -495,17 +495,21 @@ img {
 }
 @media only screen and ( min-width: 200px) and ( max-width: 768px ) {
 .header-home {
-	padding-left:0;
-	padding-top:40px;
+	padding:0;
 }
 .logo {
+	background:#fff;
 	width:100%;
+	min-height:95px;
+	padding-top:40px;
 	text-align:center;
 	font-size:35px;
 	position:fixed;
 }
 .home-showcase .col-md-7 {
+	background:#fff;
 	width:100%;
+	padding-bottom:10px;
 	position:fixed;
 }
 
@@ -542,11 +546,11 @@ img {
 /* home-showcase */
 .home-showcase {
 	background:url(../images/bg_phone_screen_mb.png) no-repeat center 400px;
-	-webkit-background-attachment:fixed;
+	/*-webkit-background-attachment:fixed;
 	   -moz-background-attachment:fixed;
 	    -ms-background-attachment:fixed;
 	     -o-background-attachment:fixed;
-	        background-attachment:fixed;
+	        background-attachment:fixed;*/
 	min-height:600px;
 	padding-bottom:20px;
 }
@@ -604,17 +608,18 @@ img {
 	position:fixed;
 }
 .home-showcase .col-md-7 {
+	background:#fff;
 	width:100%;
 	position:fixed;
 }
 /* home-showcase */
 .home-showcase {
 	background:url(../images/bg_phone_screen_mb.png) no-repeat center 255px;
-	-webkit-background-attachment:fixed;
+	/*-webkit-background-attachment:fixed;
 	   -moz-background-attachment:fixed;
 	    -ms-background-attachment:fixed;
 	     -o-background-attachment:fixed;
-	        background-attachment:fixed;
+	        background-attachment:fixed;*/
 	min-height:425px;
 	padding-bottom:20px;
 }
