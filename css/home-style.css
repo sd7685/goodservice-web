@@ -488,6 +488,11 @@ img {
 	width:1000px;
 }
 }
+@media (min-width: 1024px) {
+.home .container {
+	width:1000px;
+}
+}
 @media only screen and ( min-width: 200px) and ( max-width: 768px ) {
 .header-home {
 	padding-left:0;
@@ -536,7 +541,12 @@ img {
 @media only screen and ( min-width: 768px) and ( max-width: 999px ) {
 /* home-showcase */
 .home-showcase {
-	background:url(../images/bg_phone_screen_mb.png) no-repeat center 400px fixed;
+	background:url(../images/bg_phone_screen_mb.png) no-repeat center 400px;
+	-webkit-background-attachment:fixed;
+	   -moz-background-attachment:fixed;
+	    -ms-background-attachment:fixed;
+	     -o-background-attachment:fixed;
+	        background-attachment:fixed;
 	min-height:600px;
 	padding-bottom:20px;
 }
@@ -574,7 +584,8 @@ img {
 	width:auto;
 	height:100%;
 }
-.img-dk {
+.img-dk,
+.img-iphone {
 	display:none;
 }
 .img-ipd {
@@ -598,7 +609,12 @@ img {
 }
 /* home-showcase */
 .home-showcase {
-	background:url(../images/bg_phone_screen_mb.png) no-repeat center 255px fixed;
+	background:url(../images/bg_phone_screen_mb.png) no-repeat center 255px;
+	-webkit-background-attachment:fixed;
+	   -moz-background-attachment:fixed;
+	    -ms-background-attachment:fixed;
+	     -o-background-attachment:fixed;
+	        background-attachment:fixed;
 	min-height:425px;
 	padding-bottom:20px;
 }
@@ -707,6 +723,12 @@ img {
 	height:auto !important;
 }
 }
+@media only screen and ( min-width: 400px) and ( max-width: 440px ) {
+.main-services .col-md-4 .imgb {
+	height:232px !important;
+}
+}
+
 
 
 /*////////////////////////////////////////////
