@@ -1,0 +1,144 @@
+/* Scss Document */
+/* reset scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+input {
+  outline: none; }
+
+/* radius */
+body {
+  background-color: #2BC83E;
+  color: #2b2b2b; }
+
+/* Logo */
+.logo {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase; }
+  .logo a {
+    color: #fff; }
+
+/* Login */
+.login {
+  padding: 100px 50px 0 50px; }
+  .login h3 {
+    padding-bottom: 15px;
+    font-size: 14px; }
+  .login .form {
+    background: #fff;
+    min-height: 300px;
+    padding: 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px; }
+  .login label {
+    padding-bottom: 5px;
+    display: block;
+    font-size: 13px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s; }
+  .login .input-row {
+    position: relative;
+    z-index: 1; }
+    .login .input-row label {
+      position: absolute;
+      top: 14px; }
+  .login .input {
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    background: #fff;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s; }
+  .login .input:focus {
+    border-bottom-color: #2BC83E;
+    border-bottom-width: 2px; }
+  .login .input:focus + label {
+    top: 0 !important; }
+  .login .button {
+    background: #2BC83E;
+    border: none;
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px; }
+
+/*////////////////////////////////////////////
+  Fonts
+////////////////////////////////////////////*/
+.logo {
+  font-family: 'proxima_novathin'; }
+
+body {
+  font-family: 'proxima_nova_rgregular'; }
+
+.logo span,
+.login h3 {
+  font-family: 'proxima_novasemibold'; }
+
+.abc {
+  font-family: 'proxima_nova_rgbold'; }
+
+/*# sourceMappingURL=style.css.map */

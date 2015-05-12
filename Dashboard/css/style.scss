@@ -1,0 +1,120 @@
+/* Scss Document */
+@import 'reset';
+  
+$primary-color: #2BC83E;
+$common-color: #2b2b2b;
+
+/* radius */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
+}
+
+
+
+body {
+	background-color:$primary-color;
+	color:$common-color;
+}
+
+/* Logo */
+.logo {
+	  padding-bottom:20px;
+	  text-align:center;
+	  font-size:30px;
+	  color: #fff;
+	  text-transform:uppercase;
+	  
+	  a {
+	    color: #fff;
+	  }
+}
+
+/* Login */
+.login {
+  padding:100px 50px 0 50px;
+  
+  h3 {
+    padding-bottom:15px;
+	font-size:14px; 
+  }
+  
+  .form {
+    background:#fff;
+	min-height:300px;
+	padding:20px;
+	@include border-radius(3px);
+  }
+  
+  label {
+	padding-bottom:5px;
+	display:block;
+	font-size:13px;
+	@include transition(0.5s); 
+  }
+  
+  .input-row {
+	 position:relative;
+	 z-index:1;
+	 label {
+		position:absolute;
+		top:14px; 
+	 }
+  }
+  
+  .input {
+	border:none;
+	border-bottom:1px solid #ebebeb;
+    background:#fff;
+	width:100%;
+	height:40px;
+	margin-bottom:20px;
+	@include transition(0.5s);
+  }
+  .input:focus {
+	border-bottom-color:$primary-color;
+	border-bottom-width:2px;
+  }
+  .input:focus + label {
+	top:0 !important;
+  }
+  
+  .button {
+	background:$primary-color;
+	border:none;
+	width:100%;
+	height:40px;
+	font-size:14px;
+	color:#fff;
+	line-height:40px;
+	text-transform:uppercase;
+	@include border-radius(3px);
+  }
+  
+}
+
+
+/*////////////////////////////////////////////
+  Fonts
+////////////////////////////////////////////*/
+.logo {
+  font-family: 'proxima_novathin';
+}
+body {
+  font-family: 'proxima_nova_rgregular';
+}
+.logo span,
+.login h3 {
+  font-family: 'proxima_novasemibold';
+}
+.abc {
+  font-family: 'proxima_nova_rgbold';
+}
