@@ -9,116 +9,6 @@
 <link href="css/fonts.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider.js"></script>
-<script>
-$(document).ready(function() {
-	
-	///////// slider1 ////////////
-	$captions = $('.captions');
-	$captions2 = $('.captions2');
-		
-	$('.carousel1').flexslider({
-		selector: ".slides > li",
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		itemWidth: 107,
-		itemMargin: 15,
-		asNavFor: '.slider1'
-	});
-		   
-	$('.slider1').flexslider({
-		selector: ".slides > li",
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		sync: ".carousel1",
-		start: function() {
-			$activecaption = $('.flex-active-slide .flex-caption');
-			$captions.html($activecaption.text());        
-		},
-		after: function() {
-			$activecaption = $('.flex-active-slide .flex-caption');
-			$captions.html($activecaption.text());
-		}
-	});	
-	
-	
-	$('.carousel2').flexslider({
-		selector: ".slides > li",
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		itemWidth: 107,
-		itemMargin: 15,
-		asNavFor: '.slider2'
-	});
-		   
-	$('.slider2').flexslider({
-		selector: ".slides > li",
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		sync: ".carousel2",
-		start: function() {
-			$activecaption = $('.flex-active-slide .flex-caption2');
-			$captions2.html($activecaption.text());        
-		},
-		after: function() {
-			$activecaption = $('.flex-active-slide .flex-caption2');
-			$captions2.html($activecaption.text());
-		}
-	});	
-	
-	
-	
-	$('.dk-gallery-link li a').click(function() {
-		$('#dk-slider').addClass('active');
-		$('body').css("overflow","hidden");
-		return false;
-    });
-	
-	$('.dk-videos-link li a').click(function() {
-		$('#dk-videos').addClass('active');
-		$('body').css("overflow","hidden");
-		$('.rightcol-overlay').css("overflow","inherit");
-		return false;
-    });
-	
-	$('.slider-popup .close-btn2').click(function() {
-		$('#dk-slider,#dk-videos').removeClass('active');
-		$('body').css("overflow","inherit");
-		return false;
-    });
-	
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 10) {
-			$('.header').addClass('active');
-		} else {
-			$('.header').removeClass('active');
-		}
-	});
-	
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 250) {
-			$('.section-link,.filter-vendor .column').addClass('active');
-		} else {
-			$('.section-link,.filter-vendor .column').removeClass('active');
-		}
-	});
-	
-	var width=$('.vendor').width();
-	var width2=$('.filter').width();
-	
-	$('.section-link').width(width);
-	$('.filter-vendor .column').width(width2);
-	
-});
-</script>
 </head>
 
 <body>
@@ -866,11 +756,28 @@ $(document).ready(function() {
     <!-- end container -->
 </header>
 <!-- end header -->
+<!-- start showcase -->
+<div class="showcase">
+	<div class="showcase-in">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 pull-right">
+                	<div class="caption">
+                		<img src="images/img_play_store.png" width="200" height="60" alt="play store">
+                    	<h3>Book nearest electrician instantly</h3>
+                    	<p>Price & quality guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end showcase -->
 <!-- start main-container -->
 <div class="main-container">
 	<!-- start container -->
 	<div class="container">
-    	<!-- start find-search -->
+        <!-- start find-search -->
         <div class="find-search">
             <div class="container">
                 <div class="row">
@@ -888,468 +795,25 @@ $(document).ready(function() {
             </div>
         </div>
         <!-- end find-search -->
-    	<!-- start row -->
+        <!-- start result-count -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="result-count">
+                    <p><span><strong>70</strong> mobile & tablet repair in gurgaon</span></p>
+                </div>
+            </div>
+        </div>
+        <!-- end result-count -->
+		<!-- start row -->
     	<div class="row">
         	<!-- start leftcol -->
-            <div class="col-md-8">
-                <!-- start vendor -->
-                <div class="vendor">
-                    <!-- start heaering -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h2>Zion Technologies</h2>
-                        </div>
-                    </div>
-                    <!-- end heaering -->
-                    <!-- start title -->
-                    <div class="row">
-                        <div class="col-md-12 title">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <a href="#phone" data-toggle="collapse" title="Phone" class="phone-btn"><i class="fa fa-phone"></i> Phone</a>
-                                    <p>HUDA Market <span>Gurgaon</span></p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="collapse col-md-12" id="phone">
-                                    <p><span>Phone:</span> +91-9818271286,+91-9810935376</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end title -->
-                    <!-- start section-link -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-link">
-                                <ul>
-                                    <li><a href="#link-box1" title="Photos">Photos</a></li>
-                                    <li><a href="#link-box2" title="Prices">Prices</a></li>
-                                    <li><a href="#link-box3" title="Repair Center Info">Repair Center Info</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end section-link -->
-                    <!-- start txtb -->
-                    <div class="row">
-                        <div class="col-md-12 txtb">
-                            <p>Showing you Zion Technologies's Mobile & Tablet Repair , see <strong>Laptop & Computer Repair</strong></p>
-                        </div>
-                    </div>
-                    <!-- end txtb -->
-                    <!-- start photo -->
-                    <div class="row photo">
-                        <div class="col-md-12">
-                            <h3>Photos</h3>
-                            <ul>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li class="last"><a href="#" title="View More">View More</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end photo -->
-                    <!-- start videos -->
-                    <div class="row photo videos">
-                        <div class="col-md-12">
-                            <h3>Videos</h3>
-                            <ul>
-                                <li><a href="#" title="pics"><div class="overlay"><span class="play">play</span></div><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><div class="overlay"><span class="play">play</span></div><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><div class="overlay"><span class="play">play</span></div><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li class="last"><a href="#" title="View More">View More</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end videos -->
-                    <!-- start price -->
-                    <div class="row">
-                        <div class="col-md-12 price">
-                            <h3>Prices</h3>
-                            <!-- start tabs -->
-                            <div class="panel-group clearfix" id="accordion" role="tablist" aria-multiselectable="true">
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price1-heading">
-                                        <!-- start row -->
-                                        <a href="#price1" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price1" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price1-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
-                                </div>
-                                <!-- end panel-default -->
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price2-heading">
-                                        <!-- start row -->
-                                        <a href="#price2" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price2" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price2-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
-                                </div>
-                                <!-- end panel-default -->
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price3-heading">
-                                        <!-- start row -->
-                                        <a href="#price3" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price3" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price3-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
-                                </div>
-                                <!-- end panel-default -->
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price4-heading">
-                                        <!-- start row -->
-                                        <a href="#price4" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price4" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price4-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
-                                </div>
-                                <!-- end panel-default -->
-                            </div>
-                            <!-- end tabs -->
-                        </div>
-                    </div>
-                    <!-- end price -->
-                    <!-- start info -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="info">
-                                <h3>About</h3>
-                                <!-- start table -->
-                                <div class="table clearfix">
-                                    <!-- start row1 -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Brand</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p><span class="highlight">Apple</span> <span class="highlight">Samsung</span> <span class="highlight">Nokia</span> <span class="highlight">Blackberry</span> <span class="highlight">Sony</span> <span class="highlight">HTC</span> <span class="highlight">Nokia Luma</span></p>
-                                        </div>
-                                    </div>
-                                    <!-- end row1 -->
-                                    <!-- start row1 -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Brand</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p>Apple, Samsung, Nokia, Blackberry, Sony, HTC, Nokia Luma</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row1 -->
-                                    <!-- start row1 -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Service Center Type</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <p class="check"><i class="fa fa-check"></i> Multi-Brands Service Center</p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p class="error"><i class="fa fa-times"></i> Authorised Service Center</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <p>Delivery Options</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <p class="check"><i class="fa fa-check"></i> Home Pickup & Delivery</p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p class="check"><i class="fa fa-check"></i> In-Store Repair</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end row1 -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Apple</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Samsung</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Nokia</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Repair Time</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p>&nbsp;</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->	
-                                </div>
-                                <!-- end table -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end info -->
-                    <!-- start map -->
-                    <div class="row">
-                        <div class="col-md-12 map">
-                            <h3>Map</h3>
-                            <div class="imgb">
-                                <a href="#" title="Map">
-                                <img src="images/img_map.png" width="640" height="160" alt="map">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end map -->
-                </div>
-                <!-- end vendor -->
-            </div>
-            <!-- end leftcol -->
-            <!-- start rightcol -->
             <div class="col-md-4">
-                <!-- start filter -->
-                <div class="filter filter-vendor">
-                    <!-- start app-icon -->
-                    <div class="app-icon">
-                        <img src="images/img_play_store.png" width="250" height="75" alt="play store">
-                    </div>
-                    <!-- start app-icon -->
-                    <!-- start column -->
+            	<!-- start filter -->
+                <div class="filter">
+                    <h3>Locality</h3>
                     <div class="column">
-                        <h4><a href="#" title="Anywhere in Gurgoan"><span class="icon-down_arrow"></span>Anywhere in Gurgoan</a></h4>
-                        <div>
+                        <h4><a href="#filter-locality" data-toggle="collapse" title="Anywhere in Gurgoan"><span class="icon-down_arrow"></span>Anywhere in Gurgoan</a></h4>
+                        <div class="collapse" id="filter-locality">
                             <ul>
                                 <li><a href="#" title="Sector 24" class="active">Sector 24</a></li>
                                 <li><a href="#" title="Sector 2">Sector 2</a></li>
@@ -1358,69 +822,294 @@ $(document).ready(function() {
                             </ul>
                         </div>
                     </div>
-                    <!-- end column -->
+                    <h3>Categories</h3>
+                    <div class="column">
+                        <h4><a href="#filter-categories" data-toggle="collapse" title="Mobile Repair"><span class="icon-down_arrow"></span><strong class="pull-right">(1200)</strong>Mobile Repair Mobile Repair</a></h4>
+                        <div class="collapse" id="filter-categories">
+                            <ul>
+                                <li><a href="#" title="Sector 24">Sector 24</a></li>
+                                <li><a href="#" title="Sector 2">Sector 2</a></li>
+                                <li><a href="#" title="Huda city center">Huda city center</a></li>
+                                <li><a href="#" title="MG road metro">MG road metro</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Brands</h3>
+                    <div class="column">
+                        <h4><a href="#filter-brands" data-toggle="collapse" title="Show Any"><span class="icon-down_arrow"></span><strong class="pull-right">(1200)</strong>Show Any</a></h4>
+                        <div class="collapse" id="filter-brands">
+                            <ul>
+                                <li><input type="radio" id="radio1"><label for="radio1" class="disabled"><strong class="pull-right">(1200)</strong><span></span>Sector 24 Show Any Show Any</label></li>
+                                <li><input type="radio" id="radio2"><label for="radio2"><strong class="pull-right">(1200)</strong><span></span>Sector 2</label></li>
+                                <li><input type="radio" id="radio3"><label for="radio3"><strong class="pull-right">(1200)</strong><span></span>Huda city center</label></li>
+                                <li><input type="radio" id="radio4"><label for="radio4"><strong class="pull-right">(1200)</strong><span></span>MG road metro</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h3>Service Center</h3>
+                    <div class="column">
+                        <h4><a href="#filter-service" data-toggle="collapse" title="Show Any"><span class="icon-down_arrow"></span> Show Any</a></h4>
+                        <div class="collapse" id="filter-service">
+                            <ul>
+                                <li><input type="checkbox" id="checkbox1"><label for="checkbox1" class="disabled"><strong class="pull-right">(1200)</strong><span></span>Sector 24</label></li>
+                                <li><input type="checkbox" id="checkbox2"><label for="checkbox2"><strong class="pull-right">(1200)</strong><span></span>Sector 2</label></li>
+                                <li><input type="checkbox" id="checkbox3"><label for="checkbox3"><strong class="pull-right">(1200)</strong><span></span>Huda city center</label></li>
+                                <li><input type="checkbox" id="checkbox4"><label for="checkbox4"><strong class="pull-right">(1200)</strong><span></span>MG road metro</label></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <!-- end filter -->
+            </div>
+            <!-- end leftcol -->
+            <!-- start rightcol -->
+            <div class="col-md-8">
+            	<!-- start vendor-list -->
+            	<div class="vendor-list">
+                    <!-- start row -->
+                    <div class="row row1">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 address-row">
+                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                            <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row">
+                                        <h4><a href="#dk-price-box1" data-toggle="collapse" title="Prices" class="active"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse in" id="dk-price-box1">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row services-row">
+                                        <h4><a href="#dk-repair-box1" data-toggle="collapse" title="SERVICES" class="active">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse in" id="dk-repair-box1">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                        <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="row row1">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 address-row">
+                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                            <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row">
+                                        <h4><a href="#dk-price-box2" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse" id="dk-price-box2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row services-row">
+                                        <h4><a href="#dk-repair-box2" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse" id="dk-repair-box2">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                        <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="row row1">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 address-row">
+                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                            <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row">
+                                        <h4><a href="#dk-price-box3" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse" id="dk-price-box3">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row services-row">
+                                        <h4><a href="#dk-repair-box3" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse" id="dk-repair-box3">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                        <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                    <div class="row row1">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="row">
+                                        <div class="col-md-12"><h3><a href="#" title="Zion Technologies">Zion Technologies</a></h3></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 address-row">
+                                            <address>Lajpat Nagar 2-Lajpat Nagar</address>
+                                            <a href="#" title="See 1 more location in gurgaon">See <strong>1 more</strong> location in gurgaon</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <a href="#" title="PHONE" class="button phone"><span class="icon-phone_icon"></span> PHONE</a>
+                                    <a href="#" title="BOOK NOW" class="button">BOOK NOW</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row">
+                                        <h4><a href="#dk-price-box4" data-toggle="collapse" title="Prices"><strong>View</strong> PRICE <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse" id="dk-price-box4">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <p><strong class="pull-right">Rs 500</strong> Other Samsung Charger</p>
+                                                        <a href="#" title="View all prices" class="more-prices">View all prices <span class="icon-right_arrow"></span></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="price-row services-row">
+                                        <h4><a href="#dk-repair-box4" data-toggle="collapse" title="SERVICES">SERVICES <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></a></h4>
+                                        <div class="collapse" id="dk-repair-box4">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="price-box">
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts, Back Battery Cover, Keypa</p>
+                                                        <p><strong class="pull-left">Mobile Parts</strong> Camera Repair, Phone Casing, Physical Damage, Motherboard Repair, Genuine Parts</p>
+                                                        <a href="#" title="View all services" class="more-prices">View all services <span class="icon-right_arrow"></span></a>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end vendor-list -->
             </div>
             <!-- end rightcol -->
         </div>
         <!-- end row -->
     </div>
     <!-- end container -->
-    <!-- start slider-popup -->
-    <div class="slider-popup" id="dk-slider">
-        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
-        <!-- start slide -->
-        <div class="slider slider1 clearfix">
-            <ul class="slides">
-                <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-                <li><p class="flex-caption">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-                <li><p class="flex-caption">5/5: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-                <li><p class="flex-caption">7/7: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-            </ul>
-        </div>
-        <!-- end slide -->
-        <!-- start carousel -->
-        <div class="carousel carousel1 clearfix">
-            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
-            <span class="pull-left captions"></span>
-            <ul class="slides">
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
-            </ul>
-        </div>
-        <!-- end carousel -->
-    </div>
-    <!-- end slider-popup -->
-    <!-- start slider-popup -->
-    <div class="slider-popup" id="dk-videos">
-        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
-        <!-- start slider -->
-        <div class="slider slider2 clearfix">
-            <ul class="slides">
-                <li><p class="flex-caption2">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
-                <li><p class="flex-caption2">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
-                <li><p class="flex-caption2">5/5: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
-                <li><p class="flex-caption2">7/7: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
-            </ul>
-        </div>
-        <!-- end slider -->
-        <!-- start carousel -->
-        <div class="carousel carousel2 clearfix">
-            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
-            <span class="pull-left captions2"></span>
-            <ul class="slides">
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
-            </ul>
-        </div>
-        <!-- end carousel -->
-    </div>
-    <!-- end slider-popup -->
 </div>
 <!-- end main-container -->
 <!-- start loading -->
