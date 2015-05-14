@@ -98,6 +98,18 @@ p {
 }
 
 /* Common Tages */
+::-webkit-input-placeholder {
+  color:inherit;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color:inherit;
+}
+:-ms-input-placeholder {
+  color:inherit;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color:inherit;
+}
 .loading {
 	background:rgba(255,255,255,0.9);
 	width:100%;
@@ -227,6 +239,7 @@ body {
 	border-bottom:1px solid #E2E2E2;
 	background:#fff;
 	position:fixed;
+	top:0;
 }
 .logo {
 	float:left;
@@ -343,7 +356,6 @@ body {
 .sub-nav li a:hover {
 	color:#33CE53;
 }
-
 
 /* Showcase */
 .showcase {
@@ -482,6 +494,9 @@ body {
 }
 .filter-vendor {
 	padding:0 0 0 45px;
+}
+.filter-vendor .column {
+	z-index:99;
 }
 .app-icon {
 	padding-bottom:24px;
@@ -659,10 +674,10 @@ input[type="radio"]:checked + label span {
 	height:36px;
 	margin-bottom:20px;
 	font-size:12px;
-	color:#a0adb4;
+	color:#AFBBC1;
 	font-weight:600;
 	text-transform:uppercase;
-	z-index:999;
+	z-index:99;
 }
 .section-link.active,
 .filter-vendor .column.active {
@@ -690,7 +705,7 @@ input[type="radio"]:checked + label span {
 	margin-bottom:25px;
 }
 .photo ul {
-	margin-right:-10px;
+	margin-right:-5px;
 }
 .photo li {
 	width:82px;
@@ -714,22 +729,34 @@ input[type="radio"]:checked + label span {
 			border-radius:2px;
 }
 .photo li.last {
-	background:#e4e4e4;
+	background:#E6E6E6;
+	width:81px;
 	text-align:center;
 	font-size:14px;
 }
 .photo li.last a {
 	display:block;
-	line-height:82px;
+	min-height:82px;
+	padding-top:25px;
+	font-size:12px;
+	color:#959595;
+	line-height:16px;
+	text-transform:uppercase;
+}
+.photo li.last a span {
+	display:block;
 }
 /* Videos */
 .videos li {
-	width:147px;
+	width:125px;
 	height:82px;
 	overflow:hidden;
 }
 .videos li img {
 	width:100%;
+}
+.videos li.last {
+	width:83px;
 }
 .videos .overlay {
 	background:rgba(255,255,255,0.5);
@@ -817,21 +844,16 @@ input[type="radio"]:checked + label span {
 }
 .info .table {
 	border:1px solid #ededed;
-	position:relative;
 	margin-bottom:0;
 }
 .info .table.active {
 	height:inherit;
 }
 .info .table .row1 {
-	border-top:1px solid #ededed;
-	background:#ededed;
+	background:#EDEDED;
 	width:100%;
 	float:left;
 	padding:11px 0 3px 0;
-}
-.info .table .row1:first-child {
-	border-top:none;
 }
 .info p {
 	line-height:24px;
@@ -1165,19 +1187,28 @@ input[type="radio"]:checked + label span {
 
 @media (min-width:768px) {
 .container {
-	width: 750px
+	width: 750px;
 }
 }
 
 @media (min-width:992px) {
 .container {
-	width: 950px
+	width: 950px;
 }
 }
 
 @media (min-width:1200px) {
 .container {
-	width: 950px
+	width: 950px;
+}
+}
+@media (min-width:1300px) {
+.header .container-fluid {
+	width: 1270px;
+}
+.sub-nav {
+	width:1270px;
+	margin-left:-635px;
 }
 }
 

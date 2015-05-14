@@ -9,6 +9,13 @@
 <link href="css/fonts.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('.vendor-list h4 a').click(function() {
+		$(this).toggleClass('active');
+    });
+});
+</script>
 </head>
 
 <body>
@@ -27,725 +34,809 @@
             <nav class="nav">
                 <ul>
                     <li><a href="#" title="Education">Education<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav-Education -->
+                    	<!-- start sub-nav -->
                         <div class="sub-nav">
-                        	<div class="col">
-                                <h3>Learning & Hobbies</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                        <li><a href="#" title="Italian">Italian</a></li>
-                                        <li><a href="#" title="Indian">Indian</a></li>
-                                        <li><a href="#" title="Desserts">Desserts</a></li>
-                                        <li><a href="#" title="Thai">Thai</a></li>
-                                        <li><a href="#" title="South Indian">South Indian</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Tabla">Tabla</a></li>
-                                        <li><a href="#" title="Drums">Drums</a></li>
-                                        <li><a href="#" title="Guitar">Guitar</a></li>
-                                        <li><a href="#" title="Piano">Piano</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="French">French</a></li>
-                                        <li><a href="#" title="German">German</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                        <li><a href="#" title="Zumba">Zumba</a></li>
-                                        <li><a href="#" title="Salsa">Salsa</a></li>
-                                        <li><a href="#" title="Kathak">Kathak</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                    <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                    <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                        <li><a href="#" title="Origami">Origami</a></li>
-                                        <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                        <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                        <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                        <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Tuitions & entrance coaching</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                        <li><a href="#" title="Physics">Physics</a></li>
-                                        <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                        <li><a href="#" title="IB">IB</a></li>
-                                        <li><a href="#" title="ICSE">ICSE</a></li>
-                                        <li><a href="#" title="CBSE">CBSE</a></li>
-                                        <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                        <li><a href="#" title="Economics">Economics</a></li>
-                                        <li><a href="#" title="Accounts">Accounts</a></li>
-                                        <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="CA Final">CA Final</a></li>
-                                        <li><a href="#" title="SAT">SAT</a></li>
-                                        <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                        <li><a href="#" title="AFMC">AFMC</a></li>
-                                        <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                        <li><a href="#" title="GMAT">GMAT</a></li>
-                                        <li><a href="#" title="GRE">GRE</a></li>
-                                        <li><a href="#" title="CAT">CAT</a></li>
-                                        <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Professional Courses</h3>
-                                <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                        	<div class="container">
+                        		<div class="row">
+                                	<div class="col-md-4">
+                                        <h3>Learning & Hobbies</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
+                                                    <li><a href="#" title="Italian">Italian</a></li>
+                                                    <li><a href="#" title="Indian">Indian</a></li>
+                                                    <li><a href="#" title="Desserts">Desserts</a></li>
+                                                    <li><a href="#" title="Thai">Thai</a></li>
+                                                    <li><a href="#" title="South Indian">South Indian</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Tabla">Tabla</a></li>
+                                                    <li><a href="#" title="Drums">Drums</a></li>
+                                                    <li><a href="#" title="Guitar">Guitar</a></li>
+                                                    <li><a href="#" title="Piano">Piano</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="French">French</a></li>
+                                                    <li><a href="#" title="German">German</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
+                                                    <li><a href="#" title="Zumba">Zumba</a></li>
+                                                    <li><a href="#" title="Salsa">Salsa</a></li>
+                                                    <li><a href="#" title="Kathak">Kathak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
+                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
+                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
+                                                    <li><a href="#" title="Origami">Origami</a></li>
+                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
+                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
+                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
+                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Tuitions & entrance coaching</h3>
+                                        <div class="row">
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
+                                                    <li><a href="#" title="Physics">Physics</a></li>
+                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
+                                                    <li><a href="#" title="IB">IB</a></li>
+                                                    <li><a href="#" title="ICSE">ICSE</a></li>
+                                                    <li><a href="#" title="CBSE">CBSE</a></li>
+                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
+                                                    <li><a href="#" title="Economics">Economics</a></li>
+                                                    <li><a href="#" title="Accounts">Accounts</a></li>
+                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
+                                                </ul>
+                                            </div>
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="CA Final">CA Final</a></li>
+                                                    <li><a href="#" title="SAT">SAT</a></li>
+                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
+                                                    <li><a href="#" title="AFMC">AFMC</a></li>
+                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
+                                                    <li><a href="#" title="GMAT">GMAT</a></li>
+                                                    <li><a href="#" title="GRE">GRE</a></li>
+                                                    <li><a href="#" title="CAT">CAT</a></li>
+                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Professional Courses</h3>
+                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
+                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
+                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
+                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
+                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                                    </div>
+                            	</div>
                             </div>
                         </div>
-                        <!-- start sub-nav-Education -->
+                        <!-- end sub-nav -->
                     </li>
                     <li><a href="#" title="Home Needs">Home Needs<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav-Education -->
+                    	<!-- start sub-nav -->
                         <div class="sub-nav">
-                        	<div class="col">
-                                <h3>Learning & Hobbies</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                        <li><a href="#" title="Italian">Italian</a></li>
-                                        <li><a href="#" title="Indian">Indian</a></li>
-                                        <li><a href="#" title="Desserts">Desserts</a></li>
-                                        <li><a href="#" title="Thai">Thai</a></li>
-                                        <li><a href="#" title="South Indian">South Indian</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Tabla">Tabla</a></li>
-                                        <li><a href="#" title="Drums">Drums</a></li>
-                                        <li><a href="#" title="Guitar">Guitar</a></li>
-                                        <li><a href="#" title="Piano">Piano</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="French">French</a></li>
-                                        <li><a href="#" title="German">German</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                        <li><a href="#" title="Zumba">Zumba</a></li>
-                                        <li><a href="#" title="Salsa">Salsa</a></li>
-                                        <li><a href="#" title="Kathak">Kathak</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                    <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                    <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                        <li><a href="#" title="Origami">Origami</a></li>
-                                        <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                        <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                        <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                        <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Tuitions & entrance coaching</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                        <li><a href="#" title="Physics">Physics</a></li>
-                                        <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                        <li><a href="#" title="IB">IB</a></li>
-                                        <li><a href="#" title="ICSE">ICSE</a></li>
-                                        <li><a href="#" title="CBSE">CBSE</a></li>
-                                        <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                        <li><a href="#" title="Economics">Economics</a></li>
-                                        <li><a href="#" title="Accounts">Accounts</a></li>
-                                        <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="CA Final">CA Final</a></li>
-                                        <li><a href="#" title="SAT">SAT</a></li>
-                                        <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                        <li><a href="#" title="AFMC">AFMC</a></li>
-                                        <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                        <li><a href="#" title="GMAT">GMAT</a></li>
-                                        <li><a href="#" title="GRE">GRE</a></li>
-                                        <li><a href="#" title="CAT">CAT</a></li>
-                                        <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Professional Courses</h3>
-                                <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                        	<div class="container">
+                        		<div class="row">
+                                	<div class="col-md-4">
+                                        <h3>Learning & Hobbies</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
+                                                    <li><a href="#" title="Italian">Italian</a></li>
+                                                    <li><a href="#" title="Indian">Indian</a></li>
+                                                    <li><a href="#" title="Desserts">Desserts</a></li>
+                                                    <li><a href="#" title="Thai">Thai</a></li>
+                                                    <li><a href="#" title="South Indian">South Indian</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Tabla">Tabla</a></li>
+                                                    <li><a href="#" title="Drums">Drums</a></li>
+                                                    <li><a href="#" title="Guitar">Guitar</a></li>
+                                                    <li><a href="#" title="Piano">Piano</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="French">French</a></li>
+                                                    <li><a href="#" title="German">German</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
+                                                    <li><a href="#" title="Zumba">Zumba</a></li>
+                                                    <li><a href="#" title="Salsa">Salsa</a></li>
+                                                    <li><a href="#" title="Kathak">Kathak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
+                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
+                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
+                                                    <li><a href="#" title="Origami">Origami</a></li>
+                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
+                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
+                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
+                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Tuitions & entrance coaching</h3>
+                                        <div class="row">
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
+                                                    <li><a href="#" title="Physics">Physics</a></li>
+                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
+                                                    <li><a href="#" title="IB">IB</a></li>
+                                                    <li><a href="#" title="ICSE">ICSE</a></li>
+                                                    <li><a href="#" title="CBSE">CBSE</a></li>
+                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
+                                                    <li><a href="#" title="Economics">Economics</a></li>
+                                                    <li><a href="#" title="Accounts">Accounts</a></li>
+                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
+                                                </ul>
+                                            </div>
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="CA Final">CA Final</a></li>
+                                                    <li><a href="#" title="SAT">SAT</a></li>
+                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
+                                                    <li><a href="#" title="AFMC">AFMC</a></li>
+                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
+                                                    <li><a href="#" title="GMAT">GMAT</a></li>
+                                                    <li><a href="#" title="GRE">GRE</a></li>
+                                                    <li><a href="#" title="CAT">CAT</a></li>
+                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Professional Courses</h3>
+                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
+                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
+                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
+                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
+                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                                    </div>
+                            	</div>
                             </div>
                         </div>
-                        <!-- start sub-nav-Education -->
+                        <!-- end sub-nav -->
                     </li>
                     <li><a href="#" title="Electronics & Auto Repairs">Electronics & Auto Repairs<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav-Education -->
+                    	<!-- start sub-nav -->
                         <div class="sub-nav">
-                        	<div class="col">
-                                <h3>Learning & Hobbies</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                        <li><a href="#" title="Italian">Italian</a></li>
-                                        <li><a href="#" title="Indian">Indian</a></li>
-                                        <li><a href="#" title="Desserts">Desserts</a></li>
-                                        <li><a href="#" title="Thai">Thai</a></li>
-                                        <li><a href="#" title="South Indian">South Indian</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Tabla">Tabla</a></li>
-                                        <li><a href="#" title="Drums">Drums</a></li>
-                                        <li><a href="#" title="Guitar">Guitar</a></li>
-                                        <li><a href="#" title="Piano">Piano</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="French">French</a></li>
-                                        <li><a href="#" title="German">German</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                        <li><a href="#" title="Zumba">Zumba</a></li>
-                                        <li><a href="#" title="Salsa">Salsa</a></li>
-                                        <li><a href="#" title="Kathak">Kathak</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                    <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                    <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                        <li><a href="#" title="Origami">Origami</a></li>
-                                        <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                        <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                        <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                        <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Tuitions & entrance coaching</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                        <li><a href="#" title="Physics">Physics</a></li>
-                                        <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                        <li><a href="#" title="IB">IB</a></li>
-                                        <li><a href="#" title="ICSE">ICSE</a></li>
-                                        <li><a href="#" title="CBSE">CBSE</a></li>
-                                        <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                        <li><a href="#" title="Economics">Economics</a></li>
-                                        <li><a href="#" title="Accounts">Accounts</a></li>
-                                        <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="CA Final">CA Final</a></li>
-                                        <li><a href="#" title="SAT">SAT</a></li>
-                                        <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                        <li><a href="#" title="AFMC">AFMC</a></li>
-                                        <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                        <li><a href="#" title="GMAT">GMAT</a></li>
-                                        <li><a href="#" title="GRE">GRE</a></li>
-                                        <li><a href="#" title="CAT">CAT</a></li>
-                                        <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Professional Courses</h3>
-                                <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                        	<div class="container">
+                        		<div class="row">
+                                	<div class="col-md-4">
+                                        <h3>Learning & Hobbies</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
+                                                    <li><a href="#" title="Italian">Italian</a></li>
+                                                    <li><a href="#" title="Indian">Indian</a></li>
+                                                    <li><a href="#" title="Desserts">Desserts</a></li>
+                                                    <li><a href="#" title="Thai">Thai</a></li>
+                                                    <li><a href="#" title="South Indian">South Indian</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Tabla">Tabla</a></li>
+                                                    <li><a href="#" title="Drums">Drums</a></li>
+                                                    <li><a href="#" title="Guitar">Guitar</a></li>
+                                                    <li><a href="#" title="Piano">Piano</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="French">French</a></li>
+                                                    <li><a href="#" title="German">German</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
+                                                    <li><a href="#" title="Zumba">Zumba</a></li>
+                                                    <li><a href="#" title="Salsa">Salsa</a></li>
+                                                    <li><a href="#" title="Kathak">Kathak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
+                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
+                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
+                                                    <li><a href="#" title="Origami">Origami</a></li>
+                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
+                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
+                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
+                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Tuitions & entrance coaching</h3>
+                                        <div class="row">
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
+                                                    <li><a href="#" title="Physics">Physics</a></li>
+                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
+                                                    <li><a href="#" title="IB">IB</a></li>
+                                                    <li><a href="#" title="ICSE">ICSE</a></li>
+                                                    <li><a href="#" title="CBSE">CBSE</a></li>
+                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
+                                                    <li><a href="#" title="Economics">Economics</a></li>
+                                                    <li><a href="#" title="Accounts">Accounts</a></li>
+                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
+                                                </ul>
+                                            </div>
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="CA Final">CA Final</a></li>
+                                                    <li><a href="#" title="SAT">SAT</a></li>
+                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
+                                                    <li><a href="#" title="AFMC">AFMC</a></li>
+                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
+                                                    <li><a href="#" title="GMAT">GMAT</a></li>
+                                                    <li><a href="#" title="GRE">GRE</a></li>
+                                                    <li><a href="#" title="CAT">CAT</a></li>
+                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Professional Courses</h3>
+                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
+                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
+                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
+                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
+                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                                    </div>
+                            	</div>
                             </div>
                         </div>
-                        <!-- start sub-nav-Education -->
+                        <!-- end sub-nav -->
                     </li>
                     <li><a href="#" title="Events">Events<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav-Education -->
+                    	<!-- start sub-nav -->
                         <div class="sub-nav">
-                        	<div class="col">
-                                <h3>Learning & Hobbies</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                        <li><a href="#" title="Italian">Italian</a></li>
-                                        <li><a href="#" title="Indian">Indian</a></li>
-                                        <li><a href="#" title="Desserts">Desserts</a></li>
-                                        <li><a href="#" title="Thai">Thai</a></li>
-                                        <li><a href="#" title="South Indian">South Indian</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Tabla">Tabla</a></li>
-                                        <li><a href="#" title="Drums">Drums</a></li>
-                                        <li><a href="#" title="Guitar">Guitar</a></li>
-                                        <li><a href="#" title="Piano">Piano</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="French">French</a></li>
-                                        <li><a href="#" title="German">German</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                        <li><a href="#" title="Zumba">Zumba</a></li>
-                                        <li><a href="#" title="Salsa">Salsa</a></li>
-                                        <li><a href="#" title="Kathak">Kathak</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                    <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                    <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                        <li><a href="#" title="Origami">Origami</a></li>
-                                        <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                        <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                        <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                        <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Tuitions & entrance coaching</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                        <li><a href="#" title="Physics">Physics</a></li>
-                                        <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                        <li><a href="#" title="IB">IB</a></li>
-                                        <li><a href="#" title="ICSE">ICSE</a></li>
-                                        <li><a href="#" title="CBSE">CBSE</a></li>
-                                        <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                        <li><a href="#" title="Economics">Economics</a></li>
-                                        <li><a href="#" title="Accounts">Accounts</a></li>
-                                        <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="CA Final">CA Final</a></li>
-                                        <li><a href="#" title="SAT">SAT</a></li>
-                                        <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                        <li><a href="#" title="AFMC">AFMC</a></li>
-                                        <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                        <li><a href="#" title="GMAT">GMAT</a></li>
-                                        <li><a href="#" title="GRE">GRE</a></li>
-                                        <li><a href="#" title="CAT">CAT</a></li>
-                                        <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Professional Courses</h3>
-                                <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                        	<div class="container">
+                        		<div class="row">
+                                	<div class="col-md-4">
+                                        <h3>Learning & Hobbies</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
+                                                    <li><a href="#" title="Italian">Italian</a></li>
+                                                    <li><a href="#" title="Indian">Indian</a></li>
+                                                    <li><a href="#" title="Desserts">Desserts</a></li>
+                                                    <li><a href="#" title="Thai">Thai</a></li>
+                                                    <li><a href="#" title="South Indian">South Indian</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Tabla">Tabla</a></li>
+                                                    <li><a href="#" title="Drums">Drums</a></li>
+                                                    <li><a href="#" title="Guitar">Guitar</a></li>
+                                                    <li><a href="#" title="Piano">Piano</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="French">French</a></li>
+                                                    <li><a href="#" title="German">German</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
+                                                    <li><a href="#" title="Zumba">Zumba</a></li>
+                                                    <li><a href="#" title="Salsa">Salsa</a></li>
+                                                    <li><a href="#" title="Kathak">Kathak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
+                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
+                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
+                                                    <li><a href="#" title="Origami">Origami</a></li>
+                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
+                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
+                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
+                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Tuitions & entrance coaching</h3>
+                                        <div class="row">
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
+                                                    <li><a href="#" title="Physics">Physics</a></li>
+                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
+                                                    <li><a href="#" title="IB">IB</a></li>
+                                                    <li><a href="#" title="ICSE">ICSE</a></li>
+                                                    <li><a href="#" title="CBSE">CBSE</a></li>
+                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
+                                                    <li><a href="#" title="Economics">Economics</a></li>
+                                                    <li><a href="#" title="Accounts">Accounts</a></li>
+                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
+                                                </ul>
+                                            </div>
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="CA Final">CA Final</a></li>
+                                                    <li><a href="#" title="SAT">SAT</a></li>
+                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
+                                                    <li><a href="#" title="AFMC">AFMC</a></li>
+                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
+                                                    <li><a href="#" title="GMAT">GMAT</a></li>
+                                                    <li><a href="#" title="GRE">GRE</a></li>
+                                                    <li><a href="#" title="CAT">CAT</a></li>
+                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Professional Courses</h3>
+                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
+                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
+                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
+                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
+                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                                    </div>
+                            	</div>
                             </div>
                         </div>
-                        <!-- start sub-nav-Education -->
+                        <!-- end sub-nav -->
                     </li>
                     <li><a href="#" title="Beauty & Health">Beauty & Health<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav-Education -->
+                    	<!-- start sub-nav -->
                         <div class="sub-nav">
-                        	<div class="col">
-                                <h3>Learning & Hobbies</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                        <li><a href="#" title="Italian">Italian</a></li>
-                                        <li><a href="#" title="Indian">Indian</a></li>
-                                        <li><a href="#" title="Desserts">Desserts</a></li>
-                                        <li><a href="#" title="Thai">Thai</a></li>
-                                        <li><a href="#" title="South Indian">South Indian</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Tabla">Tabla</a></li>
-                                        <li><a href="#" title="Drums">Drums</a></li>
-                                        <li><a href="#" title="Guitar">Guitar</a></li>
-                                        <li><a href="#" title="Piano">Piano</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="French">French</a></li>
-                                        <li><a href="#" title="German">German</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                        <li><a href="#" title="Zumba">Zumba</a></li>
-                                        <li><a href="#" title="Salsa">Salsa</a></li>
-                                        <li><a href="#" title="Kathak">Kathak</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                    <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                    <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                        <li><a href="#" title="Origami">Origami</a></li>
-                                        <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                        <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                        <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                        <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Tuitions & entrance coaching</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                        <li><a href="#" title="Physics">Physics</a></li>
-                                        <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                        <li><a href="#" title="IB">IB</a></li>
-                                        <li><a href="#" title="ICSE">ICSE</a></li>
-                                        <li><a href="#" title="CBSE">CBSE</a></li>
-                                        <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                        <li><a href="#" title="Economics">Economics</a></li>
-                                        <li><a href="#" title="Accounts">Accounts</a></li>
-                                        <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="CA Final">CA Final</a></li>
-                                        <li><a href="#" title="SAT">SAT</a></li>
-                                        <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                        <li><a href="#" title="AFMC">AFMC</a></li>
-                                        <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                        <li><a href="#" title="GMAT">GMAT</a></li>
-                                        <li><a href="#" title="GRE">GRE</a></li>
-                                        <li><a href="#" title="CAT">CAT</a></li>
-                                        <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Professional Courses</h3>
-                                <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                        	<div class="container">
+                        		<div class="row">
+                                	<div class="col-md-4">
+                                        <h3>Learning & Hobbies</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
+                                                    <li><a href="#" title="Italian">Italian</a></li>
+                                                    <li><a href="#" title="Indian">Indian</a></li>
+                                                    <li><a href="#" title="Desserts">Desserts</a></li>
+                                                    <li><a href="#" title="Thai">Thai</a></li>
+                                                    <li><a href="#" title="South Indian">South Indian</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Tabla">Tabla</a></li>
+                                                    <li><a href="#" title="Drums">Drums</a></li>
+                                                    <li><a href="#" title="Guitar">Guitar</a></li>
+                                                    <li><a href="#" title="Piano">Piano</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="French">French</a></li>
+                                                    <li><a href="#" title="German">German</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
+                                                    <li><a href="#" title="Zumba">Zumba</a></li>
+                                                    <li><a href="#" title="Salsa">Salsa</a></li>
+                                                    <li><a href="#" title="Kathak">Kathak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
+                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
+                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
+                                                    <li><a href="#" title="Origami">Origami</a></li>
+                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
+                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
+                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
+                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Tuitions & entrance coaching</h3>
+                                        <div class="row">
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
+                                                    <li><a href="#" title="Physics">Physics</a></li>
+                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
+                                                    <li><a href="#" title="IB">IB</a></li>
+                                                    <li><a href="#" title="ICSE">ICSE</a></li>
+                                                    <li><a href="#" title="CBSE">CBSE</a></li>
+                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
+                                                    <li><a href="#" title="Economics">Economics</a></li>
+                                                    <li><a href="#" title="Accounts">Accounts</a></li>
+                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
+                                                </ul>
+                                            </div>
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="CA Final">CA Final</a></li>
+                                                    <li><a href="#" title="SAT">SAT</a></li>
+                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
+                                                    <li><a href="#" title="AFMC">AFMC</a></li>
+                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
+                                                    <li><a href="#" title="GMAT">GMAT</a></li>
+                                                    <li><a href="#" title="GRE">GRE</a></li>
+                                                    <li><a href="#" title="CAT">CAT</a></li>
+                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Professional Courses</h3>
+                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
+                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
+                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
+                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
+                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                                    </div>
+                            	</div>
                             </div>
                         </div>
-                        <!-- start sub-nav-Education -->
+                        <!-- end sub-nav -->
                     </li>
                     <li><a href="#" title="Business">Business<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav-Education -->
+                    	<!-- start sub-nav -->
                         <div class="sub-nav">
-                        	<div class="col">
-                                <h3>Learning & Hobbies</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                        <li><a href="#" title="Italian">Italian</a></li>
-                                        <li><a href="#" title="Indian">Indian</a></li>
-                                        <li><a href="#" title="Desserts">Desserts</a></li>
-                                        <li><a href="#" title="Thai">Thai</a></li>
-                                        <li><a href="#" title="South Indian">South Indian</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Tabla">Tabla</a></li>
-                                        <li><a href="#" title="Drums">Drums</a></li>
-                                        <li><a href="#" title="Guitar">Guitar</a></li>
-                                        <li><a href="#" title="Piano">Piano</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="French">French</a></li>
-                                        <li><a href="#" title="German">German</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                        <li><a href="#" title="Zumba">Zumba</a></li>
-                                        <li><a href="#" title="Salsa">Salsa</a></li>
-                                        <li><a href="#" title="Kathak">Kathak</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                    <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                    <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                        <li><a href="#" title="Origami">Origami</a></li>
-                                        <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                        <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                        <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                        <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Tuitions & entrance coaching</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                        <li><a href="#" title="Physics">Physics</a></li>
-                                        <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                        <li><a href="#" title="IB">IB</a></li>
-                                        <li><a href="#" title="ICSE">ICSE</a></li>
-                                        <li><a href="#" title="CBSE">CBSE</a></li>
-                                        <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                        <li><a href="#" title="Economics">Economics</a></li>
-                                        <li><a href="#" title="Accounts">Accounts</a></li>
-                                        <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="CA Final">CA Final</a></li>
-                                        <li><a href="#" title="SAT">SAT</a></li>
-                                        <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                        <li><a href="#" title="AFMC">AFMC</a></li>
-                                        <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                        <li><a href="#" title="GMAT">GMAT</a></li>
-                                        <li><a href="#" title="GRE">GRE</a></li>
-                                        <li><a href="#" title="CAT">CAT</a></li>
-                                        <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Professional Courses</h3>
-                                <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                        	<div class="container">
+                        		<div class="row">
+                                	<div class="col-md-4">
+                                        <h3>Learning & Hobbies</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
+                                                    <li><a href="#" title="Italian">Italian</a></li>
+                                                    <li><a href="#" title="Indian">Indian</a></li>
+                                                    <li><a href="#" title="Desserts">Desserts</a></li>
+                                                    <li><a href="#" title="Thai">Thai</a></li>
+                                                    <li><a href="#" title="South Indian">South Indian</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Tabla">Tabla</a></li>
+                                                    <li><a href="#" title="Drums">Drums</a></li>
+                                                    <li><a href="#" title="Guitar">Guitar</a></li>
+                                                    <li><a href="#" title="Piano">Piano</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="French">French</a></li>
+                                                    <li><a href="#" title="German">German</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
+                                                    <li><a href="#" title="Zumba">Zumba</a></li>
+                                                    <li><a href="#" title="Salsa">Salsa</a></li>
+                                                    <li><a href="#" title="Kathak">Kathak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
+                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
+                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
+                                                    <li><a href="#" title="Origami">Origami</a></li>
+                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
+                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
+                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
+                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Tuitions & entrance coaching</h3>
+                                        <div class="row">
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
+                                                    <li><a href="#" title="Physics">Physics</a></li>
+                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
+                                                    <li><a href="#" title="IB">IB</a></li>
+                                                    <li><a href="#" title="ICSE">ICSE</a></li>
+                                                    <li><a href="#" title="CBSE">CBSE</a></li>
+                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
+                                                    <li><a href="#" title="Economics">Economics</a></li>
+                                                    <li><a href="#" title="Accounts">Accounts</a></li>
+                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
+                                                </ul>
+                                            </div>
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="CA Final">CA Final</a></li>
+                                                    <li><a href="#" title="SAT">SAT</a></li>
+                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
+                                                    <li><a href="#" title="AFMC">AFMC</a></li>
+                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
+                                                    <li><a href="#" title="GMAT">GMAT</a></li>
+                                                    <li><a href="#" title="GRE">GRE</a></li>
+                                                    <li><a href="#" title="CAT">CAT</a></li>
+                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Professional Courses</h3>
+                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
+                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
+                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
+                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
+                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                                    </div>
+                            	</div>
                             </div>
                         </div>
-                        <!-- start sub-nav-Education -->
+                        <!-- end sub-nav -->
                     </li>
                     <li><a href="#" title="More">More<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav-Education -->
+                    	<!-- start sub-nav -->
                         <div class="sub-nav">
-                        	<div class="col">
-                                <h3>Learning & Hobbies</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                        <li><a href="#" title="Italian">Italian</a></li>
-                                        <li><a href="#" title="Indian">Indian</a></li>
-                                        <li><a href="#" title="Desserts">Desserts</a></li>
-                                        <li><a href="#" title="Thai">Thai</a></li>
-                                        <li><a href="#" title="South Indian">South Indian</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Tabla">Tabla</a></li>
-                                        <li><a href="#" title="Drums">Drums</a></li>
-                                        <li><a href="#" title="Guitar">Guitar</a></li>
-                                        <li><a href="#" title="Piano">Piano</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="French">French</a></li>
-                                        <li><a href="#" title="German">German</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                        <li><a href="#" title="Zumba">Zumba</a></li>
-                                        <li><a href="#" title="Salsa">Salsa</a></li>
-                                        <li><a href="#" title="Kathak">Kathak</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                    <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                    <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                        <li><a href="#" title="Origami">Origami</a></li>
-                                        <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                        <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                        <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                        <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Tuitions & entrance coaching</h3>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="Hindi">Hindi</a></li>
-                                        <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                        <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                        <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                        <li><a href="#" title="Physics">Physics</a></li>
-                                        <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                        <li><a href="#" title="IB">IB</a></li>
-                                        <li><a href="#" title="ICSE">ICSE</a></li>
-                                        <li><a href="#" title="CBSE">CBSE</a></li>
-                                        <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                        <li><a href="#" title="Economics">Economics</a></li>
-                                        <li><a href="#" title="Accounts">Accounts</a></li>
-                                        <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-col">
-                                    <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                    <ul>
-                                        <li><a href="#" title="CA Final">CA Final</a></li>
-                                        <li><a href="#" title="SAT">SAT</a></li>
-                                        <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                        <li><a href="#" title="AFMC">AFMC</a></li>
-                                        <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                        <li><a href="#" title="GMAT">GMAT</a></li>
-                                        <li><a href="#" title="GRE">GRE</a></li>
-                                        <li><a href="#" title="CAT">CAT</a></li>
-                                        <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <h3>Professional Courses</h3>
-                                <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                        	<div class="container">
+                        		<div class="row">
+                                	<div class="col-md-4">
+                                        <h3>Learning & Hobbies</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
+                                                    <li><a href="#" title="Italian">Italian</a></li>
+                                                    <li><a href="#" title="Indian">Indian</a></li>
+                                                    <li><a href="#" title="Desserts">Desserts</a></li>
+                                                    <li><a href="#" title="Thai">Thai</a></li>
+                                                    <li><a href="#" title="South Indian">South Indian</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Tabla">Tabla</a></li>
+                                                    <li><a href="#" title="Drums">Drums</a></li>
+                                                    <li><a href="#" title="Guitar">Guitar</a></li>
+                                                    <li><a href="#" title="Piano">Piano</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="French">French</a></li>
+                                                    <li><a href="#" title="German">German</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
+                                                    <li><a href="#" title="Zumba">Zumba</a></li>
+                                                    <li><a href="#" title="Salsa">Salsa</a></li>
+                                                    <li><a href="#" title="Kathak">Kathak</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
+                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
+                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
+                                                    <li><a href="#" title="Origami">Origami</a></li>
+                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
+                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
+                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
+                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Tuitions & entrance coaching</h3>
+                                        <div class="row">
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="Hindi">Hindi</a></li>
+                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
+                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
+                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
+                                                    <li><a href="#" title="Physics">Physics</a></li>
+                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
+                                                    <li><a href="#" title="IB">IB</a></li>
+                                                    <li><a href="#" title="ICSE">ICSE</a></li>
+                                                    <li><a href="#" title="CBSE">CBSE</a></li>
+                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
+                                                    <li><a href="#" title="Economics">Economics</a></li>
+                                                    <li><a href="#" title="Accounts">Accounts</a></li>
+                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
+                                                </ul>
+                                            </div>
+                                        	<div class="col-md-6">
+                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
+                                                <ul>
+                                                    <li><a href="#" title="CA Final">CA Final</a></li>
+                                                    <li><a href="#" title="SAT">SAT</a></li>
+                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
+                                                    <li><a href="#" title="AFMC">AFMC</a></li>
+                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
+                                                    <li><a href="#" title="GMAT">GMAT</a></li>
+                                                    <li><a href="#" title="GRE">GRE</a></li>
+                                                    <li><a href="#" title="CAT">CAT</a></li>
+                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                            		<div class="col-md-4">
+                                        <h3>Professional Courses</h3>
+                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
+                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
+                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
+                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
+                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
+                                    </div>
+                            	</div>
                             </div>
                         </div>
-                        <!-- start sub-nav-Education -->
+                        <!-- end sub-nav -->
                     </li>
                 </ul>
             </nav>
