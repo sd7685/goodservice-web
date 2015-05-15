@@ -2,6 +2,7 @@
 @import 'reset';
   
 $primary-color: #2BC83E;
+$primary-color-hover: #0aa91d;
 $common-color: #2b2b2b;
 
 /* radius */
@@ -19,86 +20,155 @@ $common-color: #2b2b2b;
 }
 
 
+/*///////////////////////////////////
+  Checkbox and Radio CSS
+///////////////////////////////////*/
+input[type="checkbox"] {
+	display:none;
+}
+input[type="checkbox"] + label span {
+	background:url(../images/bg_checkbox.png) no-repeat left top;
+    display:inline-block;
+    width:14px;
+    height:14px;
+	float:left;
+	margin:8px 5px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/bg_checkbox.png) no-repeat left -14px;
+}
+input[type="radio"] + label span {
+	background:url(../images/bg_radio.png) no-repeat left top;
+    display:inline-block;
+    width:14px;
+    height:14px;
+	float:left;
+	margin:8px 5px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+}
+input[type="radio"]:checked + label span {
+    background:url(../images/bg_radio.png) no-repeat left -14px;
+}
 
+
+
+
+/*///////////////////////////////////
+  Start Main CSS
+///////////////////////////////////*/
+html,
 body {
-	background-color:$primary-color;
+  height:100%;
+}
+body {
+	background:$primary-color;
+	font-size:12px;
 	color:$common-color;
 }
 
+.header {
+	padding-top:15px;
+}
 /* Logo */
 .logo {
-	  padding-bottom:20px;
-	  text-align:center;
-	  font-size:30px;
-	  color: #fff;
-	  text-transform:uppercase;
-	  
-	  a {
-	    color: #fff;
-	  }
+  padding-bottom:15px;
+  font-size:30px;
+  color: #fff;
+  text-transform:uppercase;
+  a {
+	color: #fff;
+  }
 }
 
 /* Login */
 .login {
   padding:100px 50px 0 50px;
   
+  .logo {
+	  text-align:center;
+  }
   h3 {
     padding-bottom:15px;
 	font-size:14px; 
   }
-  
+  p {
+    padding-bottom:15px;
+	line-height:21px;
+  }
   .form {
     background:#fff;
-	min-height:300px;
 	padding:20px;
 	@include border-radius(3px);
   }
-  
-  label {
-	padding-bottom:5px;
-	display:block;
-	font-size:13px;
-	@include transition(0.5s); 
-  }
-  
   .input-row {
-	 position:relative;
-	 z-index:1;
-	 label {
-		position:absolute;
-		top:14px; 
-	 }
+	padding-top:15px;
+	position:relative;
+	z-index:1;
+	
+	label {
+	  display:block;
+	  font-size:14px;
+	  @include transition(0.2s); 
+	  position:absolute;
+	  top:29px; 
+	}
+	&.active {
+	  label {
+		top:5px; 
+		font-size:12px;
+		color:$primary-color;
+	  }
+	}
+	.input {
+	  border:none;
+	  border-bottom:1px solid #ebebeb;
+	  background:#fff;
+	  width:100%;
+	  height:40px;
+	  margin-bottom:15px;
+	  font-size:16px;
+	  color:$common-color;
+	  @include transition(0.2s);
+	  &:focus {
+		border-bottom-color:$primary-color;
+		border-bottom-width:2px;
+	  }
+	}
   }
-  
-  .input {
-	border:none;
-	border-bottom:1px solid #ebebeb;
-    background:#fff;
-	width:100%;
-	height:40px;
-	margin-bottom:20px;
-	@include transition(0.5s);
+  .keep {
+	display:block;
+	padding:10px 0 10px 0;
+	span {
+	  float:left;
+	  margin:0 5px 0 0;
+	}
   }
-  .input:focus {
-	border-bottom-color:$primary-color;
-	border-bottom-width:2px;
-  }
-  .input:focus + label {
-	top:0 !important;
-  }
-  
   .button {
 	background:$primary-color;
 	border:none;
 	width:100%;
 	height:40px;
+	margin-top:15px;
 	font-size:14px;
 	color:#fff;
 	line-height:40px;
 	text-transform:uppercase;
 	@include border-radius(3px);
+	@include transition(0.2s);
+	
+	&:hover {
+	  background:$primary-color-hover;
+	}
   }
   
+}
+
+.main-container {
+	background:#fff;
+	height:100%;
 }
 
 

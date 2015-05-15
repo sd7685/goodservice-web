@@ -53,14 +53,56 @@ input {
   outline: none; }
 
 /* radius */
+/*///////////////////////////////////
+  Checkbox and Radio CSS
+///////////////////////////////////*/
+input[type="checkbox"] {
+  display: none; }
+
+input[type="checkbox"] + label span {
+  background: url(../images/bg_checkbox.png) no-repeat left top;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  float: left;
+  margin: 8px 5px 0 0;
+  vertical-align: middle;
+  cursor: pointer; }
+
+input[type="checkbox"]:checked + label span {
+  background: url(../images/bg_checkbox.png) no-repeat left -14px; }
+
+input[type="radio"] + label span {
+  background: url(../images/bg_radio.png) no-repeat left top;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  float: left;
+  margin: 8px 5px 0 0;
+  vertical-align: middle;
+  cursor: pointer; }
+
+input[type="radio"]:checked + label span {
+  background: url(../images/bg_radio.png) no-repeat left -14px; }
+
+/*///////////////////////////////////
+  Start Main CSS
+///////////////////////////////////*/
+html,
 body {
-  background-color: #2BC83E;
+  height: 100%; }
+
+body {
+  background: #2BC83E;
+  font-size: 12px;
   color: #2b2b2b; }
+
+.header {
+  padding-top: 15px; }
 
 /* Logo */
 .logo {
-  padding-bottom: 20px;
-  text-align: center;
+  padding-bottom: 15px;
   font-size: 30px;
   color: #fff;
   text-transform: uppercase; }
@@ -70,52 +112,66 @@ body {
 /* Login */
 .login {
   padding: 100px 50px 0 50px; }
+  .login .logo {
+    text-align: center; }
   .login h3 {
     padding-bottom: 15px;
     font-size: 14px; }
+  .login p {
+    padding-bottom: 15px;
+    line-height: 21px; }
   .login .form {
     background: #fff;
-    min-height: 300px;
     padding: 20px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
     border-radius: 3px; }
-  .login label {
-    padding-bottom: 5px;
-    display: block;
-    font-size: 13px;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    transition: 0.5s; }
   .login .input-row {
+    padding-top: 15px;
     position: relative;
     z-index: 1; }
     .login .input-row label {
+      display: block;
+      font-size: 14px;
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -ms-transition: 0.2s;
+      transition: 0.2s;
       position: absolute;
-      top: 14px; }
-  .login .input {
-    border: none;
-    border-bottom: 1px solid #ebebeb;
-    background: #fff;
-    width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    -ms-transition: 0.5s;
-    transition: 0.5s; }
-  .login .input:focus {
-    border-bottom-color: #2BC83E;
-    border-bottom-width: 2px; }
-  .login .input:focus + label {
-    top: 0 !important; }
+      top: 29px; }
+    .login .input-row.active label {
+      top: 5px;
+      font-size: 12px;
+      color: #2BC83E; }
+    .login .input-row .input {
+      border: none;
+      border-bottom: 1px solid #ebebeb;
+      background: #fff;
+      width: 100%;
+      height: 40px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #2b2b2b;
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -ms-transition: 0.2s;
+      transition: 0.2s; }
+      .login .input-row .input:focus {
+        border-bottom-color: #2BC83E;
+        border-bottom-width: 2px; }
+  .login .keep {
+    display: block;
+    padding: 10px 0 10px 0; }
+    .login .keep span {
+      float: left;
+      margin: 0 5px 0 0; }
   .login .button {
     background: #2BC83E;
     border: none;
     width: 100%;
     height: 40px;
+    margin-top: 15px;
     font-size: 14px;
     color: #fff;
     line-height: 40px;
@@ -123,7 +179,17 @@ body {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -ms-border-radius: 3px;
-    border-radius: 3px; }
+    border-radius: 3px;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    transition: 0.2s; }
+    .login .button:hover {
+      background: #0aa91d; }
+
+.main-container {
+  background: #fff;
+  height: 100%; }
 
 /*////////////////////////////////////////////
   Fonts
