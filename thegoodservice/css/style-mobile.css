@@ -152,12 +152,11 @@ body.active {
 .price .col-xs-10 {
 	padding-right:0;
 }
-.price .col-xs-2 {
-	padding-right:0;
-}
 .price .col-xs-2 i {
 	float:right;
-	margin-right:15px;
+	display:inline-block;
+	margin-right:0;
+	padding-bottom:12px;
 }
 /* Info */
 .info .highlight {
