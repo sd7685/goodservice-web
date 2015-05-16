@@ -114,8 +114,18 @@ $(document).ready(function() {
 	});
 	
 	var width=$('.vendor').width();
-	
 	$('.section-link').width(width);
+	
+	var width2=$('.find-search .col-md-3').width();
+	$('.search-dd').width(width2);
+	
+	$('.find-search .city').click(function() {
+		$('.search-dd').slideToggle();
+		return false;
+    });
+	$('.search-dd li a').click(function() {
+		$('.search-dd').slideToggle();
+    });
 	
 	$('.service-dropdown > a, .service-dropdown .dd li a, .main-overlay').click(function() {
 		$('.dd-link').toggleClass('active');
@@ -985,6 +995,15 @@ $(document).ready(function() {
                 </div>
                 <div class="col-md-3">
                     <a href="#" title="Gurgaon" class="city"><span class="icon-down_arrow"></span>Gurgaon</a>
+                    <div class="search-dd">
+                        <ul>
+                            <li><a href="#">Delhi</a></li>
+                            <li><a href="#">Mumbai</a></li>
+                            <li><a href="#">Bangalore</a></li>
+                            <li><a href="#">Chennai</a></li>
+                            <li><a href="#">Hyderabad</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1433,9 +1452,7 @@ $(document).ready(function() {
                         <div class="col-md-12 map">
                             <h3>Map</h3>
                             <div class="imgb">
-                                <a href="#" title="Map">
-                                <img src="images/img_map.png" width="640" height="160" alt="map">
-                                </a>
+                                <a href="#" title="Map"><img src="images/img_map.png" width="640" height="160" alt="map"></a>
                             </div>
                         </div>
                     </div>

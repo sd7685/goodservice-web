@@ -5,6 +5,7 @@
 <title>Good Service</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/style-mobile.css" rel="stylesheet" type="text/css">
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="css/fonts.css" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -45,47 +46,9 @@ $(document).ready(function() {
 		}
 	});	
 	
-	
-	$('.carousel2').flexslider({
-		selector: ".slides > li",
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		itemWidth: 107,
-		itemMargin: 15,
-		asNavFor: '.slider2'
-	});
-		   
-	$('.slider2').flexslider({
-		selector: ".slides > li",
-		animation: "slide",
-		controlNav: false,
-		animationLoop: false,
-		slideshow: false,
-		sync: ".carousel2",
-		start: function() {
-			$activecaption = $('.flex-active-slide .flex-caption2');
-			$captions2.html($activecaption.text());        
-		},
-		after: function() {
-			$activecaption = $('.flex-active-slide .flex-caption2');
-			$captions2.html($activecaption.text());
-		}
-	});	
-	
-	
-	
 	$('.photo li a').click(function() {
 		$('#slider').addClass('active');
 		$('body').css("overflow","hidden");
-		return false;
-    });
-	
-	$('.videos li a').click(function() {
-		$('#videos').addClass('active');
-		$('body').css("overflow","hidden");
-		$('.rightcol-overlay').css("overflow","inherit");
 		return false;
     });
 	
@@ -95,44 +58,8 @@ $(document).ready(function() {
 		return false;
     });
 	
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 10) {
-			$('.header').addClass('active');
-			$('body').css({'padding-top': '52px'});
-		} else {
-			$('.header').removeClass('active');
-			$('body').css({'padding-top': '0'});
-		}
-	});
-	
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 235) {
-			$('.section-link').addClass('active');
-		} else {
-			$('.section-link').removeClass('active');
-		}
-	});
-	
-	var width=$('.vendor').width();
-	
-	$('.section-link').width(width);
-	
-	$('.service-dropdown > a, .service-dropdown .dd li a, .main-overlay').click(function() {
-		$('.dd-link').toggleClass('active');
-		$('.service-dropdown .dd').slideToggle();
-		$('body').toggleClass('body-overflow');
-		$('.main-overlay').toggle();
-		return false;
-    });
-	
-	$('.service-dropdown .dd li a, .main-overlay').click(function() {
-		$('body').removeClass('body-overflow');
-		$('.main-overlay').hide();
-		return false;
-    });
-	
-	$('.recommend-costs ul > li > a').click(function() {
-		$(this).toggleClass('active');
+	$('.manu-icon').click(function() {
+        $('.left-nav,.main-container,body,.main-overlay').toggleClass('active');
     });
 	
 });
@@ -143,1674 +70,408 @@ $(document).ready(function() {
 <!-- start header -->
 <header class="header">
 	<!-- start container -->
-	<div class="container-fluid">
+	<div class="container">
     	<!-- start row -->
     	<div class="row">
+        	<div class="col-xs-2">
+            	<a href="#" title="Manu" class="manu-icon">Manu</a>
+            </div>
         	<!-- start logo -->
-            <div class="logo">
+            <div class="col-xs-8 logo">
                 <a href="index.html" title="GoodService">Good<span>Service</span></a>
             </div>
             <!-- end logo -->
-            <!-- start nav -->
-            <nav class="nav">
-                <ul>
-                    <li><a href="#" title="Education"><i>line</i>Education<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav -->
-                        <div class="sub-nav">
-                        	<div class="container">
-                        		<div class="row">
-                                	<div class="col-md-4">
-                                        <h3>Learning & Hobbies</h3>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                                    <li><a href="#" title="Italian">Italian</a></li>
-                                                    <li><a href="#" title="Indian">Indian</a></li>
-                                                    <li><a href="#" title="Desserts">Desserts</a></li>
-                                                    <li><a href="#" title="Thai">Thai</a></li>
-                                                    <li><a href="#" title="South Indian">South Indian</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                                    <li><a href="#" title="Drums">Drums</a></li>
-                                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                                    <li><a href="#" title="Piano">Piano</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="French">French</a></li>
-                                                    <li><a href="#" title="German">German</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                                    <li><a href="#" title="Zumba">Zumba</a></li>
-                                                    <li><a href="#" title="Salsa">Salsa</a></li>
-                                                    <li><a href="#" title="Kathak">Kathak</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                                    <li><a href="#" title="Origami">Origami</a></li>
-                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Tuitions & entrance coaching</h3>
-                                        <div class="row">
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                                    <li><a href="#" title="Physics">Physics</a></li>
-                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                                    <li><a href="#" title="IB">IB</a></li>
-                                                    <li><a href="#" title="ICSE">ICSE</a></li>
-                                                    <li><a href="#" title="CBSE">CBSE</a></li>
-                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                                    <li><a href="#" title="Economics">Economics</a></li>
-                                                    <li><a href="#" title="Accounts">Accounts</a></li>
-                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                                </ul>
-                                            </div>
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="CA Final">CA Final</a></li>
-                                                    <li><a href="#" title="SAT">SAT</a></li>
-                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                                    <li><a href="#" title="AFMC">AFMC</a></li>
-                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                                    <li><a href="#" title="GMAT">GMAT</a></li>
-                                                    <li><a href="#" title="GRE">GRE</a></li>
-                                                    <li><a href="#" title="CAT">CAT</a></li>
-                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Professional Courses</h3>
-                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
-                                    </div>
-                            	</div>
-                            </div>
-                        </div>
-                        <!-- end sub-nav -->
-                    </li>
-                    <li><a href="#" title="Home Needs"><i>line</i>Home Needs<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav -->
-                        <div class="sub-nav">
-                        	<div class="container">
-                        		<div class="row">
-                                	<div class="col-md-4">
-                                        <h3>Learning & Hobbies</h3>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                                    <li><a href="#" title="Italian">Italian</a></li>
-                                                    <li><a href="#" title="Indian">Indian</a></li>
-                                                    <li><a href="#" title="Desserts">Desserts</a></li>
-                                                    <li><a href="#" title="Thai">Thai</a></li>
-                                                    <li><a href="#" title="South Indian">South Indian</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                                    <li><a href="#" title="Drums">Drums</a></li>
-                                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                                    <li><a href="#" title="Piano">Piano</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="French">French</a></li>
-                                                    <li><a href="#" title="German">German</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                                    <li><a href="#" title="Zumba">Zumba</a></li>
-                                                    <li><a href="#" title="Salsa">Salsa</a></li>
-                                                    <li><a href="#" title="Kathak">Kathak</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                                    <li><a href="#" title="Origami">Origami</a></li>
-                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Tuitions & entrance coaching</h3>
-                                        <div class="row">
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                                    <li><a href="#" title="Physics">Physics</a></li>
-                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                                    <li><a href="#" title="IB">IB</a></li>
-                                                    <li><a href="#" title="ICSE">ICSE</a></li>
-                                                    <li><a href="#" title="CBSE">CBSE</a></li>
-                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                                    <li><a href="#" title="Economics">Economics</a></li>
-                                                    <li><a href="#" title="Accounts">Accounts</a></li>
-                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                                </ul>
-                                            </div>
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="CA Final">CA Final</a></li>
-                                                    <li><a href="#" title="SAT">SAT</a></li>
-                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                                    <li><a href="#" title="AFMC">AFMC</a></li>
-                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                                    <li><a href="#" title="GMAT">GMAT</a></li>
-                                                    <li><a href="#" title="GRE">GRE</a></li>
-                                                    <li><a href="#" title="CAT">CAT</a></li>
-                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Professional Courses</h3>
-                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
-                                    </div>
-                            	</div>
-                            </div>
-                        </div>
-                        <!-- end sub-nav -->
-                    </li>
-                    <li><a href="#" title="Electronics & Auto Repairs"><i>line</i>Electronics & Auto Repairs<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav -->
-                        <div class="sub-nav">
-                        	<div class="container">
-                        		<div class="row">
-                                	<div class="col-md-4">
-                                        <h3>Learning & Hobbies</h3>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                                    <li><a href="#" title="Italian">Italian</a></li>
-                                                    <li><a href="#" title="Indian">Indian</a></li>
-                                                    <li><a href="#" title="Desserts">Desserts</a></li>
-                                                    <li><a href="#" title="Thai">Thai</a></li>
-                                                    <li><a href="#" title="South Indian">South Indian</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                                    <li><a href="#" title="Drums">Drums</a></li>
-                                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                                    <li><a href="#" title="Piano">Piano</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="French">French</a></li>
-                                                    <li><a href="#" title="German">German</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                                    <li><a href="#" title="Zumba">Zumba</a></li>
-                                                    <li><a href="#" title="Salsa">Salsa</a></li>
-                                                    <li><a href="#" title="Kathak">Kathak</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                                    <li><a href="#" title="Origami">Origami</a></li>
-                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Tuitions & entrance coaching</h3>
-                                        <div class="row">
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                                    <li><a href="#" title="Physics">Physics</a></li>
-                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                                    <li><a href="#" title="IB">IB</a></li>
-                                                    <li><a href="#" title="ICSE">ICSE</a></li>
-                                                    <li><a href="#" title="CBSE">CBSE</a></li>
-                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                                    <li><a href="#" title="Economics">Economics</a></li>
-                                                    <li><a href="#" title="Accounts">Accounts</a></li>
-                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                                </ul>
-                                            </div>
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="CA Final">CA Final</a></li>
-                                                    <li><a href="#" title="SAT">SAT</a></li>
-                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                                    <li><a href="#" title="AFMC">AFMC</a></li>
-                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                                    <li><a href="#" title="GMAT">GMAT</a></li>
-                                                    <li><a href="#" title="GRE">GRE</a></li>
-                                                    <li><a href="#" title="CAT">CAT</a></li>
-                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Professional Courses</h3>
-                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
-                                    </div>
-                            	</div>
-                            </div>
-                        </div>
-                        <!-- end sub-nav -->
-                    </li>
-                    <li><a href="#" title="Events"><i>line</i>Events<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav -->
-                        <div class="sub-nav">
-                        	<div class="container">
-                        		<div class="row">
-                                	<div class="col-md-4">
-                                        <h3>Learning & Hobbies</h3>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                                    <li><a href="#" title="Italian">Italian</a></li>
-                                                    <li><a href="#" title="Indian">Indian</a></li>
-                                                    <li><a href="#" title="Desserts">Desserts</a></li>
-                                                    <li><a href="#" title="Thai">Thai</a></li>
-                                                    <li><a href="#" title="South Indian">South Indian</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                                    <li><a href="#" title="Drums">Drums</a></li>
-                                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                                    <li><a href="#" title="Piano">Piano</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="French">French</a></li>
-                                                    <li><a href="#" title="German">German</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                                    <li><a href="#" title="Zumba">Zumba</a></li>
-                                                    <li><a href="#" title="Salsa">Salsa</a></li>
-                                                    <li><a href="#" title="Kathak">Kathak</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                                    <li><a href="#" title="Origami">Origami</a></li>
-                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Tuitions & entrance coaching</h3>
-                                        <div class="row">
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                                    <li><a href="#" title="Physics">Physics</a></li>
-                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                                    <li><a href="#" title="IB">IB</a></li>
-                                                    <li><a href="#" title="ICSE">ICSE</a></li>
-                                                    <li><a href="#" title="CBSE">CBSE</a></li>
-                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                                    <li><a href="#" title="Economics">Economics</a></li>
-                                                    <li><a href="#" title="Accounts">Accounts</a></li>
-                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                                </ul>
-                                            </div>
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="CA Final">CA Final</a></li>
-                                                    <li><a href="#" title="SAT">SAT</a></li>
-                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                                    <li><a href="#" title="AFMC">AFMC</a></li>
-                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                                    <li><a href="#" title="GMAT">GMAT</a></li>
-                                                    <li><a href="#" title="GRE">GRE</a></li>
-                                                    <li><a href="#" title="CAT">CAT</a></li>
-                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Professional Courses</h3>
-                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
-                                    </div>
-                            	</div>
-                            </div>
-                        </div>
-                        <!-- end sub-nav -->
-                    </li>
-                    <li><a href="#" title="Beauty & Health"><i>line</i>Beauty & Health<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav -->
-                        <div class="sub-nav">
-                        	<div class="container">
-                        		<div class="row">
-                                	<div class="col-md-4">
-                                        <h3>Learning & Hobbies</h3>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                                    <li><a href="#" title="Italian">Italian</a></li>
-                                                    <li><a href="#" title="Indian">Indian</a></li>
-                                                    <li><a href="#" title="Desserts">Desserts</a></li>
-                                                    <li><a href="#" title="Thai">Thai</a></li>
-                                                    <li><a href="#" title="South Indian">South Indian</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                                    <li><a href="#" title="Drums">Drums</a></li>
-                                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                                    <li><a href="#" title="Piano">Piano</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="French">French</a></li>
-                                                    <li><a href="#" title="German">German</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                                    <li><a href="#" title="Zumba">Zumba</a></li>
-                                                    <li><a href="#" title="Salsa">Salsa</a></li>
-                                                    <li><a href="#" title="Kathak">Kathak</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                                    <li><a href="#" title="Origami">Origami</a></li>
-                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Tuitions & entrance coaching</h3>
-                                        <div class="row">
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                                    <li><a href="#" title="Physics">Physics</a></li>
-                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                                    <li><a href="#" title="IB">IB</a></li>
-                                                    <li><a href="#" title="ICSE">ICSE</a></li>
-                                                    <li><a href="#" title="CBSE">CBSE</a></li>
-                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                                    <li><a href="#" title="Economics">Economics</a></li>
-                                                    <li><a href="#" title="Accounts">Accounts</a></li>
-                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                                </ul>
-                                            </div>
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="CA Final">CA Final</a></li>
-                                                    <li><a href="#" title="SAT">SAT</a></li>
-                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                                    <li><a href="#" title="AFMC">AFMC</a></li>
-                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                                    <li><a href="#" title="GMAT">GMAT</a></li>
-                                                    <li><a href="#" title="GRE">GRE</a></li>
-                                                    <li><a href="#" title="CAT">CAT</a></li>
-                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Professional Courses</h3>
-                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
-                                    </div>
-                            	</div>
-                            </div>
-                        </div>
-                        <!-- end sub-nav -->
-                    </li>
-                    <li><a href="#" title="Business"><i>line</i>Business<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav -->
-                        <div class="sub-nav">
-                        	<div class="container">
-                        		<div class="row">
-                                	<div class="col-md-4">
-                                        <h3>Learning & Hobbies</h3>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                                    <li><a href="#" title="Italian">Italian</a></li>
-                                                    <li><a href="#" title="Indian">Indian</a></li>
-                                                    <li><a href="#" title="Desserts">Desserts</a></li>
-                                                    <li><a href="#" title="Thai">Thai</a></li>
-                                                    <li><a href="#" title="South Indian">South Indian</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                                    <li><a href="#" title="Drums">Drums</a></li>
-                                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                                    <li><a href="#" title="Piano">Piano</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="French">French</a></li>
-                                                    <li><a href="#" title="German">German</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                                    <li><a href="#" title="Zumba">Zumba</a></li>
-                                                    <li><a href="#" title="Salsa">Salsa</a></li>
-                                                    <li><a href="#" title="Kathak">Kathak</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                                    <li><a href="#" title="Origami">Origami</a></li>
-                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Tuitions & entrance coaching</h3>
-                                        <div class="row">
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                                    <li><a href="#" title="Physics">Physics</a></li>
-                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                                    <li><a href="#" title="IB">IB</a></li>
-                                                    <li><a href="#" title="ICSE">ICSE</a></li>
-                                                    <li><a href="#" title="CBSE">CBSE</a></li>
-                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                                    <li><a href="#" title="Economics">Economics</a></li>
-                                                    <li><a href="#" title="Accounts">Accounts</a></li>
-                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                                </ul>
-                                            </div>
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="CA Final">CA Final</a></li>
-                                                    <li><a href="#" title="SAT">SAT</a></li>
-                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                                    <li><a href="#" title="AFMC">AFMC</a></li>
-                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                                    <li><a href="#" title="GMAT">GMAT</a></li>
-                                                    <li><a href="#" title="GRE">GRE</a></li>
-                                                    <li><a href="#" title="CAT">CAT</a></li>
-                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Professional Courses</h3>
-                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
-                                    </div>
-                            	</div>
-                            </div>
-                        </div>
-                        <!-- end sub-nav -->
-                    </li>
-                    <li><a href="#" title="More"><i>line</i>More<span class="icon-down_arrow"></span></a>
-                    	<!-- start sub-nav -->
-                        <div class="sub-nav">
-                        	<div class="container">
-                        		<div class="row">
-                                	<div class="col-md-4">
-                                        <h3>Learning & Hobbies</h3>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Cooking Classes">Cooking Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Appetizers">Appetizers</a></li>
-                                                    <li><a href="#" title="Italian">Italian</a></li>
-                                                    <li><a href="#" title="Indian">Indian</a></li>
-                                                    <li><a href="#" title="Desserts">Desserts</a></li>
-                                                    <li><a href="#" title="Thai">Thai</a></li>
-                                                    <li><a href="#" title="South Indian">South Indian</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Music Classes">Music Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Tabla">Tabla</a></li>
-                                                    <li><a href="#" title="Drums">Drums</a></li>
-                                                    <li><a href="#" title="Guitar">Guitar</a></li>
-                                                    <li><a href="#" title="Piano">Piano</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Language Courses">Language Courses</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="French">French</a></li>
-                                                    <li><a href="#" title="German">German</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Dance Classes">Dance Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Bollywood">Bollywood</a></li>
-                                                    <li><a href="#" title="Zumba">Zumba</a></li>
-                                                    <li><a href="#" title="Salsa">Salsa</a></li>
-                                                    <li><a href="#" title="Kathak">Kathak</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h4><a href="#" title="Driving Schools">Driving Schools</a></h4>
-                                                <h4><a href="#" title="Play Schools">Play Schools</a></h4>
-                                                <h4><a href="#" title="Art & Craft Classes">Art & Craft Classes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Jewelry Making">Jewelry Making</a></li>
-                                                    <li><a href="#" title="Origami">Origami</a></li>
-                                                    <li><a href="#" title="Paper Mache">Paper Mache</a></li>
-                                                    <li><a href="#" title="Chocolate Making">Chocolate Making</a></li>
-                                                    <li><a href="#" title="Paper Quilling">Paper Quilling</a></li>
-                                                    <li><a href="#" title="Gift Packing">Gift Packing</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Tuitions & entrance coaching</h3>
-                                        <div class="row">
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Tuitions">Tuitions</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="Hindi">Hindi</a></li>
-                                                    <li><a href="#" title="Home Tutor">Home Tutor</a></li>
-                                                    <li><a href="#" title="Spoken English">Spoken English</a></li>
-                                                    <li><a href="#" title="Open School (NIOS)">Open School (NIOS)</a></li>
-                                                    <li><a href="#" title="Physics">Physics</a></li>
-                                                    <li><a href="#" title="Chemistry">Chemistry</a></li>
-                                                    <li><a href="#" title="IB">IB</a></li>
-                                                    <li><a href="#" title="ICSE">ICSE</a></li>
-                                                    <li><a href="#" title="CBSE">CBSE</a></li>
-                                                    <li><a href="#" title="Mathematics">Mathematics</a></li>
-                                                    <li><a href="#" title="Economics">Economics</a></li>
-                                                    <li><a href="#" title="Accounts">Accounts</a></li>
-                                                    <li><a href="#" title="Full-Time Tutor">Full-Time Tutor</a></li>
-                                                </ul>
-                                            </div>
-                                        	<div class="col-md-6">
-                                                <h4><a href="#" title="Coaching Institutes">Coaching Institutes</a></h4>
-                                                <ul>
-                                                    <li><a href="#" title="CA Final">CA Final</a></li>
-                                                    <li><a href="#" title="SAT">SAT</a></li>
-                                                    <li><a href="#" title="AIEEE">AIEEE</a></li>
-                                                    <li><a href="#" title="AFMC">AFMC</a></li>
-                                                    <li><a href="#" title="AIIMS">AIIMS</a></li>
-                                                    <li><a href="#" title="GMAT">GMAT</a></li>
-                                                    <li><a href="#" title="GRE">GRE</a></li>
-                                                    <li><a href="#" title="CAT">CAT</a></li>
-                                                    <li><a href="#" title="IITJEE/JEE Mains">IITJEE/JEE Mains</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            		<div class="col-md-4">
-                                        <h3>Professional Courses</h3>
-                                        <h4><a href="#" title="Animation & Graphic Design Courses">Animation & Graphic Design Courses</a></h4>
-                                        <h4><a href="#" title="Computer Courses">Computer Courses</a></h4>
-                                        <h4><a href="#" title="Finance & Accounting Courses">Finance & Accounting Courses</a></h4>
-                                        <h4><a href="#" title="Beautician Courses">Beautician Courses</a></h4>
-                                        <h4><a href="#" title="Fashion & Interior Design Courses">Fashion & Interior Design Courses</a></h4>
-                                    </div>
-                            	</div>
-                            </div>
-                        </div>
-                        <!-- end sub-nav -->
-                    </li>
-                </ul>
-            </nav>
-            <!-- end nav -->
+            <div class="col-xs-2">
+            	<a href="#" title="Manu" class="search-icon">Search</a>
+            </div>
         </div>
         <!-- end row -->
     </div>
     <!-- end container -->
 </header>
 <!-- end header -->
-<!-- start main-container -->
+<!-- start left-nav -->
+<nav class="left-nav">
+    <ul>
+        <li><a href="#" title="Education"><span class="icon-down_arrow"></span>Education</a></li>
+        <li><a href="#" title="Home Needs"><span class="icon-down_arrow"></span>Home Needs</a></li>
+        <li><a href="#" title="Electronics & Auto Repairs"><span class="icon-down_arrow"></span>Electronics & Auto Repairs</a></li>
+        <li><a href="#" title="Events"><span class="icon-down_arrow"></span>Events</a></li>
+        <li><a href="#" title="Beauty & Health"><span class="icon-down_arrow"></span>Beauty & Health</a></li>
+        <li><a href="#" title="Business"><span class="icon-down_arrow"></span>Business</a></li>
+        <li><a href="#" title="More"><span class="icon-down_arrow"></span>More</a></li>
+    </ul>
+</nav>
+<!-- end left-nav -->
+<!-- start container -->
 <div class="main-container">
-	<!-- start container -->
 	<div class="container">
-    	<!-- start find-search -->
-        <div class="find-search">
-        	<div class="form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <span class="icon-search_icon"></span>
-                        <input type="text" placeholder="Search here for anything" class="input">
-                    </div>
-                    <div class="col-md-3">
-                        <span class="icon-map_marker"></span>
-                        <input type="text" placeholder="Anywhere In Gurgoan" class="input loc">
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#" title="Gurgaon" class="city"><span class="icon-down_arrow"></span>Gurgaon</a>
-                    </div>
-                </div>
+	<div class="vendor">
+    	<div class="row">
+        	<div class="col-xs-7">
+            	<h2>Zion Technologies</h2>
+            </div>
+            <div class="col-xs-5">
+            	<a href="#phone" data-toggle="collapse" title="Phone" class="phone-btn"><i class="fa fa-phone"></i> Phone</a>
             </div>
         </div>
-        <!-- end find-search -->
-    	<!-- start row -->
-    	<div class="row">
-        	<!-- start leftcol -->
-            <div class="col-md-8">
-                <!-- start vendor -->
-                <div class="vendor">
-                    <!-- start heaering -->
-                    <div class="row">
-                        <div class="col-md-12">
-                        	<a href="#" title="Mobile Repair" class="heading-tag">Mobile Repair</a>
-                            <a href="#" title="Laptop Repair" class="heading-tag">Laptop Repair</a>
-                            <h2>Zion Technologies</h2>
-                        </div>
-                    </div>
-                    <!-- end heaering -->
-                    <!-- start title -->
-                    <div class="row">
-                        <div class="col-md-12 title">
+        <div class="row">
+        	<div class="col-xs-12 title">
+        		<p><span>Address</span> 18, Near Rao Dental Clinic, Sector 14 Gurgaon</p>
+            </div>
+        </div>
+        <!-- start txtb -->
+        <div class="row">
+            <div class="col-md-12 txtb">
+                <p>Showing you Zion Technologies's Mobile & Tablet Repair , see <strong>Laptop & Computer Repair</strong></p>
+            </div>
+        </div>
+        <!-- end txtb -->
+        <!-- start price -->
+        <div class="row">
+            <div class="col-md-12 price">
+                <h3>Prices <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></h3>
+                <!-- start tabs -->
+                <div class="panel-group clearfix" id="accordion" role="tablist" aria-multiselectable="true">
+                    <!-- start panel-default -->
+                    <div class="panel panel-default">
+                        <!-- start heading -->
+                        <div class="panel-heading" role="tab" id="price1-heading">
+                            <!-- start row -->
+                            <a href="#price1" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price1" title="Apple">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <a href="#phone" data-toggle="collapse" title="Phone" class="phone-btn"><i class="fa fa-phone"></i> Phone</a>
-                                    <p>HUDA Market <span>Gurgaon</span></p>
-                                </div>
+                                <div class="col-md-12 name">Apple</div>
                             </div>
                             <div class="row">
-                                <div class="collapse col-md-12 phone-txt" id="phone">
-                                    <p><span>Phone:</span> +91-9818271286, +91-9810935376</p>
-                                </div> 
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end title -->
-                    <!-- start section-link -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="section-link">
-                                <ul>
-                                    <li><a href="#link-box1" title="Photos">Photos</a></li>
-                                    <li><a href="#link-box2" title="Prices">Prices</a></li>
-                                    <li><a href="#link-box3" title="Repair Center Info">Repair Center Info</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end section-link -->
-                    <!-- start txtb -->
-                    <div class="row">
-                        <div class="col-md-12 txtb">
-                            <p>Showing you Zion Technologies's Mobile & Tablet Repair , see <strong>Laptop & Computer Repair</strong></p>
-                        </div>
-                    </div>
-                    <!-- end txtb -->
-                    <!-- start photo -->
-                    <div class="row photo">
-                        <div class="col-md-12">
-                            <h3>Photos</h3>
-                            <ul>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li class="last"><a href="#" title="View More">View <span>More</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end photo -->
-                    <!-- start videos -->
-                    <div class="row photo videos">
-                        <div class="col-md-12">
-                            <h3>Videos</h3>
-                            <ul>
-                                <li><a href="#" title="pics"><div class="overlay"><span class="play">play</span></div><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><div class="overlay"><span class="play">play</span></div><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><div class="overlay"><span class="play">play</span></div><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li><a href="#" title="pics"><div class="overlay"><span class="play">play</span></div><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
-                                <li class="last"><a href="#" title="View More">View <span>More</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end videos -->
-                    <!-- start price -->
-                    <div class="row">
-                        <div class="col-md-12 price">
-                            <h3>Prices</h3>
-                            <!-- start tabs -->
-                            <div class="panel-group clearfix" id="accordion" role="tablist" aria-multiselectable="true">
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price1-heading">
-                                        <!-- start row -->
-                                        <a href="#price1" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price1" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price1-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
+                                <div class="col-xs-10">
+                                    <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
                                 </div>
-                                <!-- end panel-default -->
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price2-heading">
-                                        <!-- start row -->
-                                        <a href="#price2" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price2" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price2-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
-                                </div>
-                                <!-- end panel-default -->
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price3-heading">
-                                        <!-- start row -->
-                                        <a href="#price3" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price3" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price3-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
-                                </div>
-                                <!-- end panel-default -->
-                                <!-- start panel-default -->
-                                <div class="panel panel-default">
-                                    <!-- start heading -->
-                                    <div class="panel-heading" role="tab" id="price4-heading">
-                                        <!-- start row -->
-                                        <a href="#price4" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price4" title="Apple">
-                                        <div class="row">
-                                        	<div class="col-md-12 name">Apple</div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
-                                            </div>
-                                            <div class="col-md-2">
-                                                <i class="fa fa-chevron-down"></i>
-                                            </div>
-                                        </div>
-                                        </a>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end heading -->
-                                    <!-- start panel-collapse -->
-                                    <div id="price4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price4-heading">
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                        <!-- start row -->
-                                        <div class="row">
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                            <div class="col-md-5">
-                                                <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
-                                            </div>
-                                        </div>
-                                        <!-- end row -->
-                                    </div>
-                                    <!-- end panel-collapse -->
-                                </div>
-                                <!-- end panel-default -->
-                            </div>
-                            <!-- end tabs -->
-                        </div>
-                    </div>
-                    <!-- end price -->
-                    <!-- start info -->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="info">
-                                <h3>About</h3>
-                                <!-- start table -->
-                                <div class="table clearfix">
-                                    <!-- start row1 -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Brand</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p><span class="highlight">Apple</span> <span class="highlight">Samsung</span> <span class="highlight">Nokia</span> <span class="highlight">Blackberry</span> <span class="highlight">Sony</span> <span class="highlight">HTC</span> <span class="highlight">Nokia Luma</span></p>
-                                        </div>
-                                    </div>
-                                    <!-- end row1 -->
-                                    <!-- start row1 -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Brand</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p>Apple, Samsung, Nokia, Blackberry, Sony, HTC, Nokia Luma</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row1 -->
-                                    <!-- start row1 -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Service Center Type</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <p class="check"><i class="fa fa-check"></i> Multi-Brands Service Center</p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p class="error"><i class="fa fa-times"></i> Authorised Service Center</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <p>Delivery Options</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <p class="check"><i class="fa fa-check"></i> Home Pickup & Delivery</p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p class="check"><i class="fa fa-check"></i> In-Store Repair</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end row1 -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Apple</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                        	<span class="icon-down_arrow"></span>
-                                            <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Samsung</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                        	<span class="icon-down_arrow"></span>
-                                            <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Nokia</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                        	<span class="icon-down_arrow"></span>
-                                            <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->
-                                    <!-- start row -->
-                                    <div class="row1">
-                                        <div class="col-md-3">
-                                            <p>Repair Time</p>
-                                        </div>
-                                        <div class="col-md-9">
-                                            <p>&nbsp;</p>
-                                        </div>
-                                    </div>
-                                    <!-- end row -->	
-                                </div>
-                                <!-- end table -->
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end info -->
-                    <!-- start map -->
-                    <div class="row">
-                        <div class="col-md-12 map">
-                            <h3>Map</h3>
-                            <div class="imgb">
-                                <a href="#" title="Map">
-                                <img src="images/img_map.png" width="640" height="160" alt="map">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end map -->
-                    <!-- start review -->
-                    <div class="row">
-                    	<div class="col-md-12 review">
-                        	<h3>Review</h3>
-                            <div class="review-box">
-                            	<h4></h4>
-                                <ul>
-                                	<li><span>Overall</span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
-                                	<li><span>Quality</span> 4.0</li>
-                                    <li><span>Price</span> 3.3</li>
-                                </ul>
-                                <p>Zion Technologies is a brilliant troubleshooter for all the problems your phone and laptop might be facing. They are also specialists of apple laptops and iPads. The best thing is that they offer guarantees for all the repair work they do (the duration depends on the part fixed).They also provide pickup and delivery services.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end review -->
-                    <!-- start frequent -->
-                    <div class="row">
-                    	<div class="col-md-12 frequent">
-                        	<h3>Frequent searches for this page</h3>
-                            <div class="frequent-box">
-								<div class="row">
-                                    <div class="col-md-6"><a href="#" title="Zion Technologies Gurgaon">Zion Technologies Gurgaon</a></div>
-                                    <div class="col-md-6"><a href="#" title="Zion Technologies Gurgaon">Zion Technologies Mobile Repair</a></div>
-                                    <div class="col-md-6"><a href="#" title="Zion Technologies Laptop Repair">Zion Technologies Laptop Repair</a></div>
-                            	</div>							
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end frequent -->
-                    <!-- start frequent -->
-                    <div class="row frequent">
-                        <div class="col-md-12">
-                        	<h3>Related Searches</h3>
-                            <div class="frequent-box">
-                                <div class="row">
-                                    <div class="col-md-6"><a href="#" title="Mobile Repair in Gurgaon">Mobile Repair in Gurgaon</a></div>
-                                    <div class="col-md-6"><a href="#" title="Gurgaon Mobile Repair">Gurgaon Mobile Repair</a></div>
-                                    <div class="col-md-6"><a href="#" title="Laptop Repair in Gurgaon">Laptop Repair in Gurgaon</a></div>
-                                    <div class="col-md-6"><a href="#" title="Gurgaon Laptop Repair">Gurgaon Laptop Repair</a></div>
+                                <div class="col-xs-2">
+                                    <i class="fa fa-chevron-down"></i>
                                 </div>
                             </div>
+                            </a>
+                            <!-- end row -->
                         </div>
+                        <!-- end heading -->
+                        <!-- start panel-collapse -->
+                        <div id="price1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price1-heading">
+                            <!-- start row -->
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                </div>
+                                <div class="col-xs-2"></div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end panel-collapse -->
                     </div>
-                    <!-- end frequent -->
+                    <!-- end panel-default -->
+                    <!-- start panel-default -->
+                    <div class="panel panel-default">
+                        <!-- start heading -->
+                        <div class="panel-heading" role="tab" id="price2-heading">
+                            <!-- start row -->
+                            <a href="#price2" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price2" title="Apple">
+                            <div class="row">
+                                <div class="col-xs-12 name">Apple</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            </a>
+                            <!-- end row -->
+                        </div>
+                        <!-- end heading -->
+                        <!-- start panel-collapse -->
+                        <div id="price2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price2-heading">
+                            <!-- start row -->
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                </div>
+                                <div class="col-xs-2"></div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end panel-collapse -->
+                    </div>
+                    <!-- end panel-default -->
+                    <!-- start panel-default -->
+                    <div class="panel panel-default">
+                        <!-- start heading -->
+                        <div class="panel-heading" role="tab" id="price3-heading">
+                            <!-- start row -->
+                            <a href="#price3" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price3" title="Apple">
+                            <div class="row">
+                                <div class="col-md-12 name">Apple</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            </a>
+                            <!-- end row -->
+                        </div>
+                        <!-- end heading -->
+                        <!-- start panel-collapse -->
+                        <div id="price3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price3-heading">
+                            <!-- start row -->
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                </div>
+                                <div class="col-xs-2"></div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end panel-collapse -->
+                    </div>
+                    <!-- end panel-default -->
+                    <!-- start panel-default -->
+                    <div class="panel panel-default">
+                        <!-- start heading -->
+                        <div class="panel-heading" role="tab" id="price4-heading">
+                            <!-- start row -->
+                            <a href="#price4" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="price4" title="Apple">
+                            <div class="row">
+                                <div class="col-md-12 name">Apple</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <div class="bg-line"><p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p></div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            </a>
+                            <!-- end row -->
+                        </div>
+                        <!-- end heading -->
+                        <!-- start panel-collapse -->
+                        <div id="price4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="price4-heading">
+                            <!-- start row -->
+                            <div class="row">
+                                <div class="col-xs-10">
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                    <p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                	<p><strong class="pull-right">Rs2500</strong>iPhone 5C Battery:</p>
+                                </div>
+                                <div class="col-xs-2"></div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- end panel-collapse -->
+                    </div>
+                    <!-- end panel-default -->
                 </div>
-                <!-- end vendor -->
+                <!-- end tabs -->
             </div>
-            <!-- end leftcol -->
-            <!-- start rightcol -->
-            <div class="col-md-4">
-                <!-- start filter -->
-                <div class="filter filter-vendor">
-                    <!-- start app-icon -->
-                    <div class="app-icon">
-                        <a href="#" title="play store"><img src="images/img_play_store.png" width="250" height="75" alt="play store"></a>
+        </div>
+        <!-- end price -->
+        <!-- start info -->
+        <div class="info">
+        	<h3>Electrician Info <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></h3>
+            <!-- start table -->
+            <div class="table clearfix">
+                <!-- start row1 -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Brand</p>
                     </div>
-                    <!-- end app-icon -->
-                    <!-- start column -->
-                    <div class="column">
-                        <h4><a href="#" title="See more in Mobile & Tablet Repair"><span class="icon-down_arrow"></span>See more in Mobile & Tablet Repair</a></h4>
-                        <ul>
-                            <li><a href="#" title="Apple Gurgaon">Apple Gurgaon</a></li>
-                            <li><a href="#" title="Samsung Gurgaon">Samsung Gurgaon</a></li>
-                            <li><a href="#" title="Nokia Gurgaon">Nokia Gurgaon</a></li>
-                            <li><a href="#" title="Blackberry Gurgaon">Blackberry Gurgaon</a></li>
-                            <li><a href="#" title="Sony Gurgaon">Sony Gurgaon</a></li>
-                            <li><a href="#" title="HTC Gurgaon">HTC Gurgaon</a></li>
-                            <li><a href="#" title="Micromax Gurgaon">Micromax Gurgaon</a></li>
-                            <li><a href="#" title="Moto G (Gen 2) Gurgaon">Moto G (Gen 2) Gurgaon</a></li>
-                            <li><a href="#" title="Motorola Gurgaon">Motorola Gurgaon</a></li>
-                            <li><a href="#" title="Karbonn Gurgaon">Karbonn Gurgaon</a></li>
-                            <li><a href="#" title="Moto G Gurgaon">Moto G Gurgaon</a></li>
-                        </ul>
+                    <div class="col-xs-9">
+                        <p><span class="highlight">Apple</span> <span class="highlight">Samsung</span> <span class="highlight">Nokia</span> <span class="highlight">Blackberry</span> <span class="highlight">Sony</span> <span class="highlight">HTC</span> <span class="highlight">Nokia Luma</span></p>
                     </div>
-                    <!-- end column -->
-                    <!-- start recommend-costs -->
-                    <div class="column recommend-costs">
-                        <h4><a href="#" title="Costs - Goodservice Recommends">Costs - Goodservice Recommends</a></h4>
-                        <ul>
-                            <li><a href="#apple" data-toggle="collapse" title="Apple"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Apple</a>
-                            	<div class="collapse" id="apple">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#samsung" data-toggle="collapse" title="Samsung"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Samsung</a>
-                            	<div class="collapse" id="samsung">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#blackberry" data-toggle="collapse" title="Blackberry"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Blackberry</a>
-                            	<div class="collapse" id="blackberry">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#nokia" data-toggle="collapse" title="Nokia"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Nokia</a>
-                            	<div class="collapse" id="nokia">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#htc" data-toggle="collapse" title="Htc"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Htc</a>
-                            	<div class="collapse" id="htc">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#micromax" data-toggle="collapse" title="Micromax"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Micromax</a>
-                            	<div class="collapse" id="micromax">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#sony" data-toggle="collapse" title="Sony"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Sony</a>
-                            	<div class="collapse" id="sony">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a href="#android" data-toggle="collapse" title="Android"><i class="fa fa-plus"></i><i class="fa fa-minus"></i>Android</a>
-                            	<div class="collapse" id="android">
-                                	<ul>
-                                        <li><strong>Rs. 2500</strong> iphone 6 Charger</li>
-                                        <li><strong>Rs. 3500</strong> iphone 6 Battery</li>
-                                        <li><strong>Rs. 1,500</strong> iPhone 4S/4 Charger</li>
-                                        <li><strong>Rs. 2,000</strong> iPhone SIM unlock</li>
-                                        <li><strong>Rs. 300-400</strong> iPhone Pattern Unlock</li> 
-                                        <li><strong>Rs. 1,000</strong> iPhone 4S/4 USB Cable</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="bot-bar">
-                            <p>(These are prices recommended by goodservice for your help. Please check with individual vendors for quotes.)</p>
+                </div>
+                <!-- end row1 -->
+                <!-- start row1 -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Brand</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <p>Apple, Samsung, Nokia, Blackberry, Sony, HTC, Nokia Luma</p>
+                    </div>
+                </div>
+                <!-- end row1 -->
+                <!-- start row1 -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Service Center Type</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="check"><i class="fa fa-check"></i> Multi-Brands Service Center</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <p class="error"><i class="fa fa-times"></i> Authorised Service Center</p>
+                            </div>
                         </div>
                     </div>
-                    <!-- end recommend-costs -->
                 </div>
-                <!-- end filter -->
+                <!-- end row1 -->
+                <!-- start row1 -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Delivery Options</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <p class="check"><i class="fa fa-check"></i> Home Pickup & Delivery</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <p class="check"><i class="fa fa-check"></i> In-Store Repair</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end row1 -->
+                <!-- start row -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Apple</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
+                    </div>
+                </div>
+                <!-- end row -->
+                <!-- start row -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Samsung</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
+                    </div>
+                </div>
+                <!-- end row -->
+                <!-- start row -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Nokia</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <p>IPhone 4, IPad Air 2, IPad Air, IPad, IPhone 5, IPhone 5C, IPhone 4S, IPad 4, IPhone 6, IPad Mini 3, IPhone 3GS, IPhone 5S Copy, IPad 2, IPad Mini, IPad 3, IPhone 5S</p>
+                    </div>
+                </div>
+                <!-- end row -->
+                <!-- start row -->
+                <div class="row1">
+                    <div class="col-xs-3">
+                        <p>Repair Time</p>
+                    </div>
+                    <div class="col-xs-9">
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <!-- end row -->	
             </div>
-            <!-- end rightcol -->
+            <!-- end table -->
         </div>
-        <!-- end row -->
+        <!-- end info -->
+        <!-- start map -->
+        <div class="row">
+            <div class="col-md-12 map">
+                <h3>Map <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></h3>
+                <div class="imgb">
+                    <a href="#" title="Map"><img src="images/img_map.png" width="640" height="160" alt="map"></a>
+                </div>
+            </div>
+        </div>
+        <!-- end map -->
+        <!-- start photo -->
+        <div class="row photo">
+            <div class="col-md-12">
+                <h3>Photos <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></h3>
+                <ul>
+                    <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
+                    <li><a href="#" title="pics"><img src="images/img_pics.png" width="80" height="80" alt="pics"></a></li>
+                    <li class="last"><a href="#" title="View More">View <span>More</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- end photo -->
+        <!-- start review -->
+        <div class="row">
+            <div class="col-md-12 review">
+                <h3>Review <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></h3>
+                <div class="review-box">
+                    <h4></h4>
+                    <ul>
+                        <li><span>Overall</span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i></li>
+                        <li><span>Quality</span> 4.0</li>
+                        <li><span>Price</span> 3.3</li>
+                    </ul>
+                    <p>Zion Technologies is a brilliant troubleshooter for all the problems your phone and laptop might be facing. They are also specialists of apple laptops and iPads. The best thing is that they offer guarantees for all the repair work they do (the duration depends on the part fixed).They also provide pickup and delivery services.</p>
+                </div>
+            </div>
+        </div>
+        <!-- end review -->
+        <!-- start frequent -->
+        <div class="row">
+            <div class="col-md-12 frequent">
+                <h3>Frequent searches for this page <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></h3>
+                <div class="frequent-box">
+                    <div class="row">
+                        <div class="col-md-6"><a href="#" title="Zion Technologies Gurgaon">Zion Technologies Gurgaon</a></div>
+                        <div class="col-md-6"><a href="#" title="Zion Technologies Gurgaon">Zion Technologies Mobile Repair</a></div>
+                        <div class="col-md-6"><a href="#" title="Zion Technologies Laptop Repair">Zion Technologies Laptop Repair</a></div>
+                    </div>							
+                </div>
+            </div>
+        </div>
+        <!-- end frequent -->
+        <!-- start frequent -->
+        <div class="row frequent">
+            <div class="col-md-12">
+                <h3>Related Searches <span class="icon-down_arrow"></span><span class="icon-up_arrow"></span></h3>
+                <div class="frequent-box">
+                    <div class="row">
+                        <div class="col-md-6"><a href="#" title="Mobile Repair in Gurgaon">Mobile Repair in Gurgaon</a></div>
+                        <div class="col-md-6"><a href="#" title="Gurgaon Mobile Repair">Gurgaon Mobile Repair</a></div>
+                        <div class="col-md-6"><a href="#" title="Laptop Repair in Gurgaon">Laptop Repair in Gurgaon</a></div>
+                        <div class="col-md-6"><a href="#" title="Gurgaon Laptop Repair">Gurgaon Laptop Repair</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end frequent -->
     </div>
-    <!-- end container -->
-    <!-- start slider-popup -->
-    <div class="slider-popup" id="slider">
-        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
-        <!-- start slide -->
-        <div class="slider slider1 clearfix">
-            <ul class="slides">
-                <li><p class="flex-caption">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-                <li><p class="flex-caption">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-                <li><p class="flex-caption">5/5: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-                <li><p class="flex-caption">7/7: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></span></div></li>
-            </ul>
-        </div>
-        <!-- end slide -->
-        <!-- start carousel -->
-        <div class="carousel carousel1 clearfix">
-            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
-            <span class="pull-left captions"></span>
-            <ul class="slides">
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
-            </ul>
-        </div>
-        <!-- end carousel -->
-    </div>
-    <!-- end slider-popup -->
-    <!-- start slider-popup -->
-    <div class="slider-popup" id="videos">
-        <a href="#" title="Close" class="close-btn2"><img src="images/ico_close.png" width="17" height="18" alt="close"></a>
-        <!-- start slider -->
-        <div class="slider slider2 clearfix">
-            <ul class="slides">
-                <li><p class="flex-caption2">9/25: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
-                <li><p class="flex-caption2">1/1: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
-                <li><p class="flex-caption2">5/5: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/Kkt9Uz8Ol7M" frameborder="0" allowfullscreen></iframe></span></div></li>
-                <li><p class="flex-caption2">7/7: WONDERFUL STUDIO HEART OF LE MARAIS</p><div class="imgb"><span><iframe width="700" height="400" src="https://www.youtube.com/embed/x-Tg5jFC_Oo" frameborder="0" allowfullscreen></iframe></span></div></li>
-            </ul>
-        </div>
-        <!-- end slider -->
-        <!-- start carousel -->
-        <div class="carousel carousel2 clearfix">
-            <span class="pull-right">Show photo list <i class="fa fa-caret-down"></i></span>
-            <span class="pull-left captions2"></span>
-            <ul class="slides">
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_slider1.jpg" width="1600" height="1200" alt="slider"></li>
-                <li><img src="images/img_gallery2.jpg" width="1600" height="1200" alt="slider"></li>
-            </ul>
-        </div>
-        <!-- end carousel -->
-    </div>
-    <!-- end slider-popup -->
 </div>
-<!-- end main-container -->
-<!-- start footer -->
-<footer class="footer">
-	<div class="container">
-    	<div class="row">
-        	<div class="col-md-6">
-            	<p>© Copyright 2015 Goodservice.in All rights reserved.</p>
-            </div>
-            <div class="col-md-6">
-            	<div class="service-dropdown">
-            		<a href="#" title="Gurgaon" class="dd-link"><span class="icon-down_arrow pull-right"></span><span class="icon-up_arrow pull-right"></span>Gurgaon</a>
-                    <div class="dd">
-                    	<ul>
-                            <li><a href="#">Detective Agencies Gurgaon</a></li>
-                            <li><a href="#">Pest Control Services Gurgaon</a></li>
-                            <li><a href="#">Dry Cleaners Gurgaon</a></li>
-                            <li><a href="#">Carpenters Gurgaon</a></li>
-                            <li><a href="#">Electronics &amp; Appliances Repair Gurgaon</a></li>
-                            <li><a href="#">Hair Salon &amp; Beauty Parlour Gurgaon</a></li>
-                            <li><a href="#">Seo &amp; Digital Marketing Gurgaon</a></li>
-                            <li><a href="#">Music Classes Gurgaon</a></li>
-                            <li><a href="#">DJ Mixing Course, Music School, Classes, Institutes Gurgaon</a></li>
-                            <li><a href="#">Drums classes, Teacher, Learn Drums Gurgaon</a></li>
-                            <li><a href="#">Guitar classes, Teacher, Learn Guitar Gurgaon</a></li>
-                            <li><a href="#">Piano classes, Teacher, Learn Piano Gurgaon</a></li>
-                            <li><a href="#">Dance Classes Gurgaon</a></li>
-                            <li><a href="#">Gyms Gurgaon</a></li>
-                            <li><a href="#">Chemist Gurgaon</a></li>
-                            <li><a href="#">Pet Clinics Gurgaon</a></li>
-                            <li><a href="#">Animation &amp; Graphic Design Courses Gurgaon</a></li>
-                            <li><a href="#">Tuitions Gurgaon</a></li>
-                            <li><a href="#">Packers And Movers Gurgaon</a></li>
-                            <li><a href="#">Cabs &amp; Taxi Service Gurgaon</a></li>
-                            <li><a href="#">Courier Gurgaon</a></li>
-                            <li><a href="#">Travel Agents Gurgaon</a></li>
-                            <li><a href="#">Florist Gurgaon</a></li>
-                            <li><a href="#">Caterers Gurgaon</a></li>
-                            <li><a href="#">Photographers Gurgaon</a></li>
-                            <li><a href="#">Banquet Halls Gurgaon</a></li>
-                            <li><a href="#">Bartender Gurgaon</a></li>
-                            <li><a href="#">Marriage Bureau Gurgaon</a></li>
-                            <li><a href="#">Service Apartments Gurgaon</a></li>
-                            <li><a href="#">Gift Trousseau Packing Gurgaon</a></li>
-                            <li><a href="#">Used Second Hand Goods Gurgaon</a></li>
-                            <li><a href="#">Maid Agencies Gurgaon</a></li>
-                            <li><a href="#">Professional Courses Gurgaon</a></li>
-                            <li><a href="#">Tailors Gurgaon</a></li>
-                            <li><a href="#">Crane &amp; Car Towing Gurgaon</a></li>
-                            <li><a href="#">Printers Gurgaon</a></li>
-                            <li><a href="#">Tiffin Service Gurgaon</a></li>
-                            <li><a href="#">Plumbers Gurgaon</a></li>
-                            <li><a href="#">Driving Schools Gurgaon</a></li>
-                            <li><a href="#">Birth Certificate Agents Gurgaon</a></li>
-                            <li><a href="#">Marriage Certificate Agents Gurgaon</a></li>
-                            <li><a href="#">Pan Card Agents Gurgaon</a></li>
-                            <li><a href="#">Doctors Gurgaon</a></li>
-                            <li><a href="#">Cardiologist, Heart specialists Gurgaon</a></li>
-                            <li><a href="#">Dermatologist, Skin specialist Gurgaon</a></li>
-                            <li><a href="#">ENT specialist, Ear Nose Throat doctor Gurgaon</a></li>
-                            <li><a href="#">General Physician Gurgaon</a></li>
-                            <li><a href="#">Pediatrician, Child specialist Gurgaon</a></li>
-                            <li><a href="#">Orthopedician, Orthopedic doctors, specialist Gurgaon</a></li>
-                            <li><a href="#">Ophthalmologist doctors, Eye specialist Gurgaon</a></li>
-                            <li><a href="#">Cooking Classes Gurgaon</a></li>
-                            <li><a href="#">Play Schools Gurgaon</a></li>
-                            <li><a href="#">Hair &amp; Skin Care Clinics Gurgaon</a></li>
-                            <li><a href="#">Language Courses Gurgaon</a></li>
-                            <li><a href="#">Computer Courses Gurgaon</a></li>
-                            <li><a href="#">Finance &amp; Accounting Courses Gurgaon</a></li>
-                            <li><a href="#">Graphic Designers Gurgaon</a></li>
-                            <li><a href="#">Interior Designers Gurgaon</a></li>
-                            <li><a href="#">Architects Gurgaon</a></li>
-                            <li><a href="#">Real Estate Agents Gurgaon</a></li>
-                            <li><a href="#">Event Management Companies Gurgaon</a></li>
-                            <li><a href="#">Wedding Planners Gurgaon</a></li>
-                            <li><a href="#">Event Performers Gurgaon</a></li>
-                            <li><a href="#">Housekeeping &amp; Cleaning Services Gurgaon</a></li>
-                            <li><a href="#">Gas Agency Gurgaon</a></li>
-                            <li><a href="#">Electricians Gurgaon</a></li>
-                            <li><a href="#">Foreign Currency Exchange Gurgaon</a></li>
-                            <li><a href="#">Painters Gurgaon</a></li>
-                            <li><a href="#">Car Repair Gurgaon</a></li>
-                            <li><a href="#">Honda Service Center (authorised), repair workshop Gurgaon</a></li>
-                            <li><a href="#">Sports Coaching &amp; Fitness Classes Gurgaon</a></li>
-                            <li><a href="#">Golf coaching classes, Golf lessons, Learn Golf Gurgaon</a></li>
-                            <li><a href="#">Yoga classes, centres, Learn Yoga Gurgaon</a></li>
-                            <li><a href="#">Tennis coaching classes, Tennis academy, Learn Tennis Gurgaon</a></li>
-                            <li><a href="#">Cricket coaching classes, Cricket academy Gurgaon</a></li>
-                            <li><a href="#">Horse Riding classes, schools, Learn Horse Riding Gurgaon</a></li>
-                            <li><a href="#">Basketball coaching classes, Basketball academy Gurgaon</a></li>
-                            <li><a href="#">Swimming coaching classes, Swimming academy, Learn Swimming Gurgaon</a></li>
-                            <li><a href="#">Sports Complex &amp; Clubs Gurgaon</a></li>
-                            <li><a href="#">Locksmiths &amp; Key Makers Gurgaon</a></li>
-                            <li><a href="#">Driving Licence Agent Gurgaon</a></li>
-                            <li><a href="#">Passport Agents Gurgaon</a></li>
-                            <li><a href="#">Mobile &amp; Tablet Repair Gurgaon</a></li>
-                            <li><a href="#">Laptop &amp; Computer Repair Gurgaon</a></li>
-                            <li><a href="#">Art &amp; Craft Classes Gurgaon</a></li>
-                            <li><a href="#">Coaching Institutes Gurgaon</a></li>
-                            <li><a href="#">Tattoo And Piercing Gurgaon</a></li>
-                            <li><a href="#">Beautician Courses Gurgaon</a></li>
-                            <li><a href="#">Fashion &amp; Interior Design Courses Gurgaon</a></li>
-                            <li><a href="#">Web Design Gurgaon</a></li>
-                            <li><a href="#">Placement Consultants Gurgaon</a></li>
-                            <li><a href="#">Chartered Accountants Gurgaon</a></li>
-                            <li><a href="#">Astrologers &amp; Pandits Gurgaon</a></li>
-                            <li><a href="#">Valet Parking Services Gurgaon</a></li>
-                            <li><a href="#">Paying Guest (Pg) Gurgaon</a></li>
-                            <li><a href="#">Wedding Card Designers Gurgaon</a></li>
-                            <li><a href="#">Business Centre (Serviced Office) Gurgaon</a></li>
-                            <li><a href="#">Spa Gurgaon</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- end footer -->
-<!-- start loading -->
-<div class="loading" style="display:none;">
-    <i class="fa fa-circle-o-notch fa-spin"></i>
 </div>
-<!-- end loading -->
+<!-- end container -->
 <div class="main-overlay"></div>
 </body>
 </html>

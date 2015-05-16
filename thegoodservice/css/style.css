@@ -513,6 +513,7 @@ body {
 		-ms-border-radius:2px;
 		 -o-border-radius:2px;
 			border-radius:2px;
+	position:relative;
 }
 .find-search .city span {
 	float:right;
@@ -526,7 +527,34 @@ body {
 .find-search .city:hover span {
 	color:#33CE53;
 }
-
+.search-dd {
+	background:#fff;
+	width:100%;
+	margin-top:-2px;
+	font-size:14px;
+	position:absolute;
+	left:15px;
+	top:100%;
+	z-index:99;
+	display:none;
+}
+.search-dd ul {
+	border:1px solid #d7d7d7;
+	-webkit-border-radius:0 0 2px 2px;
+	   -moz-border-radius:0 0 2px 2px;
+		-ms-border-radius:0 0 2px 2px;
+		 -o-border-radius:0 0 2px 2px;
+			border-radius:0 0 2px 2px;
+}
+.search-dd li a {
+	border-top:1px solid #d7d7d7;
+	display:block;
+	padding:0 10px;
+	line-height:35px;
+}
+.search-dd li:first-child a {
+	border-top:none;
+}
 /* Result-count */
 .result-count {
 	background:url(../images/bg_result_count.png) repeat-x left 7px;
@@ -962,8 +990,10 @@ body {
 }
 .info .highlight {
 	background:#e9e9e9;
+	display:inline-block;
 	padding:3px 4px;
-	margin:0 5px 5px 0;
+	margin:2px;
+	line-height:16px;
 	-webkit-border-radius:2px;
 	   -moz-border-radius:2px;
 		-ms-border-radius:2px;
@@ -978,7 +1008,7 @@ body {
 	white-space: nowrap;
     text-overflow: ellipsis;
 }
-.info .icon-down_arrow {
+.info .table .icon-down_arrow {
 	float:right;
 	font-size:8px;
 	color:#a0adb4;
