@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Good Service</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+$(document).ready(function() {
+	
+	$('.booking-link').click(function() {
+        $('#booking-form,.close').show();
+		$('.new-user').hide();
+		return false;
+    });
+	$('.close').click(function() {
+        $('#booking-form,.close').hide();
+		$('.new-user').show();
+		return false;
+    });
+	
+	
+	var height=$('body').height();
+	$('.common-column').height(height-60);
+	
+	var height2=$('.common-column').height();
+	$('.chat-show').height(height2-126);
+	
+	var height3=$('.column').height();
+	$('.column ul').height(height3-36);
+	
+	
+});
+</script>
+
+</head>
+
+<body>
+<!-- start header -->
+<div class="header">
+	<div class="container-fluid">
+    	<div class="row">
+        	<div class="col-md-3 logo">
+            	<img src="images/logo.png" width="170" height="19" alt="good service">
+            </div>
+            <div class="col-md-9 nav">
+            	<ul class="hidden-xs">
+                	<li><a href="#" title="Make a Booking" class="booking-link">Make a Booking</a></li>
+                    <li><a href="#" title="Current Bookings">Current Bookings</a></li>
+                    <li><a href="#" title="New Vendor">New Vendor</a></li>
+                    <li><a href="#" title="Vendor Search">Vendor Search</a></li>
+                    <li><a href="#" title="User Location">User Location</a></li>
+                    <li><a href="#" title="Send Image">Send Image</a></li>
+                    <li><a href="#" title="Send Location">Send Location</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end header -->
+<!-- start main-container -->
+<div class="main-container">
+	<div class="container-fluid">
+    	<div class="row">
+        	<!-- start Users-column -->
+        	<div class="col-md-3 common-column">
+            	<div class="user">
+            		<div class="column">
+                        <h3 class="online"><i class="fa fa-circle"></i> Online Users</h3>
+                        <ul>
+                            <li class="active"><a href="#" title="Sunil Dalal"><strong class="pull-right">1</strong>Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal <span>Chat by <strong>Piyush Chauhan</strong></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end Users-column -->
+            <!-- start chat-column -->
+            <div class="col-md-6 common-column chat-panel hidden-xs">
+            	<div class="chat-bar">
+                	<strong class="pull-right">+91-9540-266-544</strong>
+                	<h5>Sunil Dalal <span>Chating to Piyush Chauhan</span></h5>
+                </div>
+                <div class="chat-show">
+                    <ul>
+                    	<li class="user_message">
+                        	<div class="user_message">
+                            	<i></i>
+                            	<p>I LOVEUR SONGS</p>
+                                <span>11:00am</span>
+                            </div>
+                        </li>
+                        <li class="agent_message">
+                        	<div class="agent_message">
+                            	<i></i>
+                            	<p>Queen</p>
+                                <span>11:05am</span>
+                            </div>
+                        </li>
+                        <li class="user_message">
+                        	<div class="user_message">
+                            	<i></i>
+                            	<p>OMG!!! I love all of your songs like let it go!! from frozen(remembe).</p>
+                                <span>11:00am</span>
+                            </div>
+                        </li>
+                        <li class="agent_message">
+                        	<div class="agent_message">
+                            	<i></i>
+                                <p>how to get 900 gold<br>
+                                steps<br><br>
+                                1.send this to 10 people<br>
+                                2. go to shop<br>
+                                3.click f2<br>
+                                4.logg out<br>
+                                5.log in</p>
+                                <span>11:05am</span>
+                            </div>
+                        </li>
+                        <li class="user_message">
+                        	<div class="user_message">
+                            	<i></i>
+                            	<p>I LOVEUR SONGS</p>
+                                <span>11:00am</span>
+                            </div>
+                        </li>
+                        <li class="agent_message">
+                        	<div class="agent_message">
+                            	<i></i>
+                            	<p>Queen</p>
+                                <span>11:05am</span>
+                            </div>
+                        </li>
+                        <li class="user_message">
+                        	<div class="user_message">
+                            	<i></i>
+                            	<p>OMG!!! I love all of your songs like let it go!! from frozen(remembe).</p>
+                                <span>11:00am</span>
+                            </div>
+                        </li>
+                        <li class="agent_message">
+                        	<div class="agent_message">
+                            	<i></i>
+                                <p>how to get 900 gold<br>
+                                steps<br><br>
+                                1.send this to 10 people<br>
+                                2. go to shop<br>
+                                3.click f2<br>
+                                4.logg out<br>
+                                5.log in</p>
+                                <span>11:05am</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="typing-box">
+                    <textarea name="summary" placeholder="I need ..." autofocus class="textarea"></textarea>
+                    <input type="submit" value="" class="button">
+                </div>
+            </div>
+            <!-- end chat-column -->
+            <!-- start form-accst-column -->
+            <div class="col-md-3 common-column hidden-xs">
+            	<a href="#" title="close" class="close"><i class="fa fa-times-circle-o"></i></a>
+            	<!-- start booking-form -->
+            	<div class="form" id="booking-form">
+                	<h3>Booking</h3>
+                	<label>Customer</label>
+                    <input name="customer" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
+                    <label>Title</label>
+                    <input name="title" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
+                    <label>Status</label>
+                    <input name="status" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
+                    <label>Summary</label>
+                    <textarea name="summary" class="textarea"></textarea>
+                    <label>Details</label>
+                    <textarea name="details" class="textarea"></textarea>
+                    <a href="#" title="Vendor Search">Vendor Search</a>
+                    <div class="clear"></div>
+                    <input type="submit" value="submit" class="button">
+                    <input type="submit" value="Cancel" class="button">
+                </div>
+                <!-- end booking-form -->
+                <!-- start New-user -->
+                <div class="user new-user">
+            		<div class="column">
+                        <h3 class="online"><i class="fa fa-circle"></i> New Users</h3>
+                        <ul>
+                            <li><a href="#" title="Sunil Dalal"><strong class="pull-right">1</strong>Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                            <li><a href="#" title="Sunil Dalal">Sunil Dalal</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end New-user -->
+            </div>
+            <!-- end form-accst-column -->
+        </div>
+    </div>
+</div>
+<!-- end main-container -->
+</body>
+</html>
