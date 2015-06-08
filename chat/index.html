@@ -12,18 +12,6 @@
 <script>
 $(document).ready(function() {
 	
-	$('.booking-link').click(function() {
-        $('#booking-form,.close').show();
-		$('.new-user').hide();
-		return false;
-    });
-	$('.close').click(function() {
-        $('#booking-form,.close').hide();
-		$('.new-user').show();
-		return false;
-    });
-	
-	
 	var height=$('body').height();
 	$('.common-column').height(height-60);
 	
@@ -32,6 +20,39 @@ $(document).ready(function() {
 	
 	var height3=$('.column').height();
 	$('.column ul').height(height3-36);
+	
+	
+	$('.close').click(function() {
+        $('.form,.close').hide();
+		$('.new-user').show();
+		return false;
+    });
+	
+	$('.booking-link').click(function() {
+        $('#booking-form,.close').show();
+		$('.new-user').hide();
+		return false;
+    });
+	$('.send-location-link').click(function() {
+        $('#send-location-form,.close').show();
+		$('.new-user').hide();
+		return false;
+    });
+	$('.send-image-link').click(function() {
+        $('#send-image-form,.close').show();
+		$('.new-user').hide();
+		return false;
+    });
+	$('.user-location-link').click(function() {
+        $('#user-location,.close').show();
+		$('.new-user').hide();
+		return false;
+    });
+	$('.new-vendor-link').click(function() {
+        $('#new-vendor-form,.close').show();
+		$('.new-user').hide();
+		return false;
+    });
 	
 	
 });
@@ -51,11 +72,11 @@ $(document).ready(function() {
             	<ul class="hidden-xs">
                 	<li><a href="#" title="Make a Booking" class="booking-link">Make a Booking</a></li>
                     <li><a href="#" title="Current Bookings">Current Bookings</a></li>
-                    <li><a href="#" title="New Vendor">New Vendor</a></li>
+                    <li><a href="#" title="New Vendor" class="new-vendor-link">New Vendor</a></li>
                     <li><a href="#" title="Vendor Search">Vendor Search</a></li>
-                    <li><a href="#" title="User Location">User Location</a></li>
-                    <li><a href="#" title="Send Image">Send Image</a></li>
-                    <li><a href="#" title="Send Location">Send Location</a></li>
+                    <li><a href="#" title="User Location" class="user-location-link">User Location</a></li>
+                    <li><a href="#" title="Send Image" class="send-image-link">Send Image</a></li>
+                    <li><a href="#" title="Send Location" class="send-location-link">Send Location</a></li>
                 </ul>
             </div>
         </div>
@@ -96,9 +117,15 @@ $(document).ready(function() {
                 </div>
                 <div class="chat-show">
                     <ul>
+                    	<li>
+                        	<div class="no-chat">
+                            	<p>Goodservice chat no messages</p>
+                            </div>
+                        </li>
                     	<li class="user_message">
                         	<div class="user_message">
                             	<i></i>
+                                <h4>vipul</h4>
                             	<p>I LOVEUR SONGS</p>
                                 <span>11:00am</span>
                             </div>
@@ -106,6 +133,7 @@ $(document).ready(function() {
                         <li class="agent_message">
                         	<div class="agent_message">
                             	<i></i>
+                                <h4>vipul</h4>
                             	<p>Queen</p>
                                 <span>11:05am</span>
                             </div>
@@ -113,6 +141,7 @@ $(document).ready(function() {
                         <li class="user_message">
                         	<div class="user_message">
                             	<i></i>
+                                <h4>vipul</h4>
                             	<p>OMG!!! I love all of your songs like let it go!! from frozen(remembe).</p>
                                 <span>11:00am</span>
                             </div>
@@ -120,6 +149,7 @@ $(document).ready(function() {
                         <li class="agent_message">
                         	<div class="agent_message">
                             	<i></i>
+                                <h4>vipul</h4>
                                 <p>how to get 900 gold<br>
                                 steps<br><br>
                                 1.send this to 10 people<br>
@@ -133,6 +163,7 @@ $(document).ready(function() {
                         <li class="user_message">
                         	<div class="user_message">
                             	<i></i>
+                                <h4>vipul</h4>
                             	<p>I LOVEUR SONGS</p>
                                 <span>11:00am</span>
                             </div>
@@ -140,6 +171,7 @@ $(document).ready(function() {
                         <li class="agent_message">
                         	<div class="agent_message">
                             	<i></i>
+                                <h4>vipul</h4>
                             	<p>Queen</p>
                                 <span>11:05am</span>
                             </div>
@@ -147,6 +179,7 @@ $(document).ready(function() {
                         <li class="user_message">
                         	<div class="user_message">
                             	<i></i>
+                                <h4>vipul</h4>
                             	<p>OMG!!! I love all of your songs like let it go!! from frozen(remembe).</p>
                                 <span>11:00am</span>
                             </div>
@@ -154,6 +187,7 @@ $(document).ready(function() {
                         <li class="agent_message">
                         	<div class="agent_message">
                             	<i></i>
+                                <h4>vipul</h4>
                                 <p>how to get 900 gold<br>
                                 steps<br><br>
                                 1.send this to 10 people<br>
@@ -162,6 +196,19 @@ $(document).ready(function() {
                                 4.logg out<br>
                                 5.log in</p>
                                 <span>11:05am</span>
+                            </div>
+                        </li>
+                        <li class="agent_message">
+                        	<div class="agent_message">
+                            	<i></i>
+                                <img src="images/img_chat1.jpg" width="1920" height="1280" alt="chat">
+                                <span>11:05am</span>
+                            </div>
+                        </li>
+                        <li class="user_message">
+                        	<div class="user_message">
+                            	<i></i>
+                                <img src="images/img_chat2.jpg" width="1920" height="1280" alt="chat">
                             </div>
                         </li>
                     </ul>
@@ -194,8 +241,66 @@ $(document).ready(function() {
                     <input type="submit" value="Cancel" class="button">
                 </div>
                 <!-- end booking-form -->
+                <!-- start send-location-form -->
+            	<div class="form" id="send-location-form">
+                	<h3>Send Location to Chat</h3>
+                	<label>Address</label>
+                    <input name="customer" type="text" class="input">
+                    <input type="submit" value="Go" class="button">
+                    <div class="map">
+                    	<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14016.897744505442!2d77.24626269999999!3d28.5630225!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1433747438822" width="100%" height="315" frameborder="0" style="border:0"></iframe>
+                    </div>
+                    <input type="submit" value="submit" class="button">
+                    <input type="submit" value="Cancel" class="button">
+                </div>
+                <!-- end send-location-form -->
+                <!-- start user-location -->
+            	<div class="form" id="user-location">
+                	<h3>User Location</h3>
+                    <div class="map">
+                    	<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d14016.897744505442!2d77.24626269999999!3d28.5630225!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1433747438822" width="100%" height="480" frameborder="0" style="border:0"></iframe>
+                    </div>
+                </div>
+                <!-- end user-location -->
+                <!-- start send-image-form -->
+            	<div class="form" id="send-image-form">
+                	<h3>Send Image</h3>
+                	<label>Title</label>
+                    <input name="customer" type="text" class="input">
+                    <label>Description</label>
+                    <textarea name="summary" class="textarea"></textarea>
+                    <label>File</label>
+                    <input type="file" class="input">
+                    <label>Online URL</label>
+                    <input type="url" class="input">
+                    
+                    <input type="submit" value="submit" class="button">
+                    <input type="submit" value="Cancel" class="button">
+                </div>
+                <!-- end send-image-form -->
+                <!-- start new-vendor-form -->
+            	<div class="form" id="new-vendor-form">
+                	<h3>New Vendor</h3> 
+                	<label>Name</label>
+                    <input name="customer" type="text" class="input">
+                    <label>Phone</label>
+                    <input name="customer" type="text" class="input">
+                    <label>Category</label>
+                    <input name="customer" type="text" class="input">
+                    <label>Address</label>
+                    <input name="customer" type="text" class="input">
+                    <label>Geocode</label>
+                    <input name="customer" type="text" class="input">
+                    <label>City</label>
+                    <input name="customer" type="text" class="input">
+                    <label>External Source</label>
+                    <input name="customer" type="text" class="input">
+                    <input type="submit" value="submit" class="button">
+                    <input type="submit" value="Cancel" class="button">
+                </div>
+                <!-- end new-vendor-form -->
                 <!-- start New-user -->
-                <div class="user new-user">
+                <div class="user new-user" style="display:none1;">
             		<div class="column">
                         <h3 class="online"><i class="fa fa-circle"></i> New Users</h3>
                         <ul>
@@ -221,5 +326,8 @@ $(document).ready(function() {
     </div>
 </div>
 <!-- end main-container -->
+<div class="loading">
+    <i class="fa fa-circle-o-notch fa-spin"></i>
+</div>
 </body>
 </html>
