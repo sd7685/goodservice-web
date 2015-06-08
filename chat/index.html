@@ -53,6 +53,11 @@ $(document).ready(function() {
 		$('.new-user').hide();
 		return false;
     });
+	$('.bookings-link').click(function() {
+        $('#bookings-form,.close').show();
+		$('.new-user').hide();
+		return false;
+    });
 	
 	
 });
@@ -71,7 +76,7 @@ $(document).ready(function() {
             <div class="col-md-9 nav">
             	<ul class="hidden-xs">
                 	<li><a href="#" title="Make a Booking" class="booking-link">Make a Booking</a></li>
-                    <li><a href="#" title="Current Bookings">Current Bookings</a></li>
+                    <li><a href="#" title="Current Bookings" class="bookings-link">Current Bookings</a></li>
                     <li><a href="#" title="New Vendor" class="new-vendor-link">New Vendor</a></li>
                     <li><a href="#" title="Vendor Search">Vendor Search</a></li>
                     <li><a href="#" title="User Location" class="user-location-link">User Location</a></li>
@@ -199,7 +204,7 @@ $(document).ready(function() {
                             </div>
                         </li>
                         <li>
-                        	<p><span>Upload Image</span></p>
+                        	<div class="divider"><p><span>Upload Image</span></p></div>
                         </li>
                         <li class="agent_message">
                         	<div class="agent_message">
@@ -304,8 +309,21 @@ $(document).ready(function() {
                     <input type="submit" value="Cancel" class="button">
                 </div>
                 <!-- end new-vendor-form -->
+                <!-- start bookings-form -->
+            	<div class="form bookings" id="bookings-form">
+                	<h3>Bookings</h3> 
+                	<ul>
+                    	<li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                    </ul>
+                </div>
+                <!-- end new-vendor-form -->
                 <!-- start New-user -->
-                <div class="user new-user" style="display:none1;">
+                <div class="user new-user">
             		<div class="column">
                         <h3 class="online"><i class="fa fa-circle"></i> New Users</h3>
                         <ul>
