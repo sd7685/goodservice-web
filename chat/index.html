@@ -59,6 +59,12 @@ $(document).ready(function() {
 		return false;
     });
 	
+	$('.user li a').click(function() {
+        $('.chat-panel').show();
+		$('.common-column').hide();
+		return false;
+    });
+	
 	
 });
 </script>
@@ -74,7 +80,7 @@ $(document).ready(function() {
             	<img src="images/logo.png" width="170" height="19" alt="good service">
             </div>
             <div class="col-md-9 nav">
-            	<ul class="hidden-xs">
+            	<ul>
                 	<li><a href="#" title="Make a Booking" class="booking-link">Make a Booking</a></li>
                     <li><a href="#" title="Current Bookings" class="bookings-link">Current Bookings</a></li>
                     <li><a href="#" title="New Vendor" class="new-vendor-link">New Vendor</a></li>
@@ -115,7 +121,7 @@ $(document).ready(function() {
             </div>
             <!-- end Users-column -->
             <!-- start chat-column -->
-            <div class="col-md-6 common-column chat-panel hidden-xs">
+            <div class="col-md-6 common-column chat-panel">
             	<div class="chat-bar">
                 	<strong class="pull-right">+91-9540-266-544</strong>
                 	<h5>Sunil Dalal <span>Chating to Piyush Chauhan</span></h5>
@@ -228,27 +234,8 @@ $(document).ready(function() {
             </div>
             <!-- end chat-column -->
             <!-- start form-accst-column -->
-            <div class="col-md-3 common-column hidden-xs">
+            <div class="col-md-3 common-column">
             	<a href="#" title="close" class="close"><i class="fa fa-times-circle-o"></i></a>
-            	<!-- start booking-form -->
-            	<div class="form" id="booking-form">
-                	<h3>Booking</h3>
-                	<label>Customer</label>
-                    <input name="customer" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
-                    <label>Title</label>
-                    <input name="title" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
-                    <label>Status</label>
-                    <input name="status" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
-                    <label>Summary</label>
-                    <textarea name="summary" class="textarea"></textarea>
-                    <label>Details</label>
-                    <textarea name="details" class="textarea"></textarea>
-                    <a href="#" title="Vendor Search">Vendor Search</a>
-                    <div class="clear"></div>
-                    <input type="submit" value="submit" class="button">
-                    <input type="submit" value="Cancel" class="button">
-                </div>
-                <!-- end booking-form -->
                 <!-- start send-location-form -->
             	<div class="form" id="send-location-form">
                 	<h3>Send Location to Chat</h3>
@@ -310,20 +297,41 @@ $(document).ready(function() {
                 </div>
                 <!-- end new-vendor-form -->
                 <!-- start bookings-form -->
-            	<div class="form bookings" id="bookings-form">
-                	<h3>Bookings</h3> 
-                	<ul>
-                    	<li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
-                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
-                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
-                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
-                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
-                        <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
-                    </ul>
+                <div class="bookings">
+                    <div class="form" id="bookings-form" style="display:block;">
+                        <h3>Bookings</h3> 
+                        <ul>
+                            <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                            <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                            <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                            <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                            <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                            <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
+                        </ul>
+                    </div>
+                    <!-- start booking-form -->
+                    <div class="form" id="booking-form" style="display:none;">
+                        <h3>Booking</h3>
+                        <label>Customer</label>
+                        <input name="customer" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
+                        <label>Title</label>
+                        <input name="title" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
+                        <label>Status</label>
+                        <input name="status" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
+                        <label>Summary</label>
+                        <textarea name="summary" class="textarea"></textarea>
+                        <label>Details</label>
+                        <textarea name="details" class="textarea"></textarea>
+                        <a href="#" title="Vendor Search">Vendor Search</a>
+                        <div class="clear"></div>
+                        <input type="submit" value="submit" class="button">
+                        <input type="submit" value="Cancel" class="button">
+                    </div>
+                    <!-- end booking-form -->
                 </div>
                 <!-- end new-vendor-form -->
                 <!-- start New-user -->
-                <div class="user new-user">
+                <div class="user new-user" style="display:none;">
             		<div class="column">
                         <h3 class="online"><i class="fa fa-circle"></i> New Users</h3>
                         <ul>

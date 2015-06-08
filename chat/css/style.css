@@ -579,22 +579,22 @@ body {
 
 
 
-
 /*////////////////////////////////////////////
-  Fonts
+  Responsive CSS
 ////////////////////////////////////////////*/
-{
-	font-family: 'proxima_nova_rgbold_italic';
+@media only screen and (min-width : 10px) and (max-width : 767px) {
+.user {
+	margin:-15px;
+	height:auto;
+	padding-bottom:0;
 }
-{
-	font-family: 'proxima_nova_rgbold';
+.user .column {
+	border:none;
 }
- {
-	font-family: 'proxima_nova_rgregular';
 }
- {
-	font-family: 'proxima_novasemibold';
-}
- {
-	font-family: 'proxima_novathin';
-}
+
+
+
+
+
+
