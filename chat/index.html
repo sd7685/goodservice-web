@@ -23,7 +23,7 @@ $(document).ready(function() {
 	
 	
 	$('.close').click(function() {
-        $('.form,.close').hide();
+        $('.form,.close,.overlay,.image-popup').hide();
 		$('.new-user').show();
 		return false;
     });
@@ -198,6 +198,9 @@ $(document).ready(function() {
                                 <span>11:05am</span>
                             </div>
                         </li>
+                        <li>
+                        	<p><span>Upload Image</span></p>
+                        </li>
                         <li class="agent_message">
                         	<div class="agent_message">
                             	<i></i>
@@ -286,7 +289,9 @@ $(document).ready(function() {
                     <label>Phone</label>
                     <input name="customer" type="text" class="input">
                     <label>Category</label>
-                    <input name="customer" type="text" class="input">
+                    <select class="input">
+                    	<option>Category</option>
+                    </select>
                     <label>Address</label>
                     <input name="customer" type="text" class="input">
                     <label>Geocode</label>
@@ -329,5 +334,10 @@ $(document).ready(function() {
 <div class="loading">
     <i class="fa fa-circle-o-notch fa-spin"></i>
 </div>
+<div class="overlay"></div>
+<div class="image-popup">
+	<img src="images/img_chat3.png" width="720" height="1280" alt="img">
+</div>
+<a href="#" title="close" class="close close2"><i class="fa fa-times-circle-o"></i></a>
 </body>
 </html>
