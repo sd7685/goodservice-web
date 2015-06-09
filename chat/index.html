@@ -12,6 +12,15 @@
 <script>
 $(document).ready(function() {
 	
+	if ($(window).width() < 800) {
+		$('.user').addClass('user-mb');
+		$('.nav ul').addClass('menu-mb');
+	}
+	else {
+		$('.user').removeClass('user-mb');
+		$('.nav ul').removeClass('menu-mb');
+	}
+	
 	var height=$('body').height();
 	$('.common-column').height(height-60);
 	
@@ -59,12 +68,27 @@ $(document).ready(function() {
 		return false;
     });
 	
-	$('.user li a').click(function() {
-        $('.chat-panel').show();
-		$('.common-column').hide();
+	$('.user-mb li a').click(function() {
+        $('.chat-panel,.header .back').show();
+		$('.leftcol').hide();
 		return false;
     });
-	
+	$('.header .back').click(function() {
+        $('.leftcol').show();
+		$('.chat-panel,.header .back,.rightcol,.form').hide();
+		return false;
+    });
+	$('.nav .menu').click(function() {
+        $('.nav ul').slideToggle();
+		return false;
+    });
+	$('.nav li a').click(function() {
+        $('.nav .menu-mb').hide();
+    });
+	$('.menu-mb li a').click(function() {
+		$('.rightcol,.header .back').show();
+        $('.leftcol,.chat-panel').hide();
+    });
 	
 });
 </script>
@@ -76,10 +100,12 @@ $(document).ready(function() {
 <div class="header">
 	<div class="container-fluid">
     	<div class="row">
-        	<div class="col-md-3 logo">
+        	<div class="logo">
+            	<a href="#" title="back" class="back"><i class="fa fa-angle-left"></i></a>
             	<img src="images/logo.png" width="170" height="19" alt="good service">
             </div>
-            <div class="col-md-9 nav">
+            <div class="nav">
+            	<a href="#" title="Menu" class="menu"><i class="fa fa-bars"></i></a>
             	<ul>
                 	<li><a href="#" title="Make a Booking" class="booking-link">Make a Booking</a></li>
                     <li><a href="#" title="Current Bookings" class="bookings-link">Current Bookings</a></li>
@@ -99,7 +125,7 @@ $(document).ready(function() {
 	<div class="container-fluid">
     	<div class="row">
         	<!-- start Users-column -->
-        	<div class="col-md-3 common-column">
+        	<div class="col-md-3 common-column leftcol">
             	<div class="user">
             		<div class="column">
                         <h3 class="online"><i class="fa fa-circle"></i> Online Users</h3>
@@ -234,7 +260,7 @@ $(document).ready(function() {
             </div>
             <!-- end chat-column -->
             <!-- start form-accst-column -->
-            <div class="col-md-3 common-column">
+            <div class="col-md-3 common-column rightcol">
             	<a href="#" title="close" class="close"><i class="fa fa-times-circle-o"></i></a>
                 <!-- start send-location-form -->
             	<div class="form" id="send-location-form">
@@ -298,7 +324,7 @@ $(document).ready(function() {
                 <!-- end new-vendor-form -->
                 <!-- start bookings-form -->
                 <div class="bookings">
-                    <div class="form" id="bookings-form" style="display:block;">
+                    <div class="form" id="bookings-form">
                         <h3>Bookings</h3> 
                         <ul>
                             <li><a href="#" title="Edit" class="button edit">Edit</a><h4>Title <span>test Name</span></h4></li>
@@ -310,7 +336,7 @@ $(document).ready(function() {
                         </ul>
                     </div>
                     <!-- start booking-form -->
-                    <div class="form" id="booking-form" style="display:none;">
+                    <div class="form" id="booking-form">
                         <h3>Booking</h3>
                         <label>Customer</label>
                         <input name="customer" type="text" value="Ronak Mundra mi3 (+919717560973)" class="input">
@@ -331,7 +357,7 @@ $(document).ready(function() {
                 </div>
                 <!-- end new-vendor-form -->
                 <!-- start New-user -->
-                <div class="user new-user" style="display:none;">
+                <div class="user new-user">
             		<div class="column">
                         <h3 class="online"><i class="fa fa-circle"></i> New Users</h3>
                         <ul>
@@ -364,6 +390,6 @@ $(document).ready(function() {
 <div class="image-popup">
 	<img src="images/img_chat3.png" width="720" height="1280" alt="img">
 </div>
-<a href="#" title="close" class="close close2"><i class="fa fa-times-circle-o"></i></a>
+<a href="#" title="close" class="close2"><i class="fa fa-times-circle-o"></i></a>
 </body>
 </html>

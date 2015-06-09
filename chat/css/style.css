@@ -161,7 +161,19 @@ h3 {
 	opacity:0.8;
 	display:none;
 }
-
+.close2 {
+	font-size:30px;
+	color:#fff;
+	position:absolute;
+	top:10px;
+	right:10px;
+	z-index:9999;
+	opacity:0.8;
+	display:none;
+}
+.close2:hover {
+	color:#fff;
+}
 .loading,
 .overlay {
 	background:rgba(43,43,43,0.9);
@@ -205,13 +217,7 @@ h3 {
 	width:auto;
 	height:100%;	
 }
-.close2 {
-	font-size:30px;
-	color:#fff;
-}
-.close2:hover {
-	color:#fff;
-}
+
 
 /*-------------------------------------------------------------------------------------------*/
 /* SITE STRUCTURE & APPEARANCE */
@@ -235,16 +241,38 @@ body {
 	height:60px;
 	padding:9px 0;
 }
+.header .back {
+	width:20px;
+	float:left;
+	margin-top:6px;
+	margin-right:5px;
+	font-size:27px;
+	color:#2b2b2b;
+	line-height:normal;
+	display:none;
+}
 /* Logo */
 .logo {
+	float:left;
+	padding-left:15px;
 	font-size:20px;
 	color:#fff;
 	line-height:42px;
 }
 /* Nav */
 .nav {
+	float:right;
+	padding-right:15px;
 	font-size:12px;
 	color:#2b2b2b;
+}
+.nav a.menu {
+	float:right;
+	margin-top:6px;
+	font-size:25px;
+	color:#2b2b2b;
+	line-height:normal;
+	display:none;
 }
 .nav ul {
 	float:right;
@@ -583,6 +611,43 @@ body {
   Responsive CSS
 ////////////////////////////////////////////*/
 @media only screen and (min-width : 10px) and (max-width : 767px) {
+.nav ul,
+.chat-panel,
+.rightcol {
+	display:none;
+}
+.header{
+	position:relative;
+}
+/* nav */
+.nav a.menu {
+	display:block;
+}
+.nav ul {
+	border-top:1px solid #7d7d7d;
+	background:#f9f9f9;
+	width:100%;
+	padding:0;
+	margin:0;
+	position:absolute;
+	left:0;
+	top:100%;
+	z-index:99999;
+}
+.nav li {
+	float:none;
+	margin:0;
+	padding:0;
+}
+.nav li a {
+	border:none;
+	border-bottom:1px solid #7d7d7d;
+	border-radius:0;
+	font-size:14px;
+}
+
+
+/* user */
 .user {
 	margin:-15px;
 	height:auto;
@@ -590,6 +655,11 @@ body {
 }
 .user .column {
 	border:none;
+}
+/* chat-show */
+.chat-show li .user_message,
+.chat-show li .agent_message {
+	max-width:90%;
 }
 }
 
