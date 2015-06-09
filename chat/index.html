@@ -33,7 +33,7 @@ $(document).ready(function() {
 	$('.column ul').height(height3-36);
 	
 	var height4=$('.new-user .column').height();
-	$('.new-user .column ul').height(height4-36);
+	$('.new-user .column ul').height(height4-71);
 	
 	$('.close').click(function() {
         $('.form,.close,.overlay,.image-popup,.rightcol-mb').hide();
@@ -398,6 +398,10 @@ $(document).ready(function() {
                         	<a href="#new-user1" aria-controls="home" role="tab" data-toggle="tab" title="Online Users" class="online active"><i class="fa fa-circle"></i> Online Users</a>
                         	<a href="#new-user2" aria-controls="home" role="tab" data-toggle="tab" title="offline Users" class="offline"><i class="fa fa-circle"></i> Ofline Users</a>
                         </h3>
+                        <div class="search-user">
+                        	<input type="text" placeholder="Search User" class="input">
+                            <input type="button" value="Go" class="button">
+                        </div>
                         <div class="tab-content">
                             <ul role="tabpanel" class="tab-pane active" id="new-user1">
                                 <li><a href="#" title="Sunil Dalal"><strong class="pull-right">1</strong>Sunil Dalal</a></li>
