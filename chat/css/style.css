@@ -314,12 +314,19 @@ body {
 }
 .user .column {
 	border:1px solid #E2E2E2;
-	height:100%;
+	height:48.66666%;
+	margin-top:15px;
 	-webkit-border-radius:2px;
 	   -moz-border-radius:2px;
 		-ms-border-radius:2px;
 		 -o-border-radius:2px;
 			border-radius:2px;
+}
+.user .column:first-child {
+	margin-top:0;
+}
+.user.new-user .column {
+	height:100%;
 }
 .user h3 {
 	background:#E2E2E2;
@@ -328,15 +335,31 @@ body {
 	line-height:35px;
 	padding:0 10px;
 }
+.user h3 a {
+	display:block;
+	line-height:35px;
+}
+.user .online-tab h3 {
+	padding:0;
+	min-height:35px;
+}
+.user .online-tab h3 a {
+	width:50%;
+	float:left;
+	padding:0 10px;
+}
+.user .online-tab h3 a.offline {
+	border-left:1px solid #ccc;
+}
 .user h3 i {
 	font-size:14px;
 	color:#2B2B2B;
-	line-height:35px;
+	line-height:34px;
 }
-.user h3.online i {
+.user h3 .online i {
 	color:#36b74f;
 }
-.user h3.offline i {
+.user h3 .offline i {
 	color:#7d7d7d;
 }
 .user ul {
@@ -509,7 +532,7 @@ body {
 	max-height:100%;
 	height:100%;
 	margin:0;
-	padding:6px 0;
+	padding:6px 45px 6px 0;
 	font-size:15px;
 	line-height:24px;
 }
@@ -610,7 +633,7 @@ body {
 /*////////////////////////////////////////////
   Responsive CSS
 ////////////////////////////////////////////*/
-@media only screen and (min-width : 10px) and (max-width : 767px) {
+@media only screen and (min-width : 10px) and (max-width : 800px) {
 .nav ul,
 .chat-panel,
 .rightcol {
