@@ -735,6 +735,7 @@ html, body {
 	padding: 100px 50px 0 50px;
 }
 .login .logo {
+	width:100%;
 	text-align: center;
 	font-size:25px;
 	text-transform:uppercase;
@@ -806,8 +807,9 @@ html, body {
 	border-bottom-width: 2px;
 }
 .login .keep {
-	display: block;
+	display: inline-block;
 	padding: 10px 0 10px 0;
+	margin:0;
 }
 .login .keep span {
 	float: left;
@@ -900,5 +902,9 @@ html, body {
 /* chat-show */
 .chat-show li .user_message, .chat-show li .agent_message {
 	max-width: 90%;
+}
+
+.login {
+	padding:50px 0 0 0;
 }
 }
