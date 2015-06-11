@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Good Service</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('.input').focus(function () {
+    	$(this).closest('.input-row').addClass('active');
+	});
+	
+	$('.input').blur(function () {
+		if($(this).val() == '') {
+			$(this).closest('.input-row').removeClass('active');
+		}
+	});
+	
+});
+</script>
+
+</head>
+
+<body>
+<div class="container-fluid">
+	<div class="row">
+    	<div class="col-sm-4 col-sm-offset-4">
+        	<div class="login">
+                <div class="row">
+                    <div class="col-sm-12 logo">
+                        <a href="#" title="Goodservice"><span>Good</span>service</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                    	<div class="form">
+                        	<h3>Sign in with your Goodservice Account</h3>
+                            <div class="input-row">
+                            	<label>Email</label>
+                            	<input type="text" class="input">
+                            </div>
+                            <div class="input-row">
+                            	<label>Password</label>
+                            	<input type="password" class="input">
+                            </div>
+                            <input type="checkbox" id="keep"><label for="keep" class="keep"><span></span>Remember me</label>
+                            <input type="button" value="Sign in" class="button">
+                            <a href="forgot-password.html" title="Forgot your password?" class="forgot">Forgot your password?</a>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
