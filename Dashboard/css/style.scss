@@ -1,6 +1,5 @@
 /* Scss Document */
-@import 'reset';
-  
+
 $primary-color: #2BC83E;
 $primary-color-hover: #0aa91d;
 $common-color: #2b2b2b;
@@ -39,20 +38,119 @@ input[type="checkbox"] + label span {
 input[type="checkbox"]:checked + label span {
     background:url(../images/bg_checkbox.png) no-repeat left -14px;
 }
-input[type="radio"] + label span {
-	background:url(../images/bg_radio.png) no-repeat left top;
-    display:inline-block;
-    width:14px;
-    height:14px;
-	float:left;
-	margin:8px 5px 0 0;
-    vertical-align:middle;
-    cursor:pointer;
+.form {
+	background:#fff;
+	padding:20px;
+	@include border-radius(3px);
 }
-input[type="radio"]:checked + label span {
-    background:url(../images/bg_radio.png) no-repeat left -14px;
-}
+.input-row {
+	padding-top:15px;
+	position:relative;
+	z-index:1;
 
+	label {
+	  width:100%;
+	  display:block;
+	  font-size:14px;
+	  @include transition(0.2s); 
+	  position:absolute;
+	  top:29px; 
+	  z-index:1;
+	}
+	&.active {
+	  label {
+		top:0; 
+		font-size:12px;
+		color:$primary-color;
+	  }
+	}
+	.input,
+	.textarea {
+	  border:none;
+	  border-bottom:1px solid #ebebeb;
+	  background:none;
+	  width:100%;
+	  height:40px;
+	  padding:10px;
+	  margin-bottom:15px;
+	  font-size:14px;
+	  color:$common-color;
+	  line-height:20px;
+	  @include transition(0.2s);
+	  position:relative;
+	  z-index:3;
+		  &:focus {
+			border-bottom-color:$primary-color;
+			border-bottom-width:2px;
+		  }
+	}
+	.textarea {
+		height:80px;
+	}
+}
+select.input {
+	text-indent:-9999px;
+}
+.input-row.active select.input {
+	text-indent:inherit;
+}
+.input-row label.radio {
+	border:1px solid #dfdfdf;
+	width:auto;
+	min-width:36px;
+	float:left;
+	display:inline-block;
+	position:static;
+	padding:8px 10px;
+	margin:0 -1px 0 0;
+	border-radius:2px;
+	cursor:pointer;
+	line-height:15px;
+}
+.input-row label.radio.txt input,
+.input-row label.radio.txt span {
+	margin-right:5px;
+}
+.input-row label.radio.left {
+	border-radius:2px 0 0 2px;
+}
+.input-row label.radio.right {
+	border-radius:0 2px 2px 0;
+}
+.input-row label.radio input,
+.input-row label.radio span {
+	float:left;
+	position:static;
+	margin:0;
+}
+.keep {
+	display:block;
+	padding:10px 0 10px 0;
+	font-size:14px;
+	
+	span {
+	  float:left;
+	  margin:0 5px 0 0 !important;
+	}
+}
+.button {
+	background:$primary-color;
+	border:none;
+	width:100%;
+	height:40px;
+	margin-top:15px;
+	padding:0;
+	font-size:14px;
+	color:#fff;
+	line-height:40px;
+	text-transform:uppercase;
+	@include border-radius(3px);
+	@include transition(0.2s);
+	
+	&:hover {
+	  background:$primary-color-hover;
+	}
+}
 
 
 
@@ -61,7 +159,7 @@ input[type="radio"]:checked + label span {
 ///////////////////////////////////*/
 html,
 body {
-  height:100%;
+	height:100%;
 }
 body {
 	background:$primary-color;
@@ -98,78 +196,180 @@ body {
     padding-bottom:15px;
 	line-height:21px;
   }
-  .form {
-    background:#fff;
-	padding:20px;
-	@include border-radius(3px);
-  }
-  .input-row {
-	padding-top:15px;
-	position:relative;
-	z-index:1;
-	
-	label {
-	  display:block;
-	  font-size:14px;
-	  @include transition(0.2s); 
-	  position:absolute;
-	  top:29px; 
-	}
-	&.active {
-	  label {
-		top:5px; 
-		font-size:12px;
-		color:$primary-color;
-	  }
-	}
-	.input {
-	  border:none;
-	  border-bottom:1px solid #ebebeb;
-	  background:#fff;
-	  width:100%;
-	  height:40px;
-	  margin-bottom:15px;
-	  font-size:16px;
-	  color:$common-color;
-	  @include transition(0.2s);
-	  &:focus {
-		border-bottom-color:$primary-color;
-		border-bottom-width:2px;
-	  }
-	}
-  }
-  .keep {
-	display:block;
-	padding:10px 0 10px 0;
-	span {
-	  float:left;
-	  margin:0 5px 0 0;
-	}
-  }
-  .button {
-	background:$primary-color;
-	border:none;
-	width:100%;
-	height:40px;
-	margin-top:15px;
-	font-size:14px;
-	color:#fff;
-	line-height:40px;
-	text-transform:uppercase;
-	@include border-radius(3px);
-	@include transition(0.2s);
-	
-	&:hover {
-	  background:$primary-color-hover;
-	}
-  }
-  
 }
 
-.main-container {
+
+/* Inner Page */
+.inner {
 	background:#fff;
-	height:100%;
+	.header {
+		background:#2BC83E;
+	}
+	.logo {
+		float:left;
+	}
 }
+.nav {
+	float:right;
+	font-size:25px;
+	color:#fff;
+	li {
+		float:left;
+		margin-left:20px;
+		position:relative;
+		a {
+			display:block;
+			color:#fff;
+			line-height:30px;
+		}
+	}
+	ul ul {
+		background:#fff;
+		width:auto;
+		white-space:nowrap;
+		font-size:13px;
+		color:#2b2b2b;
+		padding:10px 15px;
+		box-shadow:rgba(0,0,0,0.6) 0px 0px 5px;
+		border-radius:2px;
+		position:absolute;
+		right:0;
+		top:100%;
+		display:none;
+		
+		li{
+			float:none;
+			margin:0;
+			a {
+				color:#2b2b2b;
+				text-decoration:none !important;
+				&:hover {
+				  color:$primary-color-hover;
+				}
+			}
+		}
+	}
+}
+.main-container {
+  background: #fff;
+  height: 100%;
+}
+.leftcol {
+	background:#fff;
+	width:250px;
+	height:calc(100vh - 60px);
+	float:left;
+	box-shadow:rgba(0,0,0,0.5) 0px 2px 2px;
+	position:relative;
+}
+.rightcol {
+	background:#f9f9f9;
+	width:calc(100vw - 250px);
+	height:calc(100vh - 60px);
+	float:left;
+	margin-right:-15px;
+	padding:15px;
+	overflow:auto;
+	
+	.column {
+		background:#fff;
+		min-height:300px;
+		margin:15px 0;
+		padding:15px;
+		box-shadow:rgba(0,0,0,0.5) 0px 0px 2px;
+		@include border-radius(2px);
+		
+		h3 {
+			padding-bottom:10px;
+			letter-spacing:1px;
+			font-size:14px;
+			color:$common-color;
+			font-weight:700;
+		}
+	}
+}
+/* User */
+.user {
+	background:#e8f3ed;
+	padding:15px;
+	
+	img {
+		margin-bottom:15px;
+	}
+	h3 {
+		font-size:16px;
+		font-weight:600;
+		a {
+			display:block;
+			color:$common-color;
+		}
+		span {
+			display:block;
+			margin-top:3px;
+			font-size:13px;
+			color:#7d7d7d;
+			
+			i {
+				float:right;
+				font-size:14px;
+				line-height:7px;
+			}
+		}
+	}
+}
+
+/* Sub-nav */
+.sub-nav {
+	font-size:13px;
+	color:#7d7d7d;
+	height:calc(100vh - 199px);
+	overflow:auto;
+	
+	li {
+		border-top:1px solid #f9f9f9;
+		
+		a {
+			display:block;
+			padding:0 15px;
+			color:#7d7d7d;
+			line-height:35px;
+			&:hover {
+			  color:$primary-color;
+			}
+		}
+	}
+	li:first-child {
+		border-top:none;
+	}
+}
+/* Common-form */
+.common-form {
+	border:1px solid #eaeaea;
+	background:#fff;
+	padding:0;
+	box-shadow:rgba(0,0,0,0.05) 0 1px 1px;
+	@include border-radius(2px);
+}
+.common-form .txtb {
+	border-bottom:1px solid #eaeaea;
+	padding:20px;
+}
+.common-form form {
+	padding:20px;
+}
+.common-form h4 {
+	padding-bottom:8px;
+	font-size:14px;
+	font-weight:700;
+}
+.common-form p {
+	line-height:18px;
+}
+.common-form .input-row {
+	width:100%;
+	float:left;
+}
+
 
 
 /*////////////////////////////////////////////

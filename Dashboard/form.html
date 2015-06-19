@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Goodservice</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="css/fonts.css" rel="stylesheet" type="text/css">
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/reset.scss" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/style.scss" rel="stylesheet" type="text/css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+$(document).ready(function() {
+	
+	var height=$('body').height();
+	$('.main-container').height(height-60);
+	
+	$('.input,.textarea').focus(function () {
+    	$(this).closest('.input-row').addClass('active');
+	});
+	$('.input,.textarea').blur(function () {
+		if($(this).val() == '') {
+			$(this).closest('.input-row').removeClass('active');
+		}
+	});
+	
+	$('.link-menu').click(function() {
+		$('.list-menu').slideToggle();
+		return false;
+    });
+	$('.list-menu li a,.main-container').click(function() {
+		$('.list-menu').slideUp();
+    });
+	
+});
+</script>
+</head>
+
+<body class="inner">
+<!-- start header -->
+<header class="header">
+	<div class="container-fluid">
+    	<div class="logo">
+        	<a href="#" title="Goodservice"><span>Good</span>service</a>
+        </div>
+        <div class="nav">
+        	<ul>
+            	<li><a href="#"><i class="fa fa-cog"></i></a></li>
+            	<li><a href="#"><i class="fa fa-search"></i></a></li>
+                <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
+                <li><a href="#"><i class="fa fa-user"></i></a></li>
+                <li><a href="#" class="link-menu"><i class="fa fa-ellipsis-v"></i></a>
+                	<ul class="list-menu">
+                        <li><a href="#" title="Single-column view">Single-column view</a></li>
+                        <li><a href="#" title="Sort by date">Sort by date</a></li>
+                        <li><a href="#" title="Sort by name">Sort by name</a></li>
+                        <li><a href="#" title="Help &amp; feedback">Help &amp; feedback</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- end header -->
+<!-- start main-container -->
+<div class="main-container">
+    <!-- start leftcol -->
+    <div class="leftcol">
+        <!-- start user -->
+        <div class="user">
+            <img src="images/img_user.png" width="60" height="60" alt="user">
+            <h3><a href="#" title="John Smith">John Smith <span><i class="fa fa-sort-desc"></i>john.smith@gmail.com</span></a></h3>
+        </div>
+        <!-- end user -->
+        <!-- start sub-nav -->
+        <div class="sub-nav">
+            <ul>
+                <li><a href="#" title="Dashboard">Dashboard</a></li>
+                <li><a href="#" title="Apps">Apps</a></li>
+                <li><a href="#" title="Components">Components</a></li>
+                <li><a href="#" title="Material">Material</a></li>
+                <li><a href="#" title="Form">Form</a></li>
+                <li><a href="#" title="Table">Table</a></li>
+                <li><a href="#" title="Charts">Charts</a></li>
+                <li><a href="#" title="Maps">Maps</a></li>
+                <li><a href="#" title="Pages">Pages</a></li>
+                <li><a href="#" title="Menu">Menu</a></li>
+                <li><a href="#" title="Settings">Settings</a></li>
+                <li><a href="#" title="Document">Document</a></li>
+                <li><a href="#" title="Maps">Maps</a></li>
+            </ul>
+        </div>
+        <!-- end sub-nav -->
+    </div>
+    <!-- end leftcol -->
+    <!-- start rightcol -->
+    <div class="rightcol">
+        <div class="container-fluid">
+        	<div class="row">
+                <!-- start form -->
+                <div class="col-md-6">
+                	<div class="form common-form">
+                        <div class="txtb">
+                            <h4>Basic form</h4>
+                            <p>Individual form controls automatically receive some global styling. All textual &lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt; elements with .form-control are set to width: 100%; by default. Wrap labels and controls in .form-group for optimum spacing.</p>
+                        </div>
+                        <form action="#">
+                        	<div class="input-row">
+                        		<label>Username</label>
+                            	<input name="" type="text" class="input">
+                            </div>
+                            <div class="input-row">
+                            	<label>Email</label>
+                            	<input name="" type="text" class="input">
+                            </div>
+                            <div class="row">
+                            	<div class="col-md-6">
+                                	<div class="input-row">
+                                    	<label>Enter password</label>
+                            			<input name="" type="text" class="input">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                	<div class="input-row">
+                            			<label>Confirm password</label>
+                            			<input name="" type="text" class="input">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                            	<label>Phone</label>
+                            	<input name="" type="text" class="input">
+                            </div>
+                            <div class="input-row">
+                            	<label>Select</label>
+                                <select class="input">
+                                	<option>Select</option>
+                                </select>
+                            </div>
+                            <div class="input-row">
+                            	<label>Textarea</label>
+                            	<textarea class="textarea"></textarea>
+                            </div>
+                            <div class="input-row">
+                            	<label class="radio left">
+                                	<input type="radio" name="radio">
+                                </label>
+                                <label class="radio right">
+                                	<input type="radio" name="radio">
+                                </label>
+                            </div>
+                            <div class="input-row">
+                            	<label class="radio txt">
+                                	<input type="radio" name="radio">
+                                    Radio
+                                </label>
+                            </div>
+                            <div class="input-row">
+                            	<input type="checkbox" id="checkbox1" name="checkbox">
+                            	<label class="radio left" for="checkbox1">
+                                	<span></span>
+                                </label>
+                                <input type="checkbox" id="checkbox2" name="checkbox">
+                                <label class="radio right" for="checkbox2">
+                                	<span></span>
+                                </label>
+                            </div>
+                            <div class="input-row">
+                            	<input type="checkbox" id="checkbox3" name="checkbox">
+                            	<label class="radio txt" for="checkbox3">
+                                	<span></span>
+                                    Checkbox 1
+                                </label>
+                            </div>
+                            <input type="submit" value="submit" class="button">
+                        </form>
+                    </div>
+                </div>
+                <!-- end form -->
+            </div>
+        </div>
+    </div>
+    <!-- end rightcol -->
+</div>
+<!-- end main-container -->
+</body>
+</html>
