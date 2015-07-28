@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Goodservice</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</head>
+
+<body>
+<!-- start header -->
+<div class="header">
+	<div class="container-fluid">
+    	<div class="row">
+        	<!-- start logo -->
+        	<div class="col-md-4 logo">
+            	<h1>Chat Console</h1>
+            </div>
+            <!-- end logo -->
+            <!-- start nav -->
+            <div class="col-md-8 nav">
+            	<ul>
+                  <li><a href="javascript:void(0)" id="make_booking" title="Make a Booking">Make a Booking</a></li>
+                  <li><a href="javascript:void(0)" id="current_bookings" title="Current Bookings">Current Bookings</a></li>
+                  <li><a href="javascript:void(0)" id="new-vendor-btn" title="New Vendor">New Vendor</a></li>
+                  <li><a href="/admins/sign_out" data-method="delete" rel="nofollow" title="Logout">Logout</a></li>
+                </ul>
+            </div>
+            <!-- end nav -->
+        </div>
+    </div>
+</div>
+<!-- end header -->
+<!-- start main-container -->
+<div class="main-container">
+	<div class="container-fluid">
+    	<div class="row">
+        	<!-- start booking -->
+        	<div class="column booking">
+                <h3>My Pending Booking</h3>
+                <p class="no-booking" style="display:none;">No Bookings Pending.</p>
+                <div class="row">
+                	<div class="col-md-4">
+                    	<label>Team Action:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="input select">
+                            <option>Delhi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                	<div class="col-md-4">
+                    	<label>Sort by:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select class="input select">
+                            <option>Delhi</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="list">
+                	<ul>
+                    	<li>
+                        	<div class="right">
+                            	<a href="#">Chat</a>
+                                <a href="#" title="Link">Link</a>
+                            </div>
+                        	<h4>Game Parlors</h4>
+                            <span class="tag">Info Shared</span>
+                            <p class="color1">Due at: 24/7 11:14:00 pm</p>
+                        </li>
+                        <li>
+                        	<div class="right">
+                            	<a href="#">Chat</a>
+                                <a href="#" title="Link">Link</a>
+                            </div>
+                        	<h4>Game Parlors</h4>
+                            <span class="tag">Info Shared</span>
+                            <p class="color2">Due at: 24/7 11:14:00 pm</p>
+                        </li>
+                        <li>
+                        	<div class="right">
+                            	<a href="#">Chat</a>
+                                <a href="#" title="Link">Link</a>
+                            </div>
+                        	<h4>Game Parlors</h4>
+                            <span class="tag">Info Shared</span>
+                            <p class="color3">Due at: 24/7 11:14:00 pm</p>
+                        </li>
+                        <li>
+                        	<div class="right">
+                            	<a href="#">Chat</a>
+                                <a href="#" title="Link">Link</a>
+                            </div>
+                        	<h4>Game Parlors</h4>
+                            <span class="tag">Info Shared</span>
+                            <p class="color4">Due at: 24/7 11:14:00 pm</p>
+                        </li>
+                        <li>
+                        	<div class="right">
+                            	<a href="#">Chat</a>
+                                <a href="#" title="Link">Link</a>
+                            </div>
+                        	<h4>Game Parlors</h4>
+                            <span class="tag">Info Shared</span>
+                            <p>Due at: 24/7 11:14:00 pm</p>
+                        </li>
+                        <li>
+                        	<div class="right">
+                            	<a href="#">Chat</a>
+                                <a href="#" title="Link">Link</a>
+                            </div>
+                        	<h4>Game Parlors</h4>
+                            <span class="tag">Info Shared</span>
+                            <p>Due at: 24/7 11:14:00 pm</p>
+                        </li>
+                        <li>
+                        	<div class="right">
+                            	<a href="#">Chat</a>
+                                <a href="#" title="Link">Link</a>
+                            </div>
+                        	<h4>Game Parlors</h4>
+                            <span class="tag">Info Shared</span>
+                            <p>Due at: 24/7 11:14:00 pm</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end booking -->
+            <!-- start users -->
+            <div class="column users">
+            	<h3>Users (79)</h3>
+                <div class="input-row">
+                	<i class="fa fa-search"></i>
+                	<input type="text" placeholder="User Search" class="input">
+                </div>
+                <div class="input-row">
+                	<i class="fa fa-calendar"></i>
+                	<input type="text" placeholder="27/7/2015" class="input">
+                </div>
+                <div class="users-list">
+                	<ul>
+                        <li><a href="#" title="Mazdiar" class="active"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                        <li><a href="#" title="Mazdiar"><h4>Mazdiar (AV:21)</h4> <p><i class="fa fa-mobile"></i> : +91-9540266544</p></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end users -->
+            <!-- start chat -->
+            <div class="column chat">
+            	<div class="chat-row">
+                	<!-- start user-info -->
+                	<div class="column user-info">
+                    	<div class="user-info-box">
+                    		<h3>User Info</h3>
+                    		<input type="text" placeholder="Name" class="input">
+                        	<input type="text" placeholder="Phone Number" class="input">
+                        	<input type="text" placeholder="City" class="input">
+                        	<textarea placeholder="Customer Preferences" class="textarea"></textarea>
+                        </div>
+                    </div>
+                    <!-- end user-info -->
+                    <!-- start user-location -->
+                    <div class="column user-location">
+                    	<h3>User Location</h3>
+                        <p><strong>Address:</strong> APB Garhi, East of Kailash, New Delhi-110065</p>
+                        <div class="map"><a href="#" title="zoom" class="zoom"><i class="fa fa-arrows-alt"></i></a><img src="images/img_map.png" width="225" height="188" alt="map"></div>
+                    </div>
+                    <!-- end user-location -->
+                </div>
+                <div class="chat-row">
+                	adsad	
+                </div>
+            </div>
+            <!-- end chat -->
+            <!-- start form -->
+            <div class="column form">
+            	<h3>Category Flow</h3>
+                <div class="form-box">
+                    <label>Category</label>
+                    <input type="text" class="input">
+                    <label>Questions/Checklist</label>
+                    <textarea class="textarea"></textarea>
+                    <label>Category</label>
+                    <input type="text" class="input">
+                    <label>Questions/Checklist</label>
+                    <textarea class="textarea"></textarea>
+                    <label>Category</label>
+                    <input type="text" class="input">
+                    <label>Questions/Checklist</label>
+                    <textarea class="textarea"></textarea>
+                </div>
+            </div>
+            <!-- end form -->
+            <!-- start vendor -->
+            <div class="column vendor">
+            	<div class="tab-nav">
+                    <ul>
+                        <li class="active"><a href="#" title="Services">Services</a></li>
+                        <li><a href="#" title="Restaurant">Restaurant</a></li>
+                        <li><a href="#" title="Product">Product</a></li>
+                        <li><a href="#" title="Travel">Travel</a></li>
+                        <li><a href="#" title="Movie">Movie</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                	<div class="search-bar">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" placeholder="Search" class="input">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" placeholder="Anywhere in Gurgaon" class="input">
+                            </div>
+                            <div class="col-md-3">
+                                <select class="input select">
+                                    <option>Delhi</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end vendor -->
+        </div>
+    </div>
+</div>
+<!-- end main-container -->
+<!-- start loading -->
+<div class="loading">
+    <i class="fa fa-circle-o-notch fa-spin"></i>
+</div>
+<!-- end loading -->
+<!-- start overlay -->
+<div class="overlay"></div>
+<!-- end overlay -->
+<!-- start image-popup -->
+<div class="image-popup">
+	<img src="images/img_chat2.jpg" alt="img">
+</div>
+<!-- end image-popup -->
+<!-- start close -->
+<a href="#" title="Close" class="close2"><i class="fa fa-times-circle-o"></i></a>
+<!-- end close -->
+</body>
+</html>
